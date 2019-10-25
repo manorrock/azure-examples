@@ -33,9 +33,18 @@ Set your default subscription for this session using the subscription id from th
   az account set --subscription "subscription-id"
 ````
 
-## The examples
+## The list of examples
 
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
+
+## Maven properties supported by all examples
+
+All the examples support the following properties that you can pass in as -Dname=value to the Maven command line to customize your experience.
+
+| name                   | description                                             |
+|------------------------|---------------------------------------------------------|
+| example.prefix         | a prefix used in resource names                         |
+| example.postfix        | a timestamped postfix to generate unique resource names |
 
 ## Coming soon!
 
