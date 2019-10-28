@@ -9,7 +9,7 @@ subscription, if you have NOT done so please go to our top-level
 
 ## Create the Resource Group
 
-To creste the Resource Group use the following Maven command line.
+To create the Resource Group use the following Maven command line.
 
 ````shell
   mvn package
