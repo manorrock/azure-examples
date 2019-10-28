@@ -64,6 +64,7 @@
     </dependencyManagement>
     <modules>
         <module>appservice-tomcat-helloworld</module>
+        <module>appserviceplan-create</module>
         <module>resourcegroup-create</module>
     </modules>
     <properties>

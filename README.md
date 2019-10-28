@@ -36,6 +36,7 @@ Set your default subscription for this session using the subscription id from th
 ## The list of examples
 
 1. [Create an Azure Resource Group](resourcegroup-create/README.md)
+1. [Create an App Service Plan](appserviceplan-create/README.md)
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
 
 ## Maven properties supported by all examples
@@ -49,7 +50,6 @@ All the examples support the following properties that you can pass in as -Dname
 
 ## Coming soon!
 
-1. Create an App Service plan
 1. Delete a Resource Group
 1. Deploy Tomcat 9 on a Azure App Service (Docker)
 1. Deploy Jetty 9 on a Azure App Service (Docker)
