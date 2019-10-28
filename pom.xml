@@ -20,6 +20,11 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.1</version>
                 </plugin>
@@ -59,6 +64,7 @@
     </dependencyManagement>
     <modules>
         <module>appservice-tomcat-helloworld</module>
+        <module>resourcegroup-create</module>
     </modules>
     <properties>
         <example.postfix>${maven.build.timestamp}</example.postfix>
