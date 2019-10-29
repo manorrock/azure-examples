@@ -66,6 +66,7 @@
         <module>appservice-tomcat-helloworld</module>
         <module>appserviceplan-create</module>
         <module>resourcegroup-create</module>
+        <module>resourcegroup-delete</module>
     </modules>
     <properties>
         <example.postfix>${maven.build.timestamp}</example.postfix>
