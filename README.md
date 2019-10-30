@@ -33,6 +33,14 @@ Set your default subscription for this session using the subscription id from th
   az account set --subscription "subscription-id"
 ````
 
+### Install the master POM
+
+To make sure each example knows about the parent POM you have to invoke the following command from the top level once per session.
+
+````shell
+  mvn -N install
+````
+
 ## The list of examples
 
 1. [Create an Azure Resource Group](resourcegroup-create/README.md)

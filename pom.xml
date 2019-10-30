@@ -62,14 +62,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <modules>
-        <module>appservice-docker-jetty</module>
-        <module>appservice-docker-tomcat</module>
-        <module>appservice-tomcat-helloworld</module>
-        <module>appserviceplan-create</module>
-        <module>resourcegroup-create</module>
-        <module>resourcegroup-delete</module>
-    </modules>
+    <profiles>
+        <profile>
+            <id>safeguard</id>
+            <modules>
+                <module>appservice-docker-jetty</module>
+                <module>appservice-docker-tomcat</module>
+                <module>appservice-tomcat-helloworld</module>
+                <module>appserviceplan-create</module>
+                <module>resourcegroup-create</module>
+                <module>resourcegroup-delete</module>
+            </modules>
+        </profile>
+    </profiles>
     <properties>
         <example.postfix>${maven.build.timestamp}</example.postfix>
         <example.prefix>examples</example.prefix>
