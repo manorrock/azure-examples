@@ -63,6 +63,7 @@
         </dependencies>
     </dependencyManagement>
     <modules>
+        <module>appservice-docker-tomcat</module>
         <module>appservice-tomcat-helloworld</module>
         <module>appserviceplan-create</module>
         <module>resourcegroup-create</module>

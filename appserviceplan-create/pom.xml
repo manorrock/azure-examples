@@ -25,7 +25,7 @@
                         <configuration>
                             <target>
                                 <exec executable="az">
-                                    <arg line="appservice plan create --resource-group ${example.resourceGroup} --name ${example.appServicePlan}"/>
+                                    <arg line="appservice plan create --resource-group ${example.resourceGroup} --name ${example.appServicePlan} --is-linux"/>
                                 </exec>
                             </target>
                         </configuration>
@@ -39,7 +39,7 @@
     </build>
     <properties>
         <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
-        <example.appServicePlan>${example.prefix}-appserviceplan</example.appServicePlan>
+        <example.appServicePlan>${example.prefix}-appServicePlan</example.appServicePlan>
     </properties>
 </project>
 
