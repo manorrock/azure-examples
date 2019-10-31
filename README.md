@@ -49,6 +49,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
 1. [Deploy Tomcat on Azure App Service (using a Docker image)](appservice-docker-tomcat/README.md)
 1. [Deploy Jetty on Azure App Service (using a Docker image)](appservice-docker-jetty/README.md)
+1. [Deploy Payara on a Azure App Service ((using a Docker image)](appservice-docker-payara/README.md)
 
 ## Maven properties supported by all examples
 
@@ -61,7 +62,6 @@ All the examples support the following properties that you can pass in as -Dname
 
 ## Coming soon!
 
-1. Deploy Payara 5 on a Azure App Service (Docker)
 1. Deploy Glassfish 5 on a Azure App Service (Docker)
 1. Deploy an Azure Docker registry.
 1. Create a custom dockerized Tomcat and deploy it to Azure App Service (Docker)

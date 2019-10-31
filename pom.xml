@@ -67,6 +67,7 @@
             <id>safeguard</id>
             <modules>
                 <module>appservice-docker-jetty</module>
+                <module>appservice-docker-payara</module>
                 <module>appservice-docker-tomcat</module>
                 <module>appservice-tomcat-helloworld</module>
                 <module>appserviceplan-create</module>
