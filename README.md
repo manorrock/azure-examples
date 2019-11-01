@@ -49,7 +49,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
 1. [Deploy Tomcat on Azure App Service (using a Docker image)](appservice-docker-tomcat/README.md)
 1. [Deploy Jetty on Azure App Service (using a Docker image)](appservice-docker-jetty/README.md)
-1. [Deploy Payara on a Azure App Service ((using a Docker image)](appservice-docker-payara/README.md)
+1. [Deploy Payara on a Azure App Service (using a Docker image)](appservice-docker-payara/README.md)
 
 ## Maven properties supported by all examples
 
@@ -78,3 +78,5 @@ All the examples support the following properties that you can pass in as -Dname
 1. Scale your App Service plan manually
 1. Deploy an Java Azure Function
 1. Deploy WildFly on Azure App Service (using a Docker image)
+1. Deploy a Quarkus application on Azure App Service (JavaSE)
+1. Deploy a Quarkus GraalVM application on Azure App Service (Docker)
