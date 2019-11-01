@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>resourcegroup-create</artifactId>
+    <artifactId>resourcegroup-delete</artifactId>
     <packaging>pom</packaging>
     <name>Delete an Azure Resource Group</name>
     <build>
