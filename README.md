@@ -77,3 +77,4 @@ All the examples support the following properties that you can pass in as -Dname
 1. Delete an App Service
 1. Scale your App Service plan manually
 1. Deploy an Java Azure Function
+1. Deploy WildFly on Azure App Service (using a Docker image)
