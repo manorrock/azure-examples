@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>examples.azure</groupId>
+        <artifactId>project</artifactId>
+        <version>1-SNAPSHOT</version>
+    </parent>
+    <artifactId>appserviceplan-delete</artifactId>
+    <packaging>pom</packaging>
+    <name>Delete an Azure App Service Plan</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <exec executable="az">
+                                    <arg line="appservice plan delete --resource-group ${example.resourceGroup} --name ${example.appServicePlan} --yes"/>
+                                </exec>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
+        <example.appServicePlan>${example.prefix}-appServicePlan</example.appServicePlan>
+    </properties>
+</project>
+

@@ -72,6 +72,7 @@
                 <module>appservice-docker-tomcat</module>
                 <module>appservice-tomcat-helloworld</module>
                 <module>appserviceplan-create</module>
+                <module>appserviceplan-delete</module>
                 <module>resourcegroup-create</module>
                 <module>resourcegroup-delete</module>
             </modules>
