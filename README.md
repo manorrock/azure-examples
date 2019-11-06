@@ -46,6 +46,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create an Azure Resource Group](resourcegroup-create/README.md)
 1. [Delete an Azure Resource Group](resourcegroup-delete/README.md)
 1. [Create an Azure App Service Plan](appserviceplan-create/README.md)
+1. [Delete an Azure App Service Plan](appserviceplan-delete/README.md)
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
 1. [Deploy Tomcat on Azure App Service (using a Docker image)](appservice-docker-tomcat/README.md)
 1. [Deploy Jetty on Azure App Service (using a Docker image)](appservice-docker-jetty/README.md)
@@ -73,7 +74,6 @@ All the examples support the following properties that you can pass in as -Dname
 1. Deploy Azure Spring Cloud
 1. Deploy a Spring Boot appliction to Azure Spring Cloud
 1. Serve static content using Azure Blog Storage
-1. Delete a App Service Plan
 1. Delete an App Service
 1. Scale your App Service plan manually
 1. Deploy an Java Azure Function
