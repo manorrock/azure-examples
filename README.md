@@ -52,6 +52,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy Jetty on Azure App Service (using a Docker image)](appservice-docker-jetty/README.md)
 1. [Deploy Payara on a Azure App Service (using a Docker image)](appservice-docker-payara/README.md)
 1. [Deploy Glassfish on a Azure App Service (using a Docker image)](appservice-docker-glassfish/README.md)
+1. [Create an Azure Key Vault](keyvault-create/README.md)
 
 ## Maven properties supported by all examples
 
