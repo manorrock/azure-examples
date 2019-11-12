@@ -1,17 +1,18 @@
 
-# Glassfish on Azure App Service (using a Docker image)
+# List your Azure App Services
 
 ## Prerequisites
 
-This example assume you have created the appropriate App Service Plan, if you
-have not done so please [Create an Azure App Service Plan](../appserviceplan-create/README.md)
+This example assume you have created an Azure App Service before. If you
+have not done so please go to [Deploy a Web application on Azure App Service 
+(managed Tomcat)](../appservice-tomcat-helloworld/README.md)
 
-## Deploy the example
+## List your Azure App Services
 
-To deploy the example use the following Maven command line.
+To list the Azure App Services use the following Maven command line.
 
 ````shell
-  mvn azure-webapp:deploy
+  mvn package
 ````
 
 ### Properties supported by the example
@@ -20,11 +21,8 @@ The example supports the following properties that you can pass in as -Dname=val
 
 | name                   | description                  |
 |------------------------|------------------------------|
-| example.appName        | the application name         |
-| example.appServicePlan | the App Service plan to use  |
-| example.imageName      | the Docker image name        |
 | example.resourceGroup  | the Azure Resource Group     |
 
 ## Cleanup
 
-Do NOT forget to remove the App Service and its associated resources once you are done running the example.
+Do NOT forget to remove the resources you might have created once you are done running the example.
