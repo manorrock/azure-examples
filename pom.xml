@@ -66,6 +66,7 @@
         <profile>
             <id>safeguard</id>
             <modules>
+                <module>acr-create</module>
                 <module>appservice-docker-glassfish</module>
                 <module>appservice-docker-jetty</module>
                 <module>appservice-docker-payara</module>
