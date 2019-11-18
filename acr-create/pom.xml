@@ -25,7 +25,7 @@
                         <configuration>
                             <target>
                                 <exec executable="az">
-                                    <arg line="acr create --verbose --name ${example.containerRegistry} --resource-group ${example.resourceGroup} --sku ${example.sku}"/>
+                                    <arg line="acr create --verbose --name ${example.containerRegistry} --resource-group ${example.resourceGroup} --sku ${example.sku}  --admin-enabled ${example.adminEnabled}"/>
                                 </exec>
                             </target>
                         </configuration>
@@ -38,6 +38,7 @@
         </plugins>
     </build>
     <properties>
+        <example.adminEnabled>true</example.adminEnabled>
         <example.containerRegistry>${example.prefix}${example.postfix}</example.containerRegistry>
         <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
         <example.sku>Basic</example.sku>

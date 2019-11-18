@@ -19,11 +19,12 @@ To deploy the Azure Container Registry use the following Maven command line.
 
 The example supports the following properties that you can pass in as -Dname=value to the Maven command line to customize your deployment.
 
-| name                      | description                        |
-|---------------------------|------------------------------------|
-| example.resourceGroup     | the Resource Group to use          |
-| example.containerRegistry | the name of the Container Registry |
-| example.sku               | the SKU to use                     |
+| name                      | description                               |
+|---------------------------|-------------------------------------------|
+| example.adminEnabled      | enable the admin access keys (true/false) |
+| example.resourceGroup     | the Resource Group to use                 |
+| example.containerRegistry | the name of the Container Registry        |
+| example.sku               | the SKU to use                            |
 
 ## Cleanup
 
