@@ -55,10 +55,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create an Azure Key Vault](keyvault-create/README.md)
 1. [Deploy an Azure Container registry](acr-create/README.md)
 1. [List your Azure App Services](appservice-list/README.md)
-<<<<<<< HEAD
-=======
 1. [Delete an App Service](appservice-delete/README.md)
->>>>>>> issue-17
 
 ## Maven properties supported by all examples
 
