@@ -55,6 +55,10 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create an Azure Key Vault](keyvault-create/README.md)
 1. [Deploy an Azure Container registry](acr-create/README.md)
 1. [List your Azure App Services](appservice-list/README.md)
+<<<<<<< HEAD
+=======
+1. [Delete an App Service](appservice-delete/README.md)
+>>>>>>> issue-17
 
 ## Maven properties supported by all examples
 
@@ -76,7 +80,6 @@ All the examples support the following properties that you can pass in as -Dname
 1. Deploy Azure Spring Cloud
 1. Deploy a Spring Boot appliction to Azure Spring Cloud
 1. Serve static content using Azure Blog Storage
-1. Delete an App Service
 1. Scale your App Service plan manually
 1. Deploy an Java Azure Function
 1. Deploy WildFly on Azure App Service (using a Docker image)
