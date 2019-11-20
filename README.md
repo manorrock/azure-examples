@@ -56,6 +56,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy an Azure Container registry](acr-create/README.md)
 1. [List your Azure App Services](appservice-list/README.md)
 1. [Delete an App Service](appservice-delete/README.md)
+1. [Create Maven settings.xml for Azure Container Registry](acr-create-access-keys-settings-xml/README.md)
 
 ## Maven properties supported by all examples
 
