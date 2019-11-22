@@ -3,9 +3,9 @@
 
 ## Prerequisites
 
-This example assume you are logged into Azure CLI and have set your default
-subscription, if you have NOT done so please go to our top-level
-[README](../README.md)
+This example assumes you have previously completed the following example.
+
+1. [Create an Azure Resource Group](../resourcegroup-create/README.md)
 
 ## Deploy the Azure Container Registry
 

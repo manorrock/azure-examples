@@ -32,6 +32,9 @@
                                 <replace file="${project.build.directory}/settings.xml" token="REGISTRY" value="${example.registry}"/>
                                 <replace file="${project.build.directory}/settings.xml" token="USERNAME" value="${username}"/>
                                 <replace file="${project.build.directory}/settings.xml" token="PASSWORD" value="${password}"/>
+                                <echo>
+                                    Your settings.xml file has been generated in ${project.build.directory}
+                                </echo>
                             </target>
                         </configuration>
                         <goals>

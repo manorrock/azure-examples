@@ -1,22 +1,27 @@
 
 # Create settings.xml for your Azure Container Registry (using admin access keys)
 
-```html
-Note for production environments we recommend you setup a service principal instead of using admin access keys
+```text
+Note for production environments we recommend you setup
+a service principal instead of using admin access keys
 ```
 
 ## Prerequisites
 
-This example assume you have deployed an Azure Container Registry before. If you
-have not done so please go to [Deploy a Azure Container Registry](../acr-create/README.md)
+This example assumes you have previously completed the following examples.
+
+1. [Create an Azure Resource Group](../resourcegroup-create/README.md)
+1. [Deploy an Azure Container Registry](../acr-create/README.md)
 
 ## Create the settings.xml
 
 To create the settings.xml use the following Maven command line.
 
 ````shell
-  mvn package -Dexample.registry=FILL_IN_THE_REGISTRY_NAME
+  mvn package -Dexample.registry=REGISTRY
 ````
+
+Where ```REGISTRY``` is the name of your Azure Container Registry.
 
 ### Properties supported by the example
 

@@ -3,7 +3,8 @@
 
 ## Prerequisites
 
-This example assumes you have previously created the Azure Resource Group, if you have NOT done so please go to [Create an Azure Resource Group](../resourcegroup-create/README.md)
+This example assumes you have previously created the Azure Resource Group, if you
+have NOT done so please go to [Create an Azure Resource Group](../resourcegroup-create/README.md)
 
 ## Create the Azure Key Vault
 
