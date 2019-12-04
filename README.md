@@ -58,6 +58,8 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Delete an App Service](appservice-delete/README.md)
 1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr-create-access-keys-settings-xml/README.md)
 1. [Create a custom Tomcat and deploy it to Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
+1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks-create/README.md)
+
 ## Maven properties supported by all examples
 
 All the examples support the following properties that you can pass in as -Dname=value to the Maven command line to customize your experience.
