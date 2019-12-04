@@ -72,7 +72,6 @@ All the examples support the following properties that you can pass in as -Dname
 ## Coming soon!
 
 1. Deploy a Spring Boot to Azure App Service (JavaSE)
-1. Deploy an AKS cluster (Azure Kubernetes Service)
 1. Deploy a Spring Boot application to AKS
 1. Deploy a Tomcat web application to AKS
 1. Deploy OpenLiberty 5 on a Azure App Service (Docker)
