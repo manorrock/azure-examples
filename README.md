@@ -59,6 +59,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr-create-access-keys-settings-xml/README.md)
 1. [Create a custom Tomcat and deploy it to Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
 1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks-create/README.md)
+1. [Deploy a Spring Boot application to Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
 
 ## Maven properties supported by all examples
 
@@ -71,7 +72,6 @@ All the examples support the following properties that you can pass in as -Dname
 
 ## Coming soon!
 
-1. Deploy a Spring Boot to Azure App Service (JavaSE)
 1. Deploy a Spring Boot application to AKS
 1. Deploy a Tomcat web application to AKS
 1. Deploy OpenLiberty 5 on a Azure App Service (Docker)
