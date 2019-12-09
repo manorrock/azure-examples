@@ -50,16 +50,16 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
 1. [Deploy Tomcat on Azure App Service (using a Docker image)](appservice-docker-tomcat/README.md)
 1. [Deploy Jetty on Azure App Service (using a Docker image)](appservice-docker-jetty/README.md)
-1. [Deploy Payara on a Azure App Service (using a Docker image)](appservice-docker-payara/README.md)
-1. [Deploy Glassfish on a Azure App Service (using a Docker image)](appservice-docker-glassfish/README.md)
+1. [Deploy Payara on Azure App Service (using a Docker image)](appservice-docker-payara/README.md)
+1. [Deploy Glassfish on Azure App Service (using a Docker image)](appservice-docker-glassfish/README.md)
 1. [Create an Azure Key Vault](keyvault-create/README.md)
 1. [Deploy an Azure Container registry](acr-create/README.md)
 1. [List your Azure App Services](appservice-list/README.md)
-1. [Delete an App Service](appservice-delete/README.md)
+1. [Delete an Azure App Service](appservice-delete/README.md)
 1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr-create-access-keys-settings-xml/README.md)
-1. [Create a custom Tomcat and deploy it to Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
+1. [Create a custom Tomcat and deploy it on Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
 1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks-create/README.md)
-1. [Deploy a Spring Boot application to Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
+1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
 
 ## Maven properties supported by all examples
 
