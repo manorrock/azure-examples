@@ -60,6 +60,8 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create a custom Tomcat and deploy it on Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
 1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks-create/README.md)
 1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
+1. [Create an Azure Storage Account](storageaccount-create/README.md)
+1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks-create-kube-config/README.md)
 
 ## Maven properties supported by all examples
 
@@ -70,7 +72,7 @@ All the examples support the following properties that you can pass in as -Dname
 | example.prefix         | a prefix used in resource names                         |
 | example.postfix        | a timestamped postfix to generate unique resource names |
 
-## Coming soon!
+## Coming soon
 
 1. Deploy a Spring Boot application to AKS
 1. Deploy a Tomcat web application to AKS

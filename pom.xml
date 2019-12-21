@@ -69,6 +69,7 @@
                 <module>acr-create</module>
                 <module>acr-create-access-keys-settings-xml</module>
                 <module>aks-create</module>
+                <module>aks-create-kube-config</module>
                 <module>appservice-delete</module>
                 <module>appservice-docker-custom</module>
                 <module>appservice-docker-glassfish</module>
