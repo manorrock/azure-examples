@@ -62,10 +62,11 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
 1. [Create an Azure Storage Account](storageaccount-create/README.md)
 1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks-create-kube-config/README.md)
+1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks-install-tiller/README.md)
 
-## Maven properties supported by all examples
+## Maven properties supported by most examples
 
-All the examples support the following properties that you can pass in as -Dname=value to the Maven command line to customize your experience.
+Most of the examples support the following properties that you can pass in as -Dname=value to the Maven command line to customize your experience.
 
 | name                   | description                                             |
 |------------------------|---------------------------------------------------------|

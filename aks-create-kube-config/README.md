@@ -2,7 +2,8 @@
 # Create Kube config file for your Azure Kubernetes Service (using admin access)
 
 ```text
-Note for production environments we recommend you configure RBAC to limit access to your Kubernetes cluster based on roles.
+Note for production environments we recommend you configure RBAC to
+limit access to your Kubernetes cluster based on roles.
 ```
 
 ## Prerequisites
