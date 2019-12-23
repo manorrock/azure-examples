@@ -70,6 +70,7 @@
                 <module>acr-create-access-keys-settings-xml</module>
                 <module>aks-create</module>
                 <module>aks-create-kube-config</module>
+                <module>aks-deploy-nginx-ingress-controller</module>
                 <module>aks-install-tiller</module>
                 <module>appservice-delete</module>
                 <module>appservice-docker-custom</module>
