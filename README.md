@@ -64,6 +64,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks-create-kube-config/README.md)
 1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks-install-tiller/README.md)
 1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks-deploy-nginx-ingress-controller/README.md)
+1. [Create an Azure Cosmos DB](cosmosdb-create/README.md)
 
 ## Maven properties supported by most examples
 
