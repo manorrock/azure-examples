@@ -72,6 +72,7 @@
                 <module>aks-create-kube-config</module>
                 <module>aks-deploy-nginx-ingress-controller</module>
                 <module>aks-install-tiller</module>
+                <module>aks-use-your-acr</module>
                 <module>appservice-delete</module>
                 <module>appservice-docker-custom</module>
                 <module>appservice-docker-glassfish</module>
