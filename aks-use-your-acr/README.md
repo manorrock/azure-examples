@@ -7,6 +7,7 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../resourcegroup-create/README.md)
 1. [Deploy an Azure Kubernetes Cluster](../aks-create/README.md)
+1. [Deploy an Azure Container Registry](../acr-create/README.md)
 
 ## Update your AKS cluster to use your Azure Container Registry
 
