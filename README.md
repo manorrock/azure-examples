@@ -66,6 +66,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks-deploy-nginx-ingress-controller/README.md)
 1. [Create an Azure Cosmos DB](cosmosdb-create/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](aks-use-your-acr/README.md)
+1. [Deploy a Spring Boot application to AKS](aks-springboot/README.md)
 
 ## Maven properties supported by most examples
 
@@ -78,7 +79,6 @@ Most of the examples support the following properties that you can pass in as -D
 
 ## Coming soon
 
-1. Deploy a Spring Boot application to AKS
 1. Deploy a Tomcat web application to AKS
 1. Deploy OpenLiberty 5 on a Azure App Service (Docker)
 1. Deploy Azure Spring Cloud
