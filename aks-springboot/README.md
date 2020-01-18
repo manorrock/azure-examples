@@ -8,6 +8,7 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../resourcegroup-create/README.md)
 1. [Deploy an Azure Container Registry](../acr-create/README.md)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../acr-create-access-keys-settings-xml/README.md)
+1. [Deploy an AKS cluster (Azure Kubernetes Service)](../aks-create/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](../aks-use-your-acr/README.md)
 
 ## Build the example
