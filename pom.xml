@@ -73,6 +73,7 @@
                 <module>aks-deploy-nginx-ingress-controller</module>
                 <module>aks-install-tiller</module>
                 <module>aks-springboot</module>
+                <module>aks-tomcat</module>
                 <module>aks-use-your-acr</module>
                 <module>appservice-delete</module>
                 <module>appservice-docker-custom</module>
