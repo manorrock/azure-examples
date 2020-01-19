@@ -41,33 +41,51 @@ To make sure each example knows about the parent POM you have to invoke the foll
   mvn -N install
 ````
 
-## The list of examples
+## The list of Azure App Service examples
 
-1. [Create an Azure Resource Group](resourcegroup-create/README.md)
-1. [Delete an Azure Resource Group](resourcegroup-delete/README.md)
 1. [Create an Azure App Service Plan](appserviceplan-create/README.md)
 1. [Delete an Azure App Service Plan](appserviceplan-delete/README.md)
+1. [List your Azure App Services](appservice-list/README.md)
+1. [Delete an Azure App Service](appservice-delete/README.md)
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
 1. [Deploy Tomcat on Azure App Service (using a Docker image)](appservice-docker-tomcat/README.md)
 1. [Deploy Jetty on Azure App Service (using a Docker image)](appservice-docker-jetty/README.md)
 1. [Deploy Payara on Azure App Service (using a Docker image)](appservice-docker-payara/README.md)
 1. [Deploy Glassfish on Azure App Service (using a Docker image)](appservice-docker-glassfish/README.md)
-1. [Create an Azure Key Vault](keyvault-create/README.md)
-1. [Deploy an Azure Container registry](acr-create/README.md)
-1. [List your Azure App Services](appservice-list/README.md)
-1. [Delete an Azure App Service](appservice-delete/README.md)
-1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr-create-access-keys-settings-xml/README.md)
 1. [Create a custom Tomcat and deploy it on Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
-1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks-create/README.md)
 1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
-1. [Create an Azure Storage Account](storageaccount-create/README.md)
+
+## The list of Azure Container Registry examples
+
+1. [Deploy an Azure Container registry](acr-create/README.md)
+1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr-create-access-keys-settings-xml/README.md)
+
+## The list of Azure Cosmos DB examples
+
+1. [Create an Azure Cosmos DB](cosmosdb-create/README.md)
+
+## The list of Azure Key Vault examples
+
+1. [Create an Azure Key Vault](keyvault-create/README.md)
+
+## The list of Azure Kubernetes Service examples
+
+1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks-create/README.md)
 1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks-create-kube-config/README.md)
 1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks-install-tiller/README.md)
 1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks-deploy-nginx-ingress-controller/README.md)
-1. [Create an Azure Cosmos DB](cosmosdb-create/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](aks-use-your-acr/README.md)
 1. [Deploy a Spring Boot application to AKS](aks-springboot/README.md)
 1. [Deploy a Tomcat web application to AKS](aks-tomcat/README.md)
+
+## The list of Azure Resource Group examples
+
+1. [Create an Azure Resource Group](resourcegroup-create/README.md)
+1. [Delete an Azure Resource Group](resourcegroup-delete/README.md)
+
+## The list of Azure Storage Account examples
+
+1. [Create an Azure Storage Account](storageaccount-create/README.md)
 
 ## Maven properties supported by most examples
 
