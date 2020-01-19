@@ -53,10 +53,10 @@ Once the `EXTERNAL-IP` shows up go to `http://EXTERNAL-IP:8080`.
 
 It should tell you:
 
-``shell
+```shell
 And this is served by Tomcat deployed on Azure Kubernetes Service using
 a Docker image coming from our own Azure Container Registry
-``
+```
 
 ### Properties supported by the example
 
