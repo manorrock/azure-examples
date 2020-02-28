@@ -107,4 +107,3 @@ Most of the examples support the following properties that you can pass in as -D
 1. Deploy WildFly on Azure App Service (using a Docker image)
 1. Deploy a Quarkus application on Azure App Service (JavaSE)
 1. Deploy a Quarkus GraalVM application on Azure App Service (Docker)
-1. Deploy a Servlet as an Azure Function
