@@ -90,6 +90,7 @@
                 <module>keyvault-create</module>
                 <module>resourcegroup-create</module>
                 <module>resourcegroup-delete</module>
+                <module>springcloud-create</module>
             </modules>
         </profile>
     </profiles>

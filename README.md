@@ -83,6 +83,10 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create an Azure Resource Group](resourcegroup-create/README.md)
 1. [Delete an Azure Resource Group](resourcegroup-delete/README.md)
 
+## Azure Spring Cloud examples
+
+1. [Create an Azure Spring Cloud](springcloud-create/README.md)
+
 ## Azure Storage Account examples
 
 1. [Create an Azure Storage Account](storageaccount-create/README.md)
@@ -98,8 +102,6 @@ Most of the examples support the following properties that you can pass in as -D
 
 ## Coming soon
 
-1. Deploy OpenLiberty 5 on a Azure App Service (Docker)
-1. Deploy Azure Spring Cloud
 1. Deploy a Spring Boot appliction to Azure Spring Cloud
 1. Serve static content using Azure Blog Storage
 1. Scale your App Service plan manually
