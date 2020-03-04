@@ -32,7 +32,7 @@ to http://localhost:8080/
 
 ## Deploy the application to Azure Spring Cloud
 
-````shell
+```shell
   mvn antrun:run@deploy -Dexample.springCloudName=SPRINGCLOUD
 ```
 
