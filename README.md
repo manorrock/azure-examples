@@ -86,6 +86,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 ## Azure Spring Cloud examples
 
 1. [Create an Azure Spring Cloud](springcloud-create/README.md)
+1. [Deploy a Spring Boot application to Azure Spring Cloud](springcloud-helloworld/README.md)
 
 ## Azure Storage Account examples
 
@@ -102,10 +103,10 @@ Most of the examples support the following properties that you can pass in as -D
 
 ## Coming soon
 
-1. Deploy a Spring Boot appliction to Azure Spring Cloud
 1. Serve static content using Azure Blog Storage
 1. Scale your App Service plan manually
 1. Deploy an Java Azure Function
 1. Deploy WildFly on Azure App Service (using a Docker image)
 1. Deploy a Quarkus application on Azure App Service (JavaSE)
 1. Deploy a Quarkus GraalVM application on Azure App Service (Docker)
+1. Deploy a WildFly application to AKS

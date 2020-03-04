@@ -41,8 +41,7 @@
         </plugins>
     </build>
     <properties>
-        <example.springCloudName>${example.prefix}-springcloud</example.springCloudName>
+        <example.springCloudName>${example.prefix}-springcloud-${example.postfix}</example.springCloudName>
         <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
     </properties>
 </project>
-
