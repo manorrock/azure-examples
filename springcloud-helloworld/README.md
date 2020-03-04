@@ -38,9 +38,9 @@ to http://localhost:8080/
 
 Where ```SPRINGCLOUD``` is the name of your Azure Spring Cloud.
 
-Once the deploy is done use the "url" found in the output to connect to your 
-Spring Boot application which is running on your Azure Spring Cloud. The URL 
-should be similar to the one below:
+Once the deploy is done use the "url" found in the output to point your favorite
+browser to your Spring Boot application which is now running on your Azure Spring
+Cloud. The URL should be similar to the one below:
 
 ```shell
 https://XYZ.azuremicroservices.io
