@@ -3,9 +3,10 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following examples.
+This example assumes you have previously completed the following.
 
 1. [Create an Azure Resource Group](../resourcegroup-create/README.md)
+1. [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools)
 
 ## Build the example
 
