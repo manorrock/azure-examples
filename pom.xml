@@ -87,6 +87,7 @@
                 <module>appserviceplan-create</module>
                 <module>appserviceplan-delete</module>
                 <module>cosmosdb-create</module>
+                <module>function-java</module>
                 <module>keyvault-create</module>
                 <module>resourcegroup-create</module>
                 <module>resourcegroup-delete</module>

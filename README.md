@@ -64,6 +64,10 @@ To make sure each example knows about the parent POM you have to invoke the foll
 
 1. [Create an Azure Cosmos DB](cosmosdb-create/README.md)
 
+## Azure Functions examples
+
+1. [Deploy a Java Azure Function](function-java/README.md)
+
 ## Azure Key Vault examples
 
 1. [Create an Azure Key Vault](keyvault-create/README.md)
@@ -105,7 +109,6 @@ Most of the examples support the following properties that you can pass in as -D
 
 1. Serve static content using Azure Blog Storage
 1. Scale your App Service plan manually
-1. Deploy an Java Azure Function
 1. Deploy WildFly on Azure App Service (using a Docker image)
 1. Deploy a Quarkus application on Azure App Service (JavaSE)
 1. Deploy a Quarkus GraalVM application on Azure App Service (Docker)
