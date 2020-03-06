@@ -81,6 +81,7 @@
                 <module>appservice-docker-jetty</module>
                 <module>appservice-docker-payara</module>
                 <module>appservice-docker-tomcat</module>
+                <module>appservice-docker-wildfly</module>
                 <module>appservice-javase-springboot</module>
                 <module>appservice-list</module>
                 <module>appservice-tomcat-helloworld</module>
