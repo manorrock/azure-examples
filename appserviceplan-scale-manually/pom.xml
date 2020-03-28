@@ -10,9 +10,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>appserviceplan-create</artifactId>
+    <artifactId>appservice-scale-manually</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure App Service Plan</name>
+    <name>Scale your App Service Plan manually</name>
     <build>
         <plugins>
             <plugin>
@@ -25,7 +25,7 @@
                         <configuration>
                             <target>
                                 <exec executable="az">
-                                    <arg line="appservice plan create --resource-group ${example.resourceGroup} --location ${example.region} --name ${example.appServicePlan} --is-linux --sku ${example.sku}"/>
+                                    <arg line="appservice plan update --verbose --name ${example.appServicePlan} --resource-group ${example.resourceGroup} --number-of-workers ${example.workerCount}"/>
                                 </exec>
                             </target>
                         </configuration>
@@ -40,8 +40,7 @@
     <properties>
         <example.appServicePlan>${example.prefix}-appServicePlan</example.appServicePlan>
         <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
-        <example.region>westus2</example.region>
-        <example.sku>P1V2</example.sku>
+        <example.workerCount>1</example.workerCount>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
-

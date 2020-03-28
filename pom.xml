@@ -87,6 +87,7 @@
                 <module>appservice-tomcat-helloworld</module>
                 <module>appserviceplan-create</module>
                 <module>appserviceplan-delete</module>
+                <module>appserviceplan-scale-manually</module>
                 <module>cosmosdb-create</module>
                 <module>function-java</module>
                 <module>keyvault-create</module>

@@ -43,8 +43,6 @@ To make sure each example knows about the parent POM you have to invoke the foll
 
 ## Azure App Service examples
 
-1. [Create an Azure App Service Plan](appserviceplan-create/README.md)
-1. [Delete an Azure App Service Plan](appserviceplan-delete/README.md)
 1. [List your Azure App Services](appservice-list/README.md)
 1. [Delete an Azure App Service](appservice-delete/README.md)
 1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
@@ -55,6 +53,12 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Create a custom Tomcat and deploy it on Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
 1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
 1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](appservice-docker-wildfly/README.md)
+
+## Azure App Service plan examples
+
+1. [Create an Azure App Service Plan](appserviceplan-create/README.md)
+1. [Delete an Azure App Service Plan](appserviceplan-delete/README.md)
+1. [Scale your Azure App Service Plan manually](appserviceplan-scale-manually/README.md)
 
 ## Azure Container Registry examples
 
@@ -109,7 +113,6 @@ Most of the examples support the following properties that you can pass in as -D
 ## Coming soon
 
 1. Serve static content using Azure Blog Storage
-1. Scale your App Service plan manually
 1. Deploy a Quarkus application on Azure App Service (JavaSE)
 1. Deploy a Quarkus GraalVM application on Azure App Service (Docker)
 1. Deploy a WildFly application to AKS

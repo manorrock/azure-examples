@@ -32,6 +32,7 @@ The example supports the following properties that you can pass in as -Dname=val
 | example.appName        | the application name         |
 | example.appServicePlan | the App Service plan to use  |
 | example.javaVersion    | the Java version to use      |
+| example.region         | the region to use            |
 | example.resourceGroup  | the Resource Group to use    |
 | example.webContainer   | the web container to use     |
 

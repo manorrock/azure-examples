@@ -20,8 +20,9 @@ The example supports the following properties that you can pass in as -Dname=val
 
 | name                   | description                         |
 |------------------------|-------------------------------------|
-| example.resourceGroup  | the Resource Group to use           |
 | example.appServicePlan | the App Service Plan name to create |
+| example.region         | the region to create in             |
+| example.resourceGroup  | the Resource Group to use           |
 
 ## Cleanup
 

@@ -23,6 +23,7 @@
                     <resourceGroup>${example.resourceGroup}</resourceGroup>
                     <appName>${example.appName}</appName>
                     <appServicePlanName>${example.appServicePlan}</appServicePlanName>
+                    <region>${example.region}</region>
                     <runtime>
                         <os>linux</os>
                         <javaVersion>${example.javaVersion}</javaVersion>
@@ -53,7 +54,8 @@
         <example.appName>${example.prefix}-helloworld-${example.postfix}</example.appName>
         <example.appServicePlan>${example.prefix}-appServicePlan</example.appServicePlan>
         <example.javaVersion>jre8</example.javaVersion>
-        <example.resourceGroup>${example.prefix}-resourceGroup</example.resourceGroup>
+        <example.region>westus2</example.region>
+        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
         <example.webContainer>tomcat 8.5</example.webContainer>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
