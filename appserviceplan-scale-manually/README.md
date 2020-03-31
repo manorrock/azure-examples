@@ -10,6 +10,16 @@ This example assumes you have previously completed the following examples.
 1. [Deploy a Web application on Azure App Service 
 (managed Tomcat)](../appservice-tomcat-helloworld/README.md)
 
+## Scale the Azure App Service Plan
+
+To scale the Azure App Service Plan use the following Maven command line.
+
+````shell
+  mvn package -Dexample.workerCount=2
+````
+
+Adjust the number to the desired number of workers.
+
 ### Properties supported by the example
 
 The example supports the following properties that you can pass in as -Dname=value
