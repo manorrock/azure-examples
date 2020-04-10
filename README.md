@@ -86,6 +86,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Update your AKS cluster to use your Azure Container Registry](aks-use-your-acr/README.md)
 1. [Deploy a Spring Boot application to AKS](aks-springboot/README.md)
 1. [Deploy a Tomcat web application to AKS](aks-tomcat/README.md)
+1. [Deploy a WildFly application to AKS](aks-wildfly/README.md)
 
 ## Azure Resource Group examples
 
@@ -115,4 +116,3 @@ Most of the examples support the following properties that you can pass in as -D
 1. Serve static content using Azure Blog Storage
 1. Deploy a Quarkus application on Azure App Service (JavaSE)
 1. Deploy a Quarkus GraalVM application on Azure App Service (Docker)
-1. Deploy a WildFly application to AKS
