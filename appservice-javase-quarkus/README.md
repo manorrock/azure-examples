@@ -12,17 +12,17 @@ This example assumes you have previously completed the following examples.
 
 To build the JAR file use the following Maven command line.
 
-````shell
+```shell
   mvn package
-````
+```
 
 ## Run example locally
 
 To run the example locally use the following Maven command line.
 
-````shell
+```shell
   mvn quarkus:dev
-````
+```
 
 You can see the application in action at http://localhost:8080/hello
 
@@ -30,9 +30,12 @@ You can see the application in action at http://localhost:8080/hello
 
 To deploy the example use the following Maven command line.
 
-````shell
+```shell
   mvn azure-webapp:deploy
-````
+```
+
+Once the command completes you will be able to see the example by using your web
+browser and going to the ```xxxxx.azurewebsites.net``` address the command echoes.
 
 ### Properties supported by the example
 

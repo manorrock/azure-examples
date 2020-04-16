@@ -84,6 +84,7 @@
                 <module>appservice-docker-tomcat</module>
                 <module>appservice-docker-wildfly</module>
                 <module>appservice-javase-springboot</module>
+                <module>appservice-javase-quarkus</module>
                 <module>appservice-list</module>
                 <module>appservice-tomcat-helloworld</module>
                 <module>appserviceplan-create</module>
