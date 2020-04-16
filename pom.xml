@@ -79,6 +79,7 @@
                 <module>appservice-delete</module>
                 <module>appservice-docker-custom</module>
                 <module>appservice-docker-glassfish</module>
+                <module>appservice-docker-graalvm</module>
                 <module>appservice-docker-jetty</module>
                 <module>appservice-docker-payara</module>
                 <module>appservice-docker-tomcat</module>
