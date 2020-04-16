@@ -54,6 +54,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
 1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](appservice-docker-wildfly/README.md)
 1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](appservice-javase-quarkus/README.md)
+1. [Deploy a GraalVM application on Azure App Service (using Docker)](appservice-docker-graalvm/README.md)
 
 ## Azure App Service plan examples
 

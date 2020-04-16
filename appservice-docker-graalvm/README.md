@@ -1,5 +1,5 @@
 
-# Create a custom WildFly and deploy it to Azure App Service (using a Docker image)
+# Create a GraalVM application and deploy it to Azure App Service (using a Docker image)
 
 ## Prerequisites
 
