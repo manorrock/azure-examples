@@ -112,9 +112,3 @@ Most of the examples support the following properties that you can pass in as -D
 |------------------------|---------------------------------------------------------|
 | example.prefix         | a prefix used in resource names                         |
 | example.postfix        | a timestamped postfix to generate unique resource names |
-
-## Coming soon
-
-1. Serve static content using Azure Blog Storage
-1. Deploy a Quarkus application on Azure App Service (JavaSE)
-1. Deploy a Quarkus GraalVM application on Azure App Service (Docker)
