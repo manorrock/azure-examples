@@ -7,25 +7,23 @@ This example assumes you have previously completed the following example.
 
 1. [Create an Azure Resource Group](../resourcegroup-create/README.md)
 
-## Deploy the Azure Container Registry
+## Deploy a basic Azure Container Registry
 
-To deploy the Azure Container Registry use the following Maven command line.
+To deploy the basic Azure Container Registry use the following command line:
 
-````shell
-  mvn package
-````
+```shell
+ az acr create --name ACR_NAME --resource-group examples-rg --sku Basic  --admin-enabled true --verbose 
+```
 
-### Properties supported by the example
+Where ACR_NAME should be replaced by a unique name you will be using for this
+Azure Container Registry. If the ACR_NAME you picked is in use the creation of 
+the Azure Container Registry will fail and you will have to try again with
+another name.
 
-The example supports the following properties that you can pass in as -Dname=value to the Maven command line to customize your deployment.
-
-| name                      | description                               |
-|---------------------------|-------------------------------------------|
-| example.adminEnabled      | enable the admin access keys (true/false) |
-| example.resourceGroup     | the Resource Group to use                 |
-| example.containerRegistry | the name of the Container Registry        |
-| example.sku               | the SKU to use                            |
+After the Azure Container Registry is successfully created capture the ACR_NAME
+you picked as it is needed when interacting with your Azure Container Registry.
 
 ## Cleanup
 
-Do NOT forget to remove the Resource Group once you are done running the example.
+Do NOT forget to remove the Azure Container Registry once you are done running the
+example.

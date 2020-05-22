@@ -9,16 +9,8 @@ subscription, if you have NOT done so please go to our top-level
 
 ## Delete the Resource Group
 
-To delete the Resource Group use the following Maven command line.
+To delete the Resource Group use the following command line:
 
 ````shell
-  mvn package
+ az group delete --name examples-rg --yes
 ````
-
-### Properties supported by the example
-
-The example supports the following properties that you can pass in as -Dname=value to the Maven command line to customize your deployment.
-
-| name                   | description                  |
-|------------------------|------------------------------|
-| example.resourceGroup  | the Resource Group to use    |

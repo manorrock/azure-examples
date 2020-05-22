@@ -18,10 +18,10 @@ This example assumes you have previously completed the following examples.
 To create the settings.xml use the following Maven command line.
 
 ````shell
-  mvn package -Dexample.registry=REGISTRY
+  mvn package -Dexample.registry=ACR_NAME
 ````
 
-Where ```REGISTRY``` is the name of your Azure Container Registry.
+Where ```ACR_NAME``` is the name of your Azure Container Registry.
 
 ### Properties supported by the example
 
@@ -34,4 +34,5 @@ The example supports the following properties that you can pass in as -Dname=val
 
 ## Cleanup
 
-Do NOT forget to remove the resources you might have created once you are done running the example.
+Do NOT forget to remove the resources you have created once you are done running
+the example.
