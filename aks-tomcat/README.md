@@ -22,16 +22,18 @@ To build the WAR file use the following Maven command line.
 ## Push the Docker image to your Azure Container Registry
 
 ````shell
-  mvn antrun:run@push -Dexample.registry=REGISTRY
+ az acr build --registry ACR_NAME --image example-tomcat:latest \
+    --file src/main/docker/Dockerfile .
 ````
 
-Where ```REGISTRY``` is the name of your Azure Container Registry.
+Where `ACR_NAME` is the name of your Azure Container Registry.
 
 ## Deploying to the AKS cluster
 
-First open `src/main/aks/deployment.yaml` in your favorite editor and replace
-`REGISTRY` with the name of your registry. Then execute the command below to
-deploy to the AKS cluster.
+First open the `src/main/aks/deployment.yaml` file in an editor and replace
+`ACR_NAME` with the name of your Azure Container Registry.
+
+Then execute the command below to deploy to the AKS cluster:
 
 ```shell
 kubectl apply -f src/main/aks/deployment.yaml
@@ -58,23 +60,7 @@ And this is served by Tomcat deployed on Azure Kubernetes Service using
 a Docker image coming from our own Azure Container Registry
 ```
 
-### Properties supported by the example
-
-The example supports the following properties that you can pass in as -Dname=value
-to the Maven command line to customize your deployment.
-
-| name                   | description                      |
-|------------------------|----------------------------------|
-| example.appName        | the application name             |
-| example.imageName      | the Docker image name            |
-| example.resourceGroup  | the resource group               |
-| example.registryUrl    | the registry URL                 |
-| example.registry       | the name of your Docker registry |
-| example.serverId       | the Maven server id              |
-| example.appServicePlan | the App Service plan to use      |
-| example.resourceGroup  | the Azure Resource Group name    |
-
 ## Cleanup
 
-Do NOT forget to remove the App Service and its associated resources once you are
-done running the example.
+Do NOT forget to remove the resources you have created once you are done running
+the example.

@@ -30,16 +30,18 @@ To run the example locally use the following Maven command line.
 ## Push the Docker image to your Azure Container Registry
 
 ````shell
-  mvn antrun:run@push -Dexample.registry=REGISTRY
+ az acr build --registry ACR_NAME --image example-springboot:latest \
+    --file src/main/docker/Dockerfile .
 ````
 
-Where ```REGISTRY``` is the name of your Azure Container Registry.
+Where `ACR_NAME` is the name of your Azure Container Registry.
 
 ## Deploying to the AKS cluster
 
-First open `src/main/aks/deployment.yaml` in your favorite editor and replace
-`REGISTRY` with the name of your registry. Then execute the command below to
-deploy to the AKS cluster.
+First open the `src/main/aks/deployment.yaml` file in an editor and replace
+`ACR_NAME` with the name of your Azure Container Registry.
+
+Then execute the command below to deploy to the AKS cluster:
 
 ```shell
 kubectl apply -f src/main/aks/deployment.yaml
@@ -50,7 +52,7 @@ kubectl apply -f src/main/aks/deployment.yaml
 
 To get the public IP address use the following command.
 
-```
+```shell
 kubectl get service/springboot
 ```
 
@@ -59,29 +61,9 @@ might take a while before AKS has assigned a public IP.
 
 Once the `EXTERNAL-IP` shows up go to `http://EXTERNAL-IP:8080`.
 
-It should tell you 
-
-``shell
-Hello World
-``
-
-### Properties supported by the example
-
-The example supports the following properties that you can pass in as -Dname=value
-to the Maven command line to customize your deployment.
-
-| name                   | description                      |
-|------------------------|----------------------------------|
-| example.appName        | the application name             |
-| example.imageName      | the Docker image name            |
-| example.resourceGroup  | the resource group               |
-| example.registryUrl    | the registry URL                 |
-| example.registry       | the name of your Docker registry |
-| example.serverId       | the Maven server id              |
-| example.appServicePlan | the App Service plan to use      |
-| example.resourceGroup  | the Azure Resource Group name    |
+It should show you a page with the text `Hello World`.
 
 ## Cleanup
 
-Do NOT forget to remove the App Service and its associated resources once you are
-done running the example.
+Do NOT forget to remove the resources you have created once you are done running
+the example.

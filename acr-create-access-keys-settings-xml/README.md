@@ -21,7 +21,7 @@ To create the settings.xml use the following Maven command line.
   mvn package -Dexample.registry=ACR_NAME
 ````
 
-Where ```ACR_NAME``` is the name of your Azure Container Registry.
+Where `ACR_NAME` is the name of your Azure Container Registry.
 
 ### Properties supported by the example
 

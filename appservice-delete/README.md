@@ -26,8 +26,9 @@ The example supports the following properties that you can pass in as -Dname=val
 | name                     | description                  |
 |--------------------------|------------------------------|
 | example.resourceGroup    | the Azure Resource Group     |
-| example&#46;name         | the name of the App Service  |
+| example.name             | the name of the App Service  |
 
 ## Cleanup
 
-Do NOT forget to remove the resources you might have created once you are done running the example.
+Do NOT forget to remove the resources you have created once you are done running
+the example.

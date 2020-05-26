@@ -19,7 +19,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: wildfly
-        image: REGISTRY.azurecr.io/examples-wildfly
+        image: REGISTRY.azurecr.io/example-wildfly
         ports:
         - containerPort: 8080
           name: http

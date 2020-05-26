@@ -10,24 +10,45 @@ This example assumes you have previously completed the following examples.
 1. [Create Kube config file for your AKS cluster (using admin access)](../aks-create-kube-config/README.md)
 1. [Install Tiller on your AKS cluster (using Helm 2)](../aks-install-tiller/README.md)
 
-And it also assumes you have installed both `helm` and `kubectl`. If you need to install `helm`, please go to [Installing Helm 2](https://v2.helm.sh/docs/using_helm/#installing-helm). If you need to install `kubectl`, please go to [Install and Setup kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+And additionally it assumes you have installed both `helm` and `kubectl`. If you
+need to install `helm`, please go to [Installing Helm 2](https://v2.helm.sh/docs/using_helm/#installing-helm).
+If you need to install `kubectl`, please go to [Install and Setup kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
+## Create the Kubernetes namespace
+
+We will create a separate Kubernetes namespace which will be used for deploying
+the NGINX Ingress Controller.
+
+To do so use the following command line:
+
+```shell
+ kubectl create namespace ingress-basic
+```
+
+Note this example assumes that you have already configured `kubectl` to use the
+right context.
 
 ## Deploy the NGINX Ingress Controller
 
-Use the following Maven command line to deploy an NGINX Ingress Controller on your AKS cluster
+Use the following command line to deploy an NGINX Ingress Controller on your AKS
+cluster:
 
-````shell
-  mvn package
-````
+```shell
+ helm install stable/nginx-ingress --namespace ingress-basic --name nginx-ingress \
+      --set controller.replicaCount=2 \
+      --set controller.nodeSelector.'beta.kubernetes.io/os'=linux \
+      --set defaultBackend.nodeSelector.'beta.kubernetes.io/os'=linux \
+```
 
-Note this example assumes that you have already set ```kubectl``` to use the right context.
+## Get the external IP of the NGINX Ingress controller
 
-To get the External IP of the NGINX Ingress Controller you can use the command line below
+To get the External IP of the NGINX Ingress Controller use the command line below:
 
-````shell
-  kubectl --namespace ingress-basic get services -o wide nginx-ingress-controller
-````
+```shell
+ kubectl --namespace ingress-basic get services -o wide nginx-ingress-controller
+```
 
 ## Cleanup
 
-Do NOT forget to remove the resources you might have created once you are done running the example.
+Do NOT forget to remove the resources you have created once you are done running
+the example.
