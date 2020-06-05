@@ -1,4 +1,4 @@
 #
-# start services on random port by default
+# Start a service on random port by default
 #
 server.port: 0
