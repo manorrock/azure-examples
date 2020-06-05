@@ -15,8 +15,8 @@ To create the Azure Key Vault use the following command lines:
   KEYVAULT_NAME="keyvault-$RANDOM"
 
   az keyvault create \
-    --resource-group $RESOURCE_GROUP_NAME
-    --name $KEY_VAULT_NAME \
+    --resource-group $RESOURCE_GROUP_NAME \
+    --name $KEYVAULT_NAME
 ```
 
 ## Cleanup
