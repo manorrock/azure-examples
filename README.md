@@ -77,7 +77,8 @@ To make sure each example knows about the parent POM you have to invoke the foll
 
 ## Azure Key Vault examples
 
-1. [Create an Azure Key Vault](keyvault-create/README.md)
+1. [Create an Azure Key Vault](keyvault/create/)
+1. [Add a Secret to an Azure Key Vault](keyvault/add-secret/)
 
 ## Azure Kubernetes Service examples
 

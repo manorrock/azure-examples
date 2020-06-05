@@ -5,4 +5,3 @@ spring:
         git:
           uri: https://github.com/manorrock/azure-examples.git
           default-label: spring-cloud-config-server
-

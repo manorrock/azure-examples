@@ -4,7 +4,7 @@
 ## Prerequisites
 
 This example assume you have created the resource group, if you have NOT done so,
-please go to [Create an Azure Resource Group](../resourcegroup-create/README.md)
+please go to [Create an Azure Resource Group](../../resourcegroup-create/README.md)
 
 ## Create the Azure Spring Cloud
 
