@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples.
 To use the Azure Spring Cloud Config Server you need to give it a configuration
 file that points to the Git repository you want to use. The command line below
 sets the configuration of the Spring Cloud Config Server according to what is in
-the application.yml.
+the `application.yml` file.
 
 ```shell
   az spring-cloud config-server set \
