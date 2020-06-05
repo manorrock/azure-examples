@@ -14,8 +14,8 @@ To add a Secret to the Azure Key Vault use the command line below:
 
 ```shell
   az keyvault secret set \
-    --name mySecret
-    --value mySecretValue
+    --name mySecret \
+    --value mySecretValue \
     --vault-name $KEYVAULT_NAME
 ```
 
