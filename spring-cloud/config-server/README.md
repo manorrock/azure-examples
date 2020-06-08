@@ -5,8 +5,8 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../resourcegroup-create/README.md)
-1. [Create an Azure Spring Cloud instance](../create/README.md)
+1. [Create an Azure Resource Group](../../group/create/)
+1. [Create an Azure Spring Cloud instance](../create/)
 
 ## Configure the Azure Spring Cloud Config Server
 

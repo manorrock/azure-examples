@@ -93,13 +93,13 @@ To make sure each example knows about the parent POM you have to invoke the foll
 
 ## Azure Resource Group examples
 
-1. [Create an Azure Resource Group](resourcegroup-create/README.md)
+1. [Create an Azure Resource Group](group/create/)
 1. [Delete an Azure Resource Group](resourcegroup-delete/README.md)
 
 ## Azure Spring Cloud examples
 
-1. [Create an Azure Spring Cloud](spring-cloud/create/README.md)
-1. [Deploy a Spring Boot application to Azure Spring Cloud](springcloud-helloworld/README.md)
+1. [Create an Azure Spring Cloud](spring-cloud/create/)
+1. [Deploy a Spring Boot application to Azure Spring Cloud](spring-cloud/helloworld/)
 1. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/)
 
 ## Azure Storage Account examples
