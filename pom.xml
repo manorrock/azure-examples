@@ -66,8 +66,7 @@
         <profile>
             <id>safeguard</id>
             <modules>
-                <module>acr-create</module>
-                <module>acr-create-access-keys-settings-xml</module>
+                <module>acr</module>
                 <module>aks-create</module>
                 <module>aks-create-kube-config</module>
                 <module>aks-deploy-nginx-ingress-controller</module>
@@ -96,7 +95,6 @@
                 <module>keyvault-create</module>
                 <module>resourcegroup-create</module>
                 <module>resourcegroup-delete</module>
-                <module>springcloud-helloworld</module>
                 <module>spring-cloud</module>
             </modules>
         </profile>

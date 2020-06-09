@@ -64,8 +64,8 @@ To make sure each example knows about the parent POM you have to invoke the foll
 
 ## Azure Container Registry examples
 
-1. [Deploy an Azure Container registry](acr-create/README.md)
-1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr-create-access-keys-settings-xml/README.md)
+1. [Deploy an Azure Container registry](acr/create/)
+1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
 
 ## Azure Cosmos DB examples
 
