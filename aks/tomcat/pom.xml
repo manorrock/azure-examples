@@ -13,39 +13,5 @@
     <artifactId>tomcat</artifactId>
     <packaging>war</packaging>
     <name>Deploy a Tomcat application to an Azure Kubernetes Service cluster</name>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <id>push</id>
-                        <phase>none</phase>
-                        <configuration>
-                            <target>
-                                <exec executable="az">
-                                    <arg line="acr build --registry '${example.registry}' --image ${example.imageName} --file src/main/docker/Dockerfile ."/>
-                                </exec>
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-    <properties>
-        <example.appName>${example.prefix}-aks-tomcat-${example.postfix}</example.appName>
-        <example.imageName>${example.prefix}-tomcat:latest</example.imageName>
-        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
-        <example.registryUrl>https://${example.serverId}.azurecr.io</example.registryUrl>
-        <example.registry>FILL_THIS_IN</example.registry>
-        <example.serverId>${example.registry}</example.serverId>
-        <java.version>1.8</java.version>
-    </properties>
 </project>
 
