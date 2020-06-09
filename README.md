@@ -82,14 +82,14 @@ To make sure each example knows about the parent POM you have to invoke the foll
 
 ## Azure Kubernetes Service examples
 
-1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks-create/README.md)
-1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks-create-kube-config/README.md)
-1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks-install-tiller/README.md)
-1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks-deploy-nginx-ingress-controller/README.md)
-1. [Update your AKS cluster to use your Azure Container Registry](aks-use-your-acr/README.md)
-1. [Deploy a Spring Boot application to AKS](aks-springboot/README.md)
-1. [Deploy a Tomcat web application to AKS](aks-tomcat/README.md)
-1. [Deploy a WildFly application to AKS](aks-wildfly/README.md)
+1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks/create/)
+1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks/create-kube-config/)
+1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks/install-tiller/)
+1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks/deploy-nginx-ingress-controller/)
+1. [Update your AKS cluster to use your Azure Container Registry](aks/use-your-acr/)
+1. [Deploy a Spring Boot application to AKS](aks/springboot/)
+1. [Deploy a Tomcat web application to AKS](aks/tomcat/)
+1. [Deploy a WildFly application to AKS](aks/wildfly/)
 
 ## Azure Resource Group examples
 

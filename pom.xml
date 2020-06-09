@@ -67,14 +67,7 @@
             <id>safeguard</id>
             <modules>
                 <module>acr</module>
-                <module>aks-create</module>
-                <module>aks-create-kube-config</module>
-                <module>aks-deploy-nginx-ingress-controller</module>
-                <module>aks-install-tiller</module>
-                <module>aks-springboot</module>
-                <module>aks-tomcat</module>
-                <module>aks-use-your-acr</module>
-                <module>aks-wildfly</module>
+                <module>aks</module>
                 <module>appservice-delete</module>
                 <module>appservice-docker-custom</module>
                 <module>appservice-docker-glassfish</module>

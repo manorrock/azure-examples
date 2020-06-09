@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>examples.azure.aks</groupId>
+        <artifactId>project</artifactId>
+        <version>1-SNAPSHOT</version>
+    </parent>
+    <artifactId>springboot</artifactId>
+    <packaging>jar</packaging>
+    <name>Deploy a Spring Boot application to an Azure Kubernetes Service cluster</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.1.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>examples.azure.aks.springboot.HelloWorldApplication</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>push</id>
+                        <phase>none</phase>
+                        <configuration>
+                            <target>
+                                <exec executable="az">
+                                    <arg line="acr build --registry '${example.registry}' --image ${example.imageName} --file src/main/docker/Dockerfile ."/>
+                                </exec>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>2.2.1.RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <version>9.0.27</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+        <example.appName>${example.prefix}-springboot-${example.postfix}</example.appName>
+        <example.imageName>${example.prefix}-springboot:latest</example.imageName>
+        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
+        <example.registryUrl>https://${example.serverId}.azurecr.io</example.registryUrl>
+        <example.registry>FILL_THIS_IN</example.registry>
+        <example.serverId>${example.registry}</example.serverId>
+        <java.version>1.8</java.version>
+    </properties>
+</project>
+
