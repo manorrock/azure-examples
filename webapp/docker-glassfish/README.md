@@ -3,28 +3,53 @@
 
 ## Prerequisites
 
-This example assume you have created the appropriate App Service Plan, if you
-have not done so please [Create an Azure App Service Plan](../appserviceplan-create/README.md)
+This example assumes you have previously completed the following examples.
+
+1. [Create an Azure Resource Group](../../group/create/)
+1. [Deploy an Azure Container Registry](../../acr/create/)
+1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../acr/create-access-keys-settings-xml/)
+1. [Create an Azure App Service Plan](../appserviceplan-create/README.md)
+
+## Push the Docker image to your Azure Container Registry
+
+To build and push the Docker image to your ACR use the command line below:
+
+````shell
+  export APPSERVICE_DOCKER_GLASSFISH_IMAGE=appservice-docker-glassfish:latest
+
+  az acr build --registry $ACR --image $APPSERVICE_DOCKER_GLASSFISH_IMAGE .
+````
 
 ## Deploy the example
 
-To deploy the example use the following Maven command line.
+To deploy the example use the following command line:
 
-````shell
-  mvn azure-webapp:deploy
-````
+```shell
+  export APPSERVICE_DOCKER_GLASSFISH_NAME=appservice-docker-glassfish-$RANDOM
 
-### Properties supported by the example
+  mvn azure-webapp:deploy \
+    --settings=$SETTINGS_XML \
+    -DappName=$APPSERVICE_DOCKER_GLASSFISH_NAME \
+    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DresourceGroup=$RESOURCE_GROUP \
+    -DserverId=$ACR
+```
 
-The example supports the following properties that you can pass in as -Dname=value to the Maven command line to customize your deployment.
+## Properties supported by the example
 
-| name                   | description                  |
-|------------------------|------------------------------|
-| example.appName        | the application name         |
-| example.appServicePlan | the App Service plan to use  |
-| example.imageName      | the Docker image name        |
-| example.resourceGroup  | the Azure Resource Group     |
+The example supports the following properties that you can pass in as -Dname=value
+to the Maven command line to customize your deployment.
+
+| name                   | description                       |
+|------------------------|-----------------------------------|
+| appName                | the application name              |
+| appServicePlan         | the App Service plan to use       |
+| imageName              | the Docker image name             |
+| serverId               | the Maven server id               |
+| registry               | the Azure Container Registry name |
+| registryUrl            | the Azure Container Registry url  |
+| resourceGroup          | the Azure Resource Group name     |
 
 ## Cleanup
 
-Do NOT forget to remove the App Service and its associated resources once you are done running the example.
+Do NOT forget to remove the resources once you are done running the example.

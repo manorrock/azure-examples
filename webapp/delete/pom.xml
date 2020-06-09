@@ -9,34 +9,8 @@
     </parent>
     <artifactId>appservice-delete</artifactId>
     <packaging>pom</packaging>
-    <name>Delete an Azure App Service</name>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <configuration>
-                            <target>
-                                <exec executable="az">
-                                    <arg line="webapp delete --resource-group '${example.resourceGroup}' --name '${example.name}'"/>
-                                </exec>
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+    <name>Delete your web application from Azure App Service</name>
     <properties>
-        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
-        <example.name>MAKE_SURE_YOU_SPECIFY_THIS_ON_THE_COMMANDLINE</example.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
