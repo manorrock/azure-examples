@@ -10,12 +10,11 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.keyvault</groupId>
+    <groupId>examples.azure.group</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure KeyVault examples</name>
+    <name>Azure Resource Group examples</name>
     <modules>
         <module>create</module>
-        <module>add-secret</module>
     </modules>
 </project>

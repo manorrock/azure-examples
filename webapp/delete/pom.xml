@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.springcloud</groupId>
+        <groupId>examples.azure.webapp</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>create</artifactId>
+    <artifactId>appservice-delete</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Spring Cloud</name>
+    <name>Delete an Azure App Service</name>
     <build>
         <plugins>
             <plugin>
@@ -23,12 +20,9 @@
                     <execution>
                         <phase>package</phase>
                         <configuration>
-                            <target> 
+                            <target>
                                 <exec executable="az">
-                                    <arg line="extension add --name spring-cloud"/>
-                                </exec>
-                                <exec executable="az">
-                                    <arg line="spring-cloud create --resource-group ${example.resourceGroup} --name ${example.springCloudName}"/>
+                                    <arg line="webapp delete --resource-group '${example.resourceGroup}' --name '${example.name}'"/>
                                 </exec>
                             </target>
                         </configuration>
@@ -41,7 +35,8 @@
         </plugins>
     </build>
     <properties>
-        <example.springCloudName>${example.prefix}-springcloud-${example.postfix}</example.springCloudName>
         <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
+        <example.name>MAKE_SURE_YOU_SPECIFY_THIS_ON_THE_COMMANDLINE</example.name>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>

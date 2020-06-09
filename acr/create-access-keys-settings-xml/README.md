@@ -37,11 +37,17 @@ Get the ACR password
 
 Fill in the settings.xml file
 
-````shell
-  sed -i '' "s/REGISTRY/$ACR/" settings.xml
-  sed -i '' "s/USERNAME/$ACR_USERNAME/" settings.xml
-  sed -i '' "s/PASSWORD/$ACR_PASSWORD/" settings.xml
-````
+```shell
+  sed -i '' "s/ACR_ID/$ACR/" settings.xml
+  sed -i '' "s/ACR_USERNAME/$ACR_USERNAME/" settings.xml
+  sed -i '' "s/ACR_PASSWORD/$ACR_PASSWORD/" settings.xml
+```
+
+Set the SETTINGS_XML variable
+
+```shell
+  export SETTINGS_XML=$PWD/settings.xml
+```
 
 ## Cleanup
 

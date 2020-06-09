@@ -13,6 +13,7 @@
     <groupId>examples.azure.springcloud</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
+    <name>Azure Spring Cloud examples</name>
     <modules>
         <module>create</module>
         <module>config-server</module>

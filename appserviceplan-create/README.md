@@ -3,27 +3,25 @@
 
 ## Prerequisites
 
-This example assume you have created the resource group, if you have NOT done so,
-please go to [Create an Azure Resource Group](../resourcegroup-create/README.md)
+This example assumes you have previously completed the following example:
+
+1. [Create an Azure Resource Group](../../group/create/)
 
 ## Create the Azure App Service Plan
 
-To create the Azure App Service Plan use the following Maven command line.
+To create the Azure App Service Plan use the following command line:
 
-````shell
-  mvn package
-````
+```shell
+  export APP_SERVICE_PLAN=appservice-plan
 
-### Properties supported by the example
-
-The example supports the following properties that you can pass in as -Dname=value to the Maven command line to customize your deployment.
-
-| name                   | description                         |
-|------------------------|-------------------------------------|
-| example.appServicePlan | the App Service Plan name to create |
-| example.region         | the region to create in             |
-| example.resourceGroup  | the Resource Group to use           |
+  az appservice plan create \
+    --resource-group $RESOURCE_GROUP \
+    --location westus2 \
+    --name $APP_SERVICE_PLAN \
+    --is-linux \
+    --sku P1V2
+```
 
 ## Cleanup
 
-Do NOT forget to remove the App Service Plan Group once you are done running the example.
+Do NOT forget to remove the resources once you are done running the example.

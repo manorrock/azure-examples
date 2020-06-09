@@ -68,27 +68,16 @@
             <modules>
                 <module>acr</module>
                 <module>aks</module>
-                <module>appservice-delete</module>
-                <module>appservice-docker-custom</module>
-                <module>appservice-docker-glassfish</module>
-                <module>appservice-docker-graalvm</module>
-                <module>appservice-docker-jetty</module>
-                <module>appservice-docker-payara</module>
-                <module>appservice-docker-tomcat</module>
-                <module>appservice-docker-wildfly</module>
-                <module>appservice-javase-springboot</module>
-                <module>appservice-javase-quarkus</module>
-                <module>appservice-list</module>
-                <module>appservice-tomcat-helloworld</module>
                 <module>appserviceplan-create</module>
                 <module>appserviceplan-delete</module>
                 <module>appserviceplan-scale-manually</module>
                 <module>cosmosdb-create</module>
                 <module>function-java</module>
-                <module>keyvault-create</module>
-                <module>resourcegroup-create</module>
+                <module>group</module>
+                <module>keyvault</module>
                 <module>resourcegroup-delete</module>
                 <module>spring-cloud</module>
+                <module>webapp</module>
             </modules>
         </profile>
     </profiles>

@@ -10,12 +10,22 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.keyvault</groupId>
+    <groupId>examples.azure.webapp</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure KeyVault examples</name>
+    <name>Azure App Service examples</name>
     <modules>
-        <module>create</module>
-        <module>add-secret</module>
+        <module>delete</module>
+        <module>docker-custom</module>
+        <module>docker-glassfish</module>
+        <module>docker-graalvm</module>
+        <module>docker-jetty</module>
+        <module>docker-payara</module>
+        <module>docker-tomcat</module>
+        <module>docker-wildfly</module>
+        <module>javase-springboot</module>
+        <module>javase-quarkus</module>
+        <module>list</module>
+        <module>tomcat-helloworld</module>
     </modules>
 </project>
