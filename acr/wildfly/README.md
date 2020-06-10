@@ -7,25 +7,24 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../create/)
-1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../create-access-keys-settings-xml/)
 
 ## Build the WAR file
 
 To build the WAR file use the following command line:
 
-````shell
+```shell
   mvn package
-````
+```
 
 ## Build and push the Docker image to your Azure Container Registry
 
 To build and push the Docker image to your ACR use the command line below:
 
-````shell
+```shell
   export ACR_WILDFLY_IMAGE=acr-wildfly:latest
 
   az acr build --registry $ACR --image $ACR_WILDFLY_IMAGE .
-````
+```
 
 ## Cleanup
 
