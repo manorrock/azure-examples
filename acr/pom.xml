@@ -17,5 +17,6 @@
     <modules>
         <module>create</module>
         <module>create-access-keys-settings-xml</module>
+        <module>wildfly</module>
     </modules>
 </project>
