@@ -11,6 +11,6 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>wildfly</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>Deploy a WildFly application to an Azure Kubernetes Service cluster</name>
 </project>

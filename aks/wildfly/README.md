@@ -7,23 +7,10 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
+1. [Create a custom WildFly Docker image and push it to Azure Container Registry](../../acr/wildfly/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Deploy an AKS cluster (Azure Kubernetes Service)](../create/)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/)
-
-## Build the example
-
-To build the WAR file use the following Maven command line.
-
-````shell
-  mvn package
-````
-
-## Push the Docker image to your Azure Container Registry
-
-````shell
- az acr build --registry $ACR --image example-wildfly:latest .
-````
 
 ## Deploying to the AKS cluster
 

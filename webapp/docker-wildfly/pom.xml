@@ -7,25 +7,24 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>appservice-docker-wildfly</artifactId>
-    <packaging>war</packaging>
+    <artifactId>docker-wildfly</artifactId>
+    <packaging>pom</packaging>
     <name>Create a custom WildFly and deploy it to Azure App Service (using a Docker image)</name>
     <build>
-        <finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-webapp-maven-plugin</artifactId>
                 <configuration>
                     <schemaVersion>V2</schemaVersion>
-                    <resourceGroup>${example.resourceGroup}</resourceGroup>
-                    <appName>${example.appName}</appName>
-                    <appServicePlanName>${example.appServicePlan}</appServicePlanName>
+                    <resourceGroup>${resourceGroup}</resourceGroup>
+                    <appName>${appName}</appName>
+                    <appServicePlanName>${appServicePlan}</appServicePlanName>
                     <runtime>
                         <os>docker</os>
-                        <image>${example.imageName}</image>
-                        <serverId>${example.serverId}</serverId>
-                        <registryUrl>${example.registryUrl}</registryUrl>
+                        <image>${imageName}</image>
+                        <serverId>${serverId}</serverId>
+                        <registryUrl>${registryUrl}</registryUrl>
                     </runtime>
                     <appSettings>
                         <property>
@@ -35,37 +34,15 @@
                     </appSettings>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <id>push</id>
-                        <phase>none</phase>
-                        <configuration>
-                            <target>
-                                <exec executable="az">
-                                    <arg line="acr build --registry '${example.registry}' --image ${example.imageName} --file src/main/docker/Dockerfile ."/>
-                                </exec>
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
     <properties>
-        <example.appName>${example.prefix}-wildfly-${example.postfix}</example.appName>
-        <example.appServicePlan>${example.prefix}-appServicePlan</example.appServicePlan>
-        <example.imageName>${example.prefix}-wildfly:latest</example.imageName>
-        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
-        <example.registryUrl>https://${example.serverId}.azurecr.io</example.registryUrl>
-        <example.registry>FILL_THIS_IN</example.registry>
-        <example.serverId>${example.registry}</example.serverId>
+        <appName>appservice-docker-wildfly-${example.postfix}</appName>
+        <appServicePlan>appservice-plan</appServicePlan>
+        <imageName>acr-wildfly:latest</imageName>
+        <resourceGroup>azure-examples</resourceGroup>
+        <registryUrl>https://${serverId}.azurecr.io</registryUrl>
+        <serverId>${env.ACR}</serverId>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
