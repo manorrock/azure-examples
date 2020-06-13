@@ -12,5 +12,5 @@ subscription, if you have NOT done so please go to our top-level
 To delete the Resource Group use the following command line:
 
 ````shell
- az group delete --name examples-rg --yes
+ az group delete --name azure-examples --yes
 ````

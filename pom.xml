@@ -75,7 +75,6 @@
                 <module>function-java</module>
                 <module>group</module>
                 <module>keyvault</module>
-                <module>resourcegroup-delete</module>
                 <module>spring-cloud</module>
                 <module>webapp</module>
             </modules>

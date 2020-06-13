@@ -16,5 +16,6 @@
     <name>Azure Resource Group examples</name>
     <modules>
         <module>create</module>
+        <module>delete</module>
     </modules>
 </project>
