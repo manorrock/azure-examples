@@ -43,18 +43,18 @@ To make sure each example knows about the parent POM you have to invoke the foll
 
 ## Azure App Service examples
 
-1. [List your Azure App Services](appservice-list/README.md)
-1. [Delete an Azure App Service](appservice-delete/README.md)
-1. [Deploy a web application on Azure App Service (managed Tomcat)](appservice-tomcat-helloworld/README.md)
-1. [Deploy Tomcat on Azure App Service (using a Docker image)](appservice-docker-tomcat/README.md)
-1. [Deploy Jetty on Azure App Service (using a Docker image)](appservice-docker-jetty/README.md)
-1. [Deploy Payara on Azure App Service (using a Docker image)](appservice-docker-payara/README.md)
-1. [Deploy Glassfish on Azure App Service (using a Docker image)](appservice-docker-glassfish/README.md)
-1. [Create a custom Tomcat and deploy it on Azure App Service (using a Docker image)](appservice-docker-custom/README.md)
-1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](appservice-javase-springboot/README.md)
-1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](appservice-docker-wildfly/README.md)
-1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](appservice-javase-quarkus/README.md)
-1. [Deploy a GraalVM application on Azure App Service (using Docker)](appservice-docker-graalvm/README.md)
+1. [List your Azure App Services](webapp/list/)
+1. [Delete an Azure App Service](webapp/delete/)
+1. [Deploy a web application on Azure App Service (managed Tomcat)](webapp/tomcat-helloworld/)
+1. [Deploy Tomcat on Azure App Service (using a Docker image)](webapp/docker-tomcat/)
+1. [Deploy Jetty on Azure App Service (using a Docker image)](webapp/docker-jetty/)
+1. [Deploy Payara on Azure App Service (using a Docker image)](webapp/docker-payara/)
+1. [Deploy Glassfish on Azure App Service (using a Docker image)](webapp/docker-glassfish/)
+1. [Create a custom Tomcat and deploy it on Azure App Service (using a Docker image)](webapp/docker-custom/)
+1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](webapp/javase-springboot/)
+1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](webapp/docker-wildfly/)
+1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](webapp/javase-quarkus/)
+1. [Deploy a GraalVM application on Azure App Service (using Docker)](webapp/docker-graalvm/)
 
 ## Azure App Service plan examples
 
@@ -94,7 +94,7 @@ To make sure each example knows about the parent POM you have to invoke the foll
 ## Azure Resource Group examples
 
 1. [Create an Azure Resource Group](group/create/)
-1. [Delete an Azure Resource Group](resourcegroup-delete/README.md)
+1. [Delete an Azure Resource Group](group/delete/)
 
 ## Azure Spring Cloud examples
 
