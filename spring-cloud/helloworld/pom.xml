@@ -71,33 +71,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <id>deploy</id>
-                        <phase>none</phase>
-                        <configuration>
-                            <target>
-                                <exec executable="az">
-                                    <arg line="spring-cloud app create -n ${example.appName} -s ${example.springCloudName} -g ${example.resourceGroup} --is-public true"/>
-                                </exec>
-                                <exec executable="az">
-                                    <arg line="spring-cloud app deploy -n ${example.appName} -s ${example.springCloudName} -g ${example.resourceGroup} --jar-path ./target/springcloud-helloworld.jar"/>
-                                </exec>
-                                <exec executable="az">
-                                    <arg line="spring-cloud app show -n ${example.appName} -s ${example.springCloudName} -g ${example.resourceGroup}"/>
-                                </exec>
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 

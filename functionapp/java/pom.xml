@@ -3,31 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.functionapp</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>function-java</artifactId>
+    <artifactId>java-function</artifactId>
     <packaging>jar</packaging>
     <name>Deploy a Java Azure Function</name>
-    
-    <properties>
-        <example.appName>function-java-${example.postfix}</example.appName>
-        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <stagingDirectory>${project.build.directory}/azure-functions/${example.appName}</stagingDirectory>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.microsoft.azure.functions</groupId>
-            <artifactId>azure-functions-java-library</artifactId>
-            <version>1.3.1</version>
-        </dependency>
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -35,8 +17,8 @@
                 <artifactId>azure-functions-maven-plugin</artifactId>
                 <version>1.3.4</version>
                 <configuration>
-                    <resourceGroup>${example.resourceGroup}</resourceGroup>
-                    <appName>${example.appName}</appName>
+                    <resourceGroup>${resourceGroup}</resourceGroup>
+                    <appName>${appName}</appName>
                     <appSettings>
                         <property>
                             <name>WEBSITE_RUN_FROM_PACKAGE</name>
@@ -120,5 +102,19 @@
             </plugin>
         </plugins>
     </build>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.microsoft.azure.functions</groupId>
+            <artifactId>azure-functions-java-library</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <appName>java-function</appName>
+        <resourceGroup>azure-examples</resourceGroup>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>
+    </properties>
 </project>

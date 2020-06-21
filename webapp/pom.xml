@@ -13,7 +13,7 @@
     <groupId>examples.azure.webapp</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure App Service examples</name>
+    <name>Azure Webapp examples</name>
     <modules>
         <module>delete</module>
         <module>docker-custom</module>

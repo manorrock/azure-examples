@@ -6,11 +6,17 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.acr</groupId>
+        <groupId>examples.azure.appservice</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>acr-create</artifactId>
+    <groupId>examples.azure.appservice.plan</groupId>
+    <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy an Azure Container Registry</name>
+    <name>Azure App Service Plan examples</name>
+    <modules>
+        <module>create</module>
+        <module>delete</module>
+        <module>scale-manually</module>
+    </modules>
 </project>

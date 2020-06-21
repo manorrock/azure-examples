@@ -3,27 +3,24 @@
 
 ## Prerequisites
 
-This example assume you have created the resource group, if you have NOT done so,
-please go to [Create an Azure Resource Group](../../group/create/)
+This example assumes you have previously completed the following examples:
+
+1. [Create an Azure Resource Group](../../group/create/)
 
 ## Create the Azure Spring Cloud
 
-To create the Azure Spring Cloud use the following Maven command line.
+To create the Azure Spring Cloud use the following command lines:
 
-````shell
-  mvn package
-````
+```shell
+  az extension add --name spring-cloud
 
-### Properties supported by the example
+  export SPRING_CLOUD_NAME=springcloud-$RANDOM
 
-The example supports the following properties that you can pass in as 
--Dname=value to the Maven command line to customize your deployment.
-
-| name                   | description                            |
-|------------------------|----------------------------------------|
-| example.resourceGroup  | the Resource Group to use              |
-| example.springCloudName| the name of the Spring Cloud to create |
+  az spring-cloud create \
+    --resource-group $RESOURCE_GROUP \
+    --name $SPRING_CLOUD_NAME
+```
 
 ## Cleanup
 
-Do NOT forget to remove the Azure Spring Cloud once you are done running the example.
+Do NOT forget to remove the resources once you are done running the example.

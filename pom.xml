@@ -62,28 +62,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <profiles>
-        <profile>
-            <id>safeguard</id>
-            <modules>
-                <module>acr</module>
-                <module>aks</module>
-                <module>appserviceplan-create</module>
-                <module>appserviceplan-delete</module>
-                <module>appserviceplan-scale-manually</module>
-                <module>cosmosdb-create</module>
-                <module>function-java</module>
-                <module>group</module>
-                <module>keyvault</module>
-                <module>spring-cloud</module>
-                <module>webapp</module>
-            </modules>
-        </profile>
-    </profiles>
+    <modules>
+        <module>acr</module>
+        <module>aks</module>
+        <module>appservice</module>
+        <module>cosmosdb</module>
+        <module>functionapp</module>
+        <module>group</module>
+        <module>keyvault</module>
+        <module>spring-cloud</module>
+        <module>webapp</module>
+    </modules>
     <properties>
-        <example.postfix>${maven.build.timestamp}</example.postfix>
-        <example.prefix>examples</example.prefix>
-        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
