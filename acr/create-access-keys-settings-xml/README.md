@@ -15,12 +15,6 @@ This example assumes you have previously completed the following examples.
 
 ## Create the settings.xml
 
-Copy the settings.xml template
-
-```shell
-  cp settings.template settings.xml
-```
-
 Get the ACR username
 
 ```shell
@@ -33,14 +27,6 @@ Get the ACR password
 ```shell
   export ACR_PASSWORD=`az acr credential show --name $ACR \
     --resource-group $RESOURCE_GROUP --query passwords[0].value --output tsv`
-```
-
-Fill in the settings.xml file
-
-```shell
-  sed -i '' "s/ACR_ID/$ACR/" settings.xml
-  sed -i '' "s/ACR_USERNAME/$ACR_USERNAME/" settings.xml
-  sed -i '' "s/ACR_PASSWORD/$ACR_PASSWORD/" settings.xml
 ```
 
 Set the SETTINGS_XML variable
