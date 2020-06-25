@@ -18,10 +18,18 @@ This example assumes you have previously completed the following examples.
 To create the Kubeconfig file use the following command line:
 
 ```shell
- az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
+  az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
 ````
 
 Once the command completes the Kubeconfig file is stored in a file named `config`
+
+## Setting the KUBECONFIG environment variable
+
+Set the KUBECONFIG environment variable using the command line below:
+
+```shell
+  export KUBECONFIG=$PWD/config
+```
 
 ## Cleanup
 
