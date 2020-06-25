@@ -19,7 +19,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: wildfly
-        image: ACR.azurecr.io/acr-wildfly:latest
+        image: acr21146.azurecr.io/acr-wildfly:latest
         ports:
         - containerPort: 8080
           name: http
@@ -36,6 +36,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
+  - port: 80
+    targetPort: 8080
   selector:
     app: wildfly

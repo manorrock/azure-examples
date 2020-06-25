@@ -19,7 +19,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: tomcat
-        image: ACR.azurecr.io/example-tomcat
+        image: acr21146.azurecr.io/example-tomcat
         ports:
         - containerPort: 8080
           name: http
@@ -36,6 +36,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
+  - port: 80
+    targetPort: 8080
   selector:
     app: tomcat
