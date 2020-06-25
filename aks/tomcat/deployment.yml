@@ -19,7 +19,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: tomcat
-        image: acr21146.azurecr.io/example-tomcat
+        image: ACR.azurecr.io/example-tomcat
         ports:
         - containerPort: 8080
           name: http
