@@ -16,8 +16,8 @@ To scale the Azure App Service Plan use the following command line:
 ```shell
   az appservice plan update \
     --verbose \
-    --name $APP_SERVICE_PLAN \ 
-    --resource-group $RESOURCE_GROUP 
+    --name $APP_SERVICE_PLAN \
+    --resource-group $RESOURCE_GROUP \
     --number-of-workers 2
 ```
 
