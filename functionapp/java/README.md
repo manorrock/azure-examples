@@ -11,25 +11,25 @@ This example assumes you have previously completed the following.
 ## Set the app name
 
 ```shell
-  export FUNCTION_APP_NAME=java-function-$RANDOM
+  export FUNCTION_APP_JAVA=function-app-java-$RANDOM
 ```
 
 ## Build the example
 
 To build the JAR file use the following Maven command line.
 
-````shell
-  mvn -DappName=$FUNCTION_APP_NAME -DresourceGroup=$RESOURCE_GROUP package
-````
+```shell
+  mvn -DappName=$FUNCTION_APP_JAVA -DresourceGroup=$RESOURCE_GROUP package
+```
 
 ## Run example locally
 
 To run the example locally use the following Maven command line.
 
-````shell
-  mvn -DappName=$FUNCTION_APP_NAME  -DresourceGroup=$RESOURCE_GROUP \
+```shell
+  mvn -DappName=$FUNCTION_APP_JAVA  -DresourceGroup=$RESOURCE_GROUP \
     clean package azure-functions:run
-````
+```
 
 You can verify the function works by using your favorite browser and going
 to  http://localhost:7071/api/helloworld
@@ -37,7 +37,7 @@ to  http://localhost:7071/api/helloworld
 ## Deploy the Azure Function to Azure
 
 ```shell
-  mvn -DappName=$FUNCTION_APP_NAME  -DresourceGroup=$RESOURCE_GROUP \
+  mvn -DappName=$FUNCTION_APP_JAVA  -DresourceGroup=$RESOURCE_GROUP \
     clean package azure-functions:deploy
 ```
 
