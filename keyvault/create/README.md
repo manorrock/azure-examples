@@ -5,7 +5,7 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../resourcegroup-create/README.md)
+1. [Create an Azure Resource Group](../../group/create/)
 
 ## Create the Azure Key Vault
 
@@ -15,7 +15,7 @@ To create the Azure Key Vault use the following command lines:
   KEYVAULT_NAME="keyvault-$RANDOM"
 
   az keyvault create \
-    --resource-group $RESOURCE_GROUP_NAME \
+    --resource-group $RESOURCE_GROUP \
     --name $KEYVAULT_NAME
 ```
 
