@@ -12,11 +12,11 @@ This example assumes you have previously completed the following example:
 To create the Azure Storage Account use the following command line:
 
 ```shell
-  export STORAGE_ACCOUNT_NAME=storage-$RANDOM
+  export STORAGE_ACCOUNT_NAME=storage$RANDOM
 
   az storage account create \
     --name $STORAGE_ACCOUNT_NAME \
-    --resource-group $RESOURCE_GROUP
+    --resource-group $RESOURCE_GROUP \
     --sku Standard_LRS \
     --kind StorageV2
 ```
