@@ -18,7 +18,8 @@ the `application.yml` file.
 ```shell
   az spring-cloud config-server set \
         --config-file application.yml \
-        --name ${SPRING_CLOUD_NAME}
+        --name ${SPRING_CLOUD_NAME} \
+        --resource-group ${RESOURCE_GROUP}
 ```
 
 Note as a convenience (to keep everything in one Git repository) the `application.yml`

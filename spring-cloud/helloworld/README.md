@@ -36,19 +36,19 @@ to http://localhost:8080/
 ```shell
   az spring-cloud app create \
     --name helloworld \
-    --service ${SPRING_CLOUD} \
-    --resource-group ${RESOURCE_GROUP}
+    --service ${SPRING_CLOUD_NAME} \
+    --resource-group ${RESOURCE_GROUP} \
     --is-public true
 
   az spring-cloud app deploy \
     --name helloworld \
-    --service ${SPRING_CLOUD}
-    --resource-group ${RESOURCE_GROUP}
+    --service ${SPRING_CLOUD_NAME} \
+    --resource-group ${RESOURCE_GROUP} \
     --jar-path ./target/springcloud-helloworld.jar
 
   az spring-cloud app show \
     --name helloworld \
-    --service ${SPRING_CLOUD}
+    --service ${SPRING_CLOUD_NAME} \
     --resource-group ${RESOURCE_GROUP}
 ```
 
