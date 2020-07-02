@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure App Service Plan](../../appserviceplan-create/README.md)
+1. [Create an Azure App Service Plan](../../appservice/plan/create/)
 1. [Deploy a Web application on Azure App Service (managed Tomcat)](../tomcat-helloworld/)
 
 ## List your web applications on Azure App Service
