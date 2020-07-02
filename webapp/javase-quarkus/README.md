@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure App Service Plan](../../appserviceplan-create/README.md)
+1. [Create an Azure App Service Plan](../../appservice/plan/create/)
 
 ## Build the example
 
@@ -28,11 +28,16 @@ You can see the application in action at http://localhost:8080/hello
 
 ## Deploy the example
 
-To deploy the example use the following Maven command line.
+To deploy the example use the following command lines:
 
-```shell
-  mvn azure-webapp:deploy
-```
+````shell
+  export JAVASE_QUARKUS_WEBAPP=javase-quarkus-$RANDOM
+
+  mvn azure-webapp:deploy \
+    -DappName=$JAVASE_QUARKUS_WEBAPP \
+    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DresourceGroup=$RESOURCE_GROUP
+````
 
 Once the command completes you will be able to see the example by using your web
 browser and going to the ```xxxxx.azurewebsites.net``` address the command echoes.
