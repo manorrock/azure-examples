@@ -9,11 +9,11 @@ This example assumes you have previously completed the following examples.
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create a custom WildFly Docker image and push it to Azure Container Registry](../../acr/wildfly/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../acr/create-access-keys-settings-xml/)
-1. [Create an Azure App Service Plan](../appserviceplan-create/README.md)
+1. [Create an Azure App Service Plan](../appservice/plan/create/)
 
 ## Deploy the example
 
-To deploy the example use the following command line:
+To deploy the example use the following command lines:
 
 ```shell
   export APPSERVICE_DOCKER_WILDFLY_NAME=appservice-docker-wildfly-$RANDOM
@@ -21,7 +21,7 @@ To deploy the example use the following command line:
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_WILDFLY_NAME \
-    -DimageName=acr-wildfly:latest
+    -DimageName=acr-wildfly:latest \
     -DappServicePlan=$APP_SERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR
