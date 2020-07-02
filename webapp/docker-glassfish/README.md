@@ -8,7 +8,7 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../acr/create-access-keys-settings-xml/)
-1. [Create an Azure App Service Plan](../appserviceplan-create/README.md)
+1. [Create an Azure App Service Plan](../appservice/plan/create/)
 
 ## Push the Docker image to your Azure Container Registry
 
