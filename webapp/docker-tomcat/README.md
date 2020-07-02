@@ -3,27 +3,35 @@
 
 ## Prerequisites
 
-This example assume you have created the appropriate App Service Plan, if you
-have not done so please [Create an Azure App Service Plan](../appserviceplan-create/README.md)
+This example assumes you have previously completed the following examples:
+
+1. [Create an Azure Resource Group](../../group/create/)
+1. [Create an Azure App Service Plan](../../appservice/plan/create/)
 
 ## Deploy the example
 
 To deploy the example use the following Maven command line.
 
 ````shell
-  mvn azure-webapp:deploy
+  export DOCKER_TOMCAT_WEBAPP=docker-tomcat-$RANDOM
+
+  mvn azure-webapp:deploy \
+    -DappName=$DOCKER_TOMCAT_WEBAPP \
+    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DresourceGroup=$RESOURCE_GROUP
 ````
 
 ### Properties supported by the example
 
-The example supports the following properties that you can pass in as -Dname=value to the Maven command line to customize your deployment.
+The example supports the following properties that you can pass in as
+-Dname=value to the Maven command line to customize your deployment.
 
 | name                   | description                  |
 |------------------------|------------------------------|
-| example.appName        | the application name         |
-| example.appServicePlan | the App Service plan to use  |
-| example.imageName      | the Docker image name        |
-| example.resourceGroup  | the Azure Resource Group     |
+| appName                | the application name         |
+| appServicePlan         | the App Service plan to use  |
+| imageName              | the Docker image name        |
+| resourceGroup          | the Azure Resource Group     |
 
 ## Cleanup
 
