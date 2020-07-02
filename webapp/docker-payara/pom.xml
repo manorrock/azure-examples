@@ -17,11 +17,11 @@
                 <artifactId>azure-webapp-maven-plugin</artifactId>
                 <configuration>
                     <deploymentType>none</deploymentType>
-                    <resourceGroup>${example.resourceGroup}</resourceGroup>
-                    <appName>${example.appName}</appName>
-                    <appServicePlanName>${example.appServicePlan}</appServicePlanName>
+                    <resourceGroup>${resourceGroup}</resourceGroup>
+                    <appName>${appName}</appName>
+                    <appServicePlanName>${appServicePlan}</appServicePlanName>
                     <containerSettings>
-                        <imageName>${example.imageName}</imageName>
+                        <imageName>${imageName}</imageName>
                     </containerSettings>
                     <appSettings>
                         <property>
@@ -34,10 +34,9 @@
         </plugins>
     </build>
     <properties>
-        <example.appName>${example.prefix}-payara-${example.postfix}</example.appName>
-        <example.appServicePlan>${example.prefix}-appServicePlan</example.appServicePlan>
-        <example.imageName>manorrock/payara</example.imageName>
-        <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
+        <appServicePlan>appservice-plan"</appServicePlan>
+        <imageName>manorrock/payara</imageName>
+        <resourceGroup>azure-examples</resourceGroup>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
