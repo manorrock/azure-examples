@@ -14,7 +14,7 @@ To delete the web application from Azure App Service use the following command
 line:
 
 ```shell
-  az webapp delete --resource-group $RESOURCE_GROUP' --name FILL_THIS_IN
+  az webapp delete --resource-group $RESOURCE_GROUP --name FILL_THIS_IN
 ```
 
 Note if you do not know what the value of `FILL_THIS_IN` should be, you can
