@@ -7,8 +7,8 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
-1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../acr/create-access-keys-settings-xml/)
-1. [Create an Azure App Service Plan](../appserviceplan-create/README.md)
+1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
+1. [Create an Azure App Service Plan](../appservice/plan/create/)
 
 ## Build the example
 
@@ -23,9 +23,9 @@ To build the WAR file use the following command line:
 To build and push the Docker image to your ACR use the command line below:
 
 ````shell
-  export APPSERVICE_DOCKER_TOMCAT_IMAGE=appservice-docker-tomcat:latest
+  export WEBAPP_DOCKER_CUSTOM_IMAGE=webapp-docker-custom:latest
 
-  az acr build --registry $ACR --image $APPSERVICE_DOCKER_TOMCAT_IMAGE .
+  az acr build --registry $ACR --image $WEBAPP_DOCKER_CUSTOM_IMAGE .
 ````
 
 ## Deploy the example
@@ -33,11 +33,12 @@ To build and push the Docker image to your ACR use the command line below:
 To deploy the example use the following command line:
 
 ```shell
-  export APPSERVICE_DOCKER_TOMCAT_NAME=appservice-docker-tomcat-$RANDOM
+  export WEBAPP_DOCKER_CUSTOM_NAME=webapp-docker-custom-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
-    -DappName=$APPSERVICE_DOCKER_TOMCAT_NAME \
+    -DappName=$WEBAPP_DOCKER_CUSTOM_NAME \
+    -DimageName=$WEBAPP_DOCKER_CUSTOM_IMAGE \
     -DappServicePlan=$APP_SERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR

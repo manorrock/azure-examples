@@ -38,9 +38,8 @@
         </plugins>
     </build>
     <properties>
-        <appName>appservice-docker-tomcat-${example.postfix}</appName>
         <appServicePlan>appservice-plan</appServicePlan>
-        <imageName>appservice-docker-tomcat:latest</imageName>
+        <imageName>webapp-docker-custom:latest</imageName>
         <resourceGroup>azure-examples</resourceGroup>
         <registryUrl>https://${serverId}.azurecr.io</registryUrl>
         <serverId>${env.ACR}</serverId>
