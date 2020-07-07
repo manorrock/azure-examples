@@ -61,6 +61,10 @@ Set your default subscription for this session using the subscription id from th
 1. [Delete an Azure App Service Plan](appservice/plan/delete/)
 1. [Scale your Azure App Service Plan manually](appservice/plan/scale-manually/)
 
+## Azure Red Hat OpenShift examples
+
+1. [Deploy an Azure Red Hat OpenShift cluster](aro/create/)
+
 ## Azure Cosmos DB examples
 
 1. [Create an Azure Cosmos DB](cosmosdb/create/)
