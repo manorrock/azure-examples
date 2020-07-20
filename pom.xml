@@ -71,6 +71,7 @@
         <module>functionapp</module>
         <module>group</module>
         <module>keyvault</module>
+        <module>mysql</module>
         <module>spring-cloud</module>
         <module>webapp</module>
     </modules>

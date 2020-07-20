@@ -38,63 +38,13 @@ Set your default subscription for this session using the subscription id from th
   az account set --subscription "subscription-id"
 ````
 
-## Azure Container Registry examples
+## Hosting platforms
 
-1. [Deploy an Azure Container registry](acr/create/)
-1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
-1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)
-
-## Azure Kubernetes Service examples
-
-1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks/create/)
-1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks/create-kube-config/)
-1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks/install-tiller/)
-1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks/deploy-nginx-ingress-controller/)
-1. [Update your AKS cluster to use your Azure Container Registry](aks/use-your-acr/)
-1. [Deploy a Spring Boot application to AKS](aks/springboot/)
-1. [Deploy a Tomcat web application to AKS](aks/tomcat/)
-1. [Deploy a WildFly application to AKS](aks/wildfly/)
-
-## Azure App Service plan examples
+### Azure App Service examples
 
 1. [Create an Azure App Service Plan](appservice/plan/create/)
 1. [Delete an Azure App Service Plan](appservice/plan/delete/)
 1. [Scale your Azure App Service Plan manually](appservice/plan/scale-manually/)
-
-## Azure Red Hat OpenShift examples
-
-1. [Deploy an Azure Red Hat OpenShift cluster](aro/create/)
-
-## Azure Cosmos DB examples
-
-1. [Create an Azure Cosmos DB](cosmosdb/create/)
-
-## Azure Functions examples
-
-1. [Deploy a Java Azure Function](functionapp/java/)
-
-## Azure Resource Group examples
-
-1. [Create an Azure Resource Group](group/create/)
-1. [Delete an Azure Resource Group](group/delete/)
-
-## Azure Key Vault examples
-
-1. [Create an Azure Key Vault](keyvault/create/)
-1. [Add a Secret to an Azure Key Vault](keyvault/add-secret/)
-
-## Azure Spring Cloud examples
-
-1. [Create an Azure Spring Cloud](spring-cloud/create/)
-1. [Deploy a Spring Boot application to Azure Spring Cloud](spring-cloud/helloworld/)
-1. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/)
-
-## Azure Storage examples
-
-1. [Create an Azure Storage Account](storage/create/)
-
-## Azure Webapp examples
-
 1. [List your Azure App Services](webapp/list/)
 1. [Delete an Azure App Service](webapp/delete/)
 1. [Deploy a web application on Azure App Service (managed Tomcat)](webapp/tomcat-helloworld/)
@@ -107,3 +57,60 @@ Set your default subscription for this session using the subscription id from th
 1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](webapp/docker-wildfly/)
 1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](webapp/javase-quarkus/)
 1. [Deploy a GraalVM application on Azure App Service (using Docker)](webapp/docker-graalvm/)
+
+## Azure Functions examples
+
+1. [Deploy a Java Azure Function](functionapp/java/)
+
+### Azure Kubernetes Service examples
+
+1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks/create/)
+1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks/create-kube-config/)
+1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks/install-tiller/)
+1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks/deploy-nginx-ingress-controller/)
+1. [Update your AKS cluster to use your Azure Container Registry](aks/use-your-acr/)
+1. [Deploy a Spring Boot application to AKS](aks/springboot/)
+1. [Deploy a Tomcat web application to AKS](aks/tomcat/)
+1. [Deploy a WildFly application to AKS](aks/wildfly/)
+
+### Azure Red Hat OpenShift examples
+
+1. [Deploy an Azure Red Hat OpenShift cluster](aro/create/)
+
+### Azure Spring Cloud examples
+
+1. [Create an Azure Spring Cloud](spring-cloud/create/)
+1. [Deploy a Spring Boot application to Azure Spring Cloud](spring-cloud/helloworld/)
+1. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/)
+
+## Databases
+
+### Azure Database for MySQL examples
+
+1. [Deploy an Azure Database for MySQL](mysql/create/)
+
+### Azure Cosmos DB examples
+
+1. [Create an Azure Cosmos DB](cosmosdb/create/)
+
+## Supporting services / examples
+
+### Azure Container Registry examples
+
+1. [Deploy an Azure Container registry](acr/create/)
+1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
+1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)
+
+### Azure Key Vault examples
+
+1. [Create an Azure Key Vault](keyvault/create/)
+1. [Add a Secret to an Azure Key Vault](keyvault/add-secret/)
+
+### Azure Resource Group examples
+
+1. [Create an Azure Resource Group](group/create/)
+1. [Delete an Azure Resource Group](group/delete/)
+
+## Azure Storage examples
+
+1. [Create an Azure Storage Account](storage/create/)
