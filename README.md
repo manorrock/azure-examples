@@ -88,7 +88,8 @@ Set your default subscription for this session using the subscription id from th
 ### Azure Database for MySQL examples
 
 1. [Deploy an Azure Database for MySQL](mysql/create/)
-1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip)
+1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip/)
+1. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/)
 
 ### Azure Cosmos DB examples
 

@@ -20,3 +20,9 @@ To create the Resource Group use the following command line:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Next steps
+
+1. [Manage resource groups and template deployments](https://docs.microsoft.com/en-us/cli/azure/group)
+
+1m

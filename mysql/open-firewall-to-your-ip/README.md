@@ -11,8 +11,8 @@ This example assumes you have previously completed the following:
 
 ## Open MySQL server firewall to your local IP address
 
-To make it possible to communicate with your MySQL server from your local IP,
-please execute the following command lines:
+To make it possible to communicate with your MySQL server from your local IP
+address execute the following command lines:
 
 ```shell
   export LOCAL_IP=`curl -s whatismyip.akamai.com`
@@ -31,10 +31,10 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-1. [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
-1. [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
-1. [Minimal downtime migration](https://docs.microsoft.com/en-us/azure/mysql/howto-migrate-online)
-1. [Query data using Java](https://docs.microsoft.com/en-us/azure/mysql/connect-java)
-1. [Manage Azure Database for MySQL servers](https://docs.microsoft.com/en-us/cli/azure/mysql)
+* [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
+* [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
+* [Minimal downtime migration](https://docs.microsoft.com/en-us/azure/mysql/howto-migrate-online)
+* [Query data using Java](https://docs.microsoft.com/en-us/azure/mysql/connect-java)
+* [Manage Azure Database for MySQL servers](https://docs.microsoft.com/en-us/cli/azure/mysql)
 
 1m
