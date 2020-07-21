@@ -28,3 +28,13 @@ To create the Azure Database for MySQL use the following command line:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Next steps
+
+1. [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
+1. [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
+1. [Minimal downtime migration](https://docs.microsoft.com/en-us/azure/mysql/howto-migrate-online)
+1. [Query data using Java](https://docs.microsoft.com/en-us/azure/mysql/connect-java)
+1. [Manage Azure Database for MySQL servers](https://docs.microsoft.com/en-us/cli/azure/mysql)
+
+4m
