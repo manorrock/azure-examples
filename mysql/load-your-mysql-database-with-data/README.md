@@ -41,8 +41,10 @@ And to exit the `mysql` tool use the following command line:
   \q
 ```
 
+>
 > If your country is missing from the SQL file please let us know by filing a
 > GitHub issue or by issuing a PR against this repository.
+>
 
 ## Cleanup
 
