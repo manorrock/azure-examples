@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools)
+1. [Install Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools)
 
 ## Set the app name
 
@@ -31,8 +31,10 @@ To run the example locally use the following Maven command line.
     clean package azure-functions:run
 ```
 
-You can verify the function works by using your favorite browser and going
-to  http://localhost:7071/api/helloworld
+You can verify the function works by using your browser and going to 
+http://localhost:7071/api/helloworld
+
+You should see `Hello World` in your brower.
 
 ## Deploy the Azure Function to Azure
 
@@ -41,16 +43,26 @@ to  http://localhost:7071/api/helloworld
     clean package azure-functions:deploy
 ```
 
-Once the deploy is done you will find the deployment URL in the output. The URL 
-should be similar to the one below:
+To verify the function works open your browser to the URL echoed by the 
+following command line:
 
 ```shell
-https://XYZ.azurewebsites.net
+  echo `az functionapp show \
+    --resource-group $RESOURCE_GROUP \
+    --name $FUNCTION_APP_JAVA \
+    --query hostNames \
+    --output tsv`/api/helloworld
 ```
 
-Now add `/api/helloworld` to the end of it and use that constructed URL in your 
-favorite browser to test the function.
+You should see `Hello World` in your browser.
 
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Next steps
+
+* [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+* [Manage function apps](https://docs.microsoft.com/cli/azure/functionapp)
+
+5m
