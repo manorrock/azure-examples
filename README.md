@@ -58,7 +58,7 @@ Set your default subscription for this session using the subscription id from th
 1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](webapp/javase-quarkus/)
 1. [Deploy a GraalVM application on Azure App Service (using Docker)](webapp/docker-graalvm/)
 
-## Azure Functions examples
+### Azure Functions examples
 
 1. [Deploy a Java Azure Function](functionapp/java/)
 
@@ -88,6 +88,7 @@ Set your default subscription for this session using the subscription id from th
 ### Azure Database for MySQL examples
 
 1. [Deploy an Azure Database for MySQL](mysql/create/)
+1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip)
 
 ### Azure Cosmos DB examples
 
