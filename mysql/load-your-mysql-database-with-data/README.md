@@ -31,13 +31,13 @@ connect to the database:
 Then use the following command line to load the `load.sql` file into the
 database:
 
-```
+```shell
   source load.sql;
 ```
 
 And to exit the `mysql` tool use the following command line:
 
-```
+```shell
   \q
 ```
 
