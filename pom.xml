@@ -67,6 +67,7 @@
         <module>aks</module>
         <module>appservice</module>
         <module>aro</module>
+        <module>container</module>
         <module>cosmosdb</module>
         <module>functionapp</module>
         <module>group</module>
