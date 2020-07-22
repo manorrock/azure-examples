@@ -30,3 +30,5 @@ Execute the following command lines to create the 'acrpull' Service Principal:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+1m
