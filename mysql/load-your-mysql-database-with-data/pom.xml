@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>open-firewall-to-your-ip</artifactId>
+    <artifactId>load-your-mysql-database-with-data</artifactId>
     <packaging>pom</packaging>
     <name>Open MySQL server firewall to your IP address</name>
 </project>
