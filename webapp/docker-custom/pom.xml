@@ -42,7 +42,7 @@
         <imageName>webapp-docker-custom:latest</imageName>
         <resourceGroup>azure-examples</resourceGroup>
         <registryUrl>https://${serverId}.azurecr.io</registryUrl>
-        <serverId>${env.ACR}</serverId>
+        <serverId>${env.ACR_NAME}</serverId>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>

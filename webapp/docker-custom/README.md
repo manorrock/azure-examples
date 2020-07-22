@@ -25,7 +25,7 @@ To build and push the Docker image to your ACR use the command line below:
 ````shell
   export WEBAPP_DOCKER_CUSTOM_IMAGE=webapp-docker-custom:latest
 
-  az acr build --registry $ACR --image $WEBAPP_DOCKER_CUSTOM_IMAGE .
+  az acr build --registry $ACR_NAME --image $WEBAPP_DOCKER_CUSTOM_IMAGE .
 ````
 
 ## Deploy the example
@@ -41,7 +41,7 @@ To deploy the example use the following command line:
     -DimageName=$WEBAPP_DOCKER_CUSTOM_IMAGE \
     -DappServicePlan=$APP_SERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
-    -DserverId=$ACR
+    -DserverId=$ACR_NAME
 ```
 
 ## Properties supported by the example

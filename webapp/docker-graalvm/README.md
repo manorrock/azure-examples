@@ -44,7 +44,7 @@ path of the current directory.
 ```shell
   export IMAGE=graalvm:latest
 
-  az acr build --registry $ACR --image $IMAGE .
+  az acr build --registry $ACR_NAME --image $IMAGE .
 ```
 
 ## Deploy the example

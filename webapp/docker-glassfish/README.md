@@ -17,7 +17,7 @@ To build and push the Docker image to your ACR use the command line below:
 ````shell
   export APPSERVICE_DOCKER_GLASSFISH_IMAGE=appservice-docker-glassfish:latest
 
-  az acr build --registry $ACR --image $APPSERVICE_DOCKER_GLASSFISH_IMAGE .
+  az acr build --registry $ACR_NAME --image $APPSERVICE_DOCKER_GLASSFISH_IMAGE .
 ````
 
 ## Deploy the example
@@ -32,7 +32,7 @@ To deploy the example use the following command line:
     -DappName=$APPSERVICE_DOCKER_GLASSFISH_NAME \
     -DappServicePlan=$APP_SERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
-    -DserverId=$ACR
+    -DserverId=$ACR_NAME
 ```
 
 ## Properties supported by the example

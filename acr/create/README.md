@@ -12,10 +12,10 @@ This example assumes you have previously completed the following example.
 To deploy the basic Azure Container Registry use the following command line:
 
 ```shell
-  export ACR=acr$RANDOM
+  export ACR_NAME=acr$RANDOM
 
   az acr create \
-    --name $ACR \
+    --name $ACR_NAME \
     --resource-group $RESOURCE_GROUP \
     --sku Basic \
     --admin-enabled true
@@ -24,3 +24,5 @@ To deploy the basic Azure Container Registry use the following command line:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+1m
