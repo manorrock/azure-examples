@@ -58,6 +58,11 @@ Set your default subscription for this session using the subscription id from th
 1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](webapp/javase-quarkus/)
 1. [Deploy a GraalVM application on Azure App Service (using Docker)](webapp/docker-graalvm/)
 
+### Azure Container Instance examples
+
+1. [Deploy a custom Tomcat and deploy it on Azure Container Instance](container/tomcat/)
+1. [Deploy a custom WildFly and deploy it on Azure Container Instance](container/wildfly/)
+
 ### Azure Functions examples
 
 1. [Deploy a Java Azure Function](functionapp/java/)
@@ -102,6 +107,7 @@ Set your default subscription for this session using the subscription id from th
 1. [Deploy an Azure Container registry](acr/create/)
 1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
 1. [Create an 'acrpull' Service Principal](acr/create-acrpull-service-principal/)
+1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](acr/tomcat/)
 1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)
 
 ### Azure Key Vault examples
