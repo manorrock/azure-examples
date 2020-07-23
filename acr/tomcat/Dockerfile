@@ -26,6 +26,7 @@ RUN export TOMCAT_VERSION=9.0.37 && \
     curl -O https://archive.apache.org/dist/tomcat/tomcat-9/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz && \
     tar xf apache-tomcat-$TOMCAT_VERSION.tar.gz && \
     mv /opt/apache-tomcat-$TOMCAT_VERSION /opt/tomcat && \
+    rm -rf /opt/tomcat/webapps/* && \
     rm apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 #
