@@ -24,3 +24,5 @@ To create the Azure Spring Cloud use the following command lines:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+6m

@@ -28,7 +28,7 @@ Note you will see exception occurring in the logs because you are not running th
 application within the Azure Spring Cloud. Do not worry this expected and can be
 ignored.
 
-You can verify the application works by using your favorite browser and going
+You can verify the application works by using your browser and going
 to http://localhost:8080/
 
 ## Deploy the application to Azure Spring Cloud
@@ -49,17 +49,22 @@ to http://localhost:8080/
   az spring-cloud app show \
     --name helloworld \
     --service ${SPRING_CLOUD_NAME} \
-    --resource-group ${RESOURCE_GROUP}
+    --resource-group ${RESOURCE_GROUP} \
+    --query properties.url \
+    --output tsv
 ```
 
-Once the deploy is done use the "url" found in the output to point your favorite
-browser to your Spring Boot application which is now running on your Azure Spring
-Cloud. The URL should be similar to the one below:
+You can verify the application works, now on Azure Spring Cloud, by using your 
+browser and going to the URL shown.
 
-```shell
-https://XYZ.azuremicroservices.io
+It should show you the following:
+
+```text
+Hello World
 ```
 
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+6m

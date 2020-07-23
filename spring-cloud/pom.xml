@@ -17,5 +17,6 @@
     <modules>
         <module>create</module>
         <module>config-server</module>
+        <module>helloworld</module>
     </modules>
 </project>
