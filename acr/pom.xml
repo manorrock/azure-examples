@@ -18,6 +18,7 @@
         <module>create</module>
         <module>create-access-keys-settings-xml</module>
         <module>create-acrpull-service-principal</module>
+        <module>tomcat</module>
         <module>wildfly</module>
     </modules>
 </project>
