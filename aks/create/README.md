@@ -20,3 +20,5 @@ To deploy the Azure Kubernetes Service cluster use the following command line:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+4m

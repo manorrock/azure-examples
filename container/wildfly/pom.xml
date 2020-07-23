@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>docker-wildfly</artifactId>
+    <artifactId>wildfly</artifactId>
     <packaging>pom</packaging>
-    <name>Create a custom WildFly and deploy it to Azure Container Instance (using a Docker image)</name>
+    <name>Deploy a custom WildFly to Azure Container Instances</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

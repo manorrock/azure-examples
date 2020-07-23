@@ -1,5 +1,5 @@
 
-# Create a custom WildFly and deploy it on Azure Container Instance (using a Docker image)
+# Deploy a custom WildFly to Azure Container Instances
 
 ## Prerequisites
 
@@ -15,21 +15,21 @@ This example assumes you have previously completed the following examples.
 To deploy the example use the following command line:
 
 ```shell
-  export ACI_DOCKER_WILDFLY_NAME=aci-docker-wildfly-$RANDOM
+  export ACI_WILDFLY_NAME=aci-wildfly-$RANDOM
 
   az container create \
     --resource-group $RESOURCE_GROUP \
-    --name $ACI_DOCKER_WILDFLY_NAME \
+    --name $ACI_WILDFLY_NAME \
     --image $ACR_NAME.azurecr.io/acr-wildfly:latest \
     --registry-login-server $ACR_NAME.azurecr.io \
     --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
     --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
-    --dns-name-label $ACI_DOCKER_WILDFLY_NAME \
+    --dns-name-label $ACI_WILDFLY_NAME \
     --ports 8080
 
   echo `az container show \
     --resource-group $RESOURCE_GROUP \
-    --name $ACI_DOCKER_WILDFLY_NAME \
+    --name $ACI_WILDFLY_NAME \
     --query ipAddress.fqdn \
     --output tsv`:8080
 ```

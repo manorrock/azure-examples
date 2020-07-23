@@ -38,3 +38,5 @@ Set the SETTINGS_XML variable
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+1m

@@ -9,7 +9,7 @@
     </parent>
     <artifactId>tomcat</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a custom Tomcat to Azure Container Instance (using a Docker image)</name>
+    <name>Deploy a custom Tomcat to Azure Container Instances</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

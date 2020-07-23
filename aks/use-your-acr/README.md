@@ -21,3 +21,5 @@ Registry you need to use the following command line.
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+1m

@@ -34,3 +34,5 @@ Set the KUBECONFIG environment variable using the command line below:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done with the example.
+
+1m

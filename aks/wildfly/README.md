@@ -10,6 +10,7 @@ This example assumes you have previously completed the following examples.
 1. [Create a custom WildFly Docker image and push it to Azure Container Registry](../../acr/wildfly/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Deploy an AKS cluster (Azure Kubernetes Service)](../create/)
+1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/)
 
 ## Deploying to the AKS cluster
@@ -43,7 +44,7 @@ Once the `EXTERNAL-IP` shows up open your browser to `http://EXTERNAL-IP`.
 
 It should tell you:
 
-```shell
+```text
 And this is served by a custom WildFly using a Docker image coming from our 
 own Azure Container Registry.
 ```
@@ -51,3 +52,5 @@ own Azure Container Registry.
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+1m

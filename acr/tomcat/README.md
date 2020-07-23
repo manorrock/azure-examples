@@ -29,3 +29,5 @@ To build and push the Docker image to your ACR use the command lines below:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+2m

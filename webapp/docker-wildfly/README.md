@@ -1,5 +1,5 @@
 
-# Create a custom WildFly and deploy it to Azure App Service (using a Docker image)
+# Deploy a custom WildFly to Azure App Service (using a Docker image)
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create a custom WildFly Docker image and push it to Azure Container Registry](../../acr/wildfly/)
-1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../acr/create-access-keys-settings-xml/)
+1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Create an Azure App Service Plan](../appservice/plan/create/)
 
 ## Deploy the example
@@ -25,6 +25,19 @@ To deploy the example use the following command lines:
     -DappServicePlan=$APP_SERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR_NAME
+
+  az webapp show \
+    --resource-group $RESOURCE_GROUP \
+    --name $APPSERVICE_DOCKER_WILDFLY_NAME \
+    --query hostNames[0] \
+    --output tsv
+```
+
+Then open your browser to the URL shown as output and you should see:
+
+```text
+And this is served by a custom WildFly using a Docker image coming from our 
+own Azure Container Registry.
 ```
 
 ## Properties supported by the example
@@ -45,3 +58,5 @@ to the Maven command line to customize your deployment.
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+3m

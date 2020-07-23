@@ -1,5 +1,5 @@
 
-# Deploy a custom Tomcat and deploy it on Azure Container Instance
+# Deploy a custom Tomcat to Azure Container Instances
 
 ## Prerequisites
 
