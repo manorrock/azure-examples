@@ -6,16 +6,12 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.storage.blob</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.storage</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>enable-static-website-hosting</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Storage examples</name>
-    <modules>
-        <module>account</module>
-        <module>blob</module>
-    </modules>
+    <name>Enable static website hosting</name>
 </project>
+
