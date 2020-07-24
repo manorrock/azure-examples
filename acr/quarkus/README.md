@@ -1,5 +1,5 @@
 
-# Create a Quarkus application packaged as a Docker image
+# Create a Quarkus application packaged as a Docker image and push it to Azure Container Registry
 
 ## Prerequisites
 
