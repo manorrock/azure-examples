@@ -121,7 +121,7 @@ Set your default subscription for this session using the subscription id from th
 1. [Create an Azure Resource Group](group/create/)
 1. [Delete an Azure Resource Group](group/delete/)
 
-## Azure Storage examples
+### Azure Storage examples
 
 1. [Create an Azure Storage Account](storage/create/)
 1. [Enabled static website hosting on Azure Storage](storage/blob/enable-static-website-hosting/)
