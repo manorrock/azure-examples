@@ -124,3 +124,4 @@ Set your default subscription for this session using the subscription id from th
 ## Azure Storage examples
 
 1. [Create an Azure Storage Account](storage/create/)
+1. [Enabled static website hosting on Azure Storage](storage/blob/enable-static-website-hosting/)
