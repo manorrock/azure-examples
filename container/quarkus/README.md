@@ -1,5 +1,5 @@
 
-# Deploy a custom Tomcat to Azure Container Instances
+# Deploy a Quarkus application to Azure Container Instances
 
 ## Prerequisites
 
