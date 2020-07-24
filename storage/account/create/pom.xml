@@ -13,5 +13,4 @@
     <artifactId>create</artifactId>
     <packaging>pom</packaging>
     <name>Create an Azure Storage Account</name>
-    </properties>
 </project>

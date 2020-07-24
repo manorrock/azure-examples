@@ -74,6 +74,7 @@
         <module>keyvault</module>
         <module>mysql</module>
         <module>spring-cloud</module>
+        <module>storage</module>
         <module>webapp</module>
     </modules>
     <properties>
