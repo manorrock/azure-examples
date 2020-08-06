@@ -16,7 +16,6 @@
     <name>Azure Webapp examples</name>
     <modules>
         <module>delete</module>
-        <module>docker-custom</module>
         <module>docker-glassfish</module>
         <module>docker-graalvm</module>
         <module>docker-jetty</module>

@@ -52,7 +52,6 @@ Set your default subscription for this session using the subscription id from th
 1. [Deploy Jetty on Azure App Service (using a Docker image)](webapp/docker-jetty/)
 1. [Deploy Payara on Azure App Service (using a Docker image)](webapp/docker-payara/)
 1. [Deploy Glassfish on Azure App Service (using a Docker image)](webapp/docker-glassfish/)
-1. [Create a custom Tomcat and deploy it on Azure App Service (using a Docker image)](webapp/docker-custom/)
 1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](webapp/javase-springboot/)
 1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](webapp/docker-wildfly/)
 1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](webapp/javase-quarkus/)
