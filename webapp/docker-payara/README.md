@@ -1,38 +1,62 @@
 
-# Payara on Azure App Service (using a Docker image)
+# Deploy a custom Payara to Azure App Service (using a Docker image)
 
 ## Prerequisites
 
-This example assumes you have previously completed the following examples:
+This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
+1. [Deploy an Azure Container Registry](../../acr/create/)
+1. [Create a custom Payara Docker image and push it to Azure Container Registry](../../acr/payara/)
+1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Create an Azure App Service Plan](../../appservice/plan/create/)
 
 ## Deploy the example
 
-To deploy the example use the following Maven command line.
+To deploy the example use the following command lines:
 
-````shell
-  export DOCKER_PAYARA_WEBAPP=docker-payara-$RANDOM
+```shell
+  export APPSERVICE_DOCKER_PAYARA_NAME=appservice-docker-payara-$RANDOM
 
   mvn azure-webapp:deploy \
-    -DappName=$DOCKER_PAYARA_WEBAPP \
+    --settings=$SETTINGS_XML \
+    -DappName=$APPSERVICE_DOCKER_PAYARA_NAME \
+    -DimageName=acr-payara:latest \
     -DappServicePlan=$APP_SERVICE_PLAN \
-    -DresourceGroup=$RESOURCE_GROUP
-````
+    -DresourceGroup=$RESOURCE_GROUP \
+    -DserverId=$ACR_NAME
 
-### Properties supported by the example
+  az webapp show \
+    --resource-group $RESOURCE_GROUP \
+    --name $APPSERVICE_DOCKER_PAYARA_NAME \
+    --query hostNames[0] \
+    --output tsv
+```
 
-The example supports the following properties that you can pass in as
--Dname=value to the Maven command line to customize your deployment.
+Then open your browser to the URL shown as output and you should see:
 
-| name                   | description                  |
-|------------------------|------------------------------|
-| appName                | the application name         |
-| appServicePlan         | the App Service plan to use  |
-| imageName              | the Docker image name        |
-| resourceGroup          | the Azure Resource Group     |
+```text
+And this is served by a custom Payara using a Docker image coming from our 
+own Azure Container Registry.
+```
+
+## Properties supported by the example
+
+The example supports the following properties that you can pass in as -Dname=value
+to the Maven command line to customize your deployment.
+
+| name                   | description                       |
+|------------------------|-----------------------------------|
+| appName                | the application name              |
+| appServicePlan         | the App Service plan to use       |
+| imageName              | the Docker image name             |
+| serverId               | the Maven server id               |
+| registry               | the Azure Container Registry name |
+| registryUrl            | the Azure Container Registry url  |
+| resourceGroup          | the Azure Resource Group name     |
 
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+3m

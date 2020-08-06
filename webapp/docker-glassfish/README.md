@@ -1,5 +1,5 @@
 
-# Deploy a custom WildFly to Azure App Service (using a Docker image)
+# Deploy a custom Glassfish to Azure App Service (using a Docker image)
 
 ## Prerequisites
 
