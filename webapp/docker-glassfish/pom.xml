@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-docker-glassfish</artifactId>
     <packaging>pom</packaging>
-    <name>Glassfish on Azure App Service (using a Docker image)</name>
+    <name>Deploy a custom Glassfish to Azure App Service (using a Docker image)</name>
     <build>
         <plugins>
             <plugin>
@@ -37,9 +37,9 @@
         </plugins>
     </build>
     <properties>
-        <appName>appservice-docker-glassfish-${postfix}</appName>
+        <appName>appservice-docker-glassfish-${example.postfix}</appName>
         <appServicePlan>appservice-plan</appServicePlan>
-        <imageName>appservice-docker-glassfish:latest</imageName>
+        <imageName>acr-glassfish:latest</imageName>
         <resourceGroup>azure-examples</resourceGroup>
         <registryUrl>https://${serverId}.azurecr.io</registryUrl>
         <serverId>${env.ACR_NAME}</serverId>
