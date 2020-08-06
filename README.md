@@ -107,6 +107,7 @@ Set your default subscription for this session using the subscription id from th
 1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
 1. [Create an 'acrpull' Service Principal](acr/create-acrpull-service-principal/)
 1. [Create a custom Glassfish Docker image and push it to Azure Container Registry](acr/glassfish/)
+1. [Create a custom Payara Docker image and push it to Azure Container Registry](acr/payara/)
 1. [Create a Quarkus application packaged as a Docker image and push it to Azure Container Registry](acr/quarkus/)
 1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](acr/tomcat/)
 1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)
