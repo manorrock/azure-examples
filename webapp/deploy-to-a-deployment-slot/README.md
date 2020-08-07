@@ -23,7 +23,7 @@ This example assumes you have previously completed the following:
     -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
     -DappServicePlan=$APP_SERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
-    -DdeploymentSlotName=slot1
+    -DdeploymentSlotName=staging
 ````
 
 Once the command completes you will be able to see the example by using your 
