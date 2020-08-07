@@ -11,7 +11,6 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>tomcat</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>Deploy a Tomcat application to an Azure Kubernetes Service cluster</name>
 </project>
-
