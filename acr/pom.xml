@@ -19,6 +19,7 @@
         <module>create-access-keys-settings-xml</module>
         <module>create-acrpull-service-principal</module>
         <module>glassfish</module>
+        <module>graalvm</module>
         <module>jetty</module>
         <module>payara</module>
         <module>quarkus</module>
