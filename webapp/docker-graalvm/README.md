@@ -1,5 +1,5 @@
 
-# Create a GraalVM application and deploy it to Azure App Service (using a Docker image)
+# Deploy a custom GraalVM to Azure App Service (using a Docker image)
 
 ## Prerequisites
 
@@ -7,56 +7,55 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
+1. [Create a GraalVM application packaged as a Docker image and push it to Azure Container Registry](../../acr/graalvm/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Create an Azure App Service Plan](../../appservice/plan/create/)
 
-## Build the example
-
-To build the JAR file use the following command line:
-
-```shell
-  mvn package
-```
-
-## Build the builder image
-
-In order to build the Linux native image we need a GraalVM version that is 
-executed on Linux. The command below will generate a Docker image with what we
-need.
-
-```shell
-  docker build -t builder -f Dockerfile.builder .
-```
-
-## Execute the builder image to build the Linux binary
-
-The next step is to use the builder image to generate the Linux binary. Execute
-the command line below. Note if you are on Windows please replace $PWD with the
-path of the current directory.
-
-```shell
-  docker run --rm -it -v $PWD/../..:/mnt builder mvn -P graalvm -pl \
-    webapp/docker-graalvm clean install  
-```
-
-## Push the Docker image to your Azure Container Registry
-
-```shell
-  export IMAGE=graalvm:latest
-
-  az acr build --registry $ACR_NAME --image $IMAGE .
-```
-
 ## Deploy the example
 
-To deploy the example use the following Maven command line.
+To deploy the example use the following command lines:
 
-````shell
-  export GRAALVM_NAME=graalvm-$RANDOM
+```shell
+  export APPSERVICE_DOCKER_GRAALVM_NAME=appservice-docker-graalvm-$RANDOM
 
-  mvn azure-webapp:deploy --settings=$SETTINGS_XML -DappName=$GRAALVM_NAME
-````
+  mvn azure-webapp:deploy \
+    --settings=$SETTINGS_XML \
+    -DappName=$APPSERVICE_DOCKER_GRAALVM_NAME \
+    -DimageName=acr-graalvm:latest \
+    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DresourceGroup=$RESOURCE_GROUP \
+    -DserverId=$ACR_NAME
+
+  echo `az webapp show \
+    --resource-group $RESOURCE_GROUP \
+    --name $APPSERVICE_DOCKER_GRAALVM_NAME \
+    --query hostNames[0] \
+    --output tsv`/hello
+```
+
+Then open your browser to the URL shown as output and you should see:
+
+```text
+Hello
+```
+
+## Properties supported by the example
+
+The example supports the following properties that you can pass in as -Dname=value
+to the Maven command line to customize your deployment.
+
+| name                   | description                       |
+|------------------------|-----------------------------------|
+| appName                | the application name              |
+| appServicePlan         | the App Service plan to use       |
+| imageName              | the Docker image name             |
+| serverId               | the Maven server id               |
+| registry               | the Azure Container Registry name |
+| registryUrl            | the Azure Container Registry url  |
+| resourceGroup          | the Azure Resource Group name     |
 
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+3m

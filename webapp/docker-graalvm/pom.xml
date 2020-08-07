@@ -8,10 +8,9 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>appservice-docker-graalvm</artifactId>
-    <packaging>jar</packaging>
-    <name>Create a GraalVM application and deploy it to Azure App Service (using a Docker image)</name>
+    <packaging>pom</packaging>
+    <name>Deploy a GraalVM application to Azure App Service (using a Docker image)</name>
     <build>
-        <finalName>graalvm</finalName>
         <plugins>
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
@@ -20,10 +19,10 @@
                     <schemaVersion>V2</schemaVersion>
                     <resourceGroup>${resourceGroup}</resourceGroup>
                     <appName>${appName}</appName>
-                    <appServicePlanName>${appServicePlanName}</appServicePlanName>
+                    <appServicePlanName>${appServicePlan}</appServicePlanName>
                     <runtime>
                         <os>docker</os>
-                        <image>${image}</image>
+                        <image>${imageName}</image>
                         <serverId>${serverId}</serverId>
                         <registryUrl>${registryUrl}</registryUrl>
                     </runtime>
@@ -37,37 +36,10 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <profile>
-            <id>graalvm</id>
-            <build>
-                <plugins>            
-                    <plugin>
-                        <groupId>org.graalvm.nativeimage</groupId>
-                        <artifactId>native-image-maven-plugin</artifactId>
-                        <version>20.0.0</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>native-image</goal>
-                                </goals>
-                                <phase>package</phase>
-                                <configuration>
-                                    <buildArgs>--enable-http --no-fallback</buildArgs>
-                                    <mainClass>examples.azure.appservice.graalvm.GraalVMApplication</mainClass>
-                                    <imageName>graalvm</imageName>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
     <properties>
-        <appName>graalvm</appName>
-        <appServicePlanName>appservice-plan</appServicePlanName>
-        <image>graalvm:latest</image>
+        <appName>appservice-docker-graalvm-${example.postfix}</appName>
+        <appServicePlan>appservice-plan</appServicePlan>
+        <imageName>acr-graalvm:latest</imageName>
         <resourceGroup>azure-examples</resourceGroup>
         <registryUrl>https://${serverId}.azurecr.io</registryUrl>
         <serverId>${env.ACR_NAME}</serverId>
