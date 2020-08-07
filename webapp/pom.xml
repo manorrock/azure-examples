@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <name>Azure Webapp examples</name>
     <modules>
+        <module>create-deployment-slot</module>
         <module>delete</module>
         <module>docker-glassfish</module>
         <module>docker-graalvm</module>
