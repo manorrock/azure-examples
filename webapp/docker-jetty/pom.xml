@@ -9,20 +9,23 @@
     </parent>
     <artifactId>appservice-docker-jetty</artifactId>
     <packaging>pom</packaging>
-    <name>Jetty on Azure App Service (using a Docker image)</name>
+    <name>Deploy a custom Jetty to Azure App Service (using a Docker image)</name>
     <build>
         <plugins>
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-webapp-maven-plugin</artifactId>
                 <configuration>
-                    <deploymentType>none</deploymentType>
+                    <schemaVersion>V2</schemaVersion>
                     <resourceGroup>${resourceGroup}</resourceGroup>
                     <appName>${appName}</appName>
                     <appServicePlanName>${appServicePlan}</appServicePlanName>
-                    <containerSettings>
-                        <imageName>${imageName}</imageName>
-                    </containerSettings>
+                    <runtime>
+                        <os>docker</os>
+                        <image>${imageName}</image>
+                        <serverId>${serverId}</serverId>
+                        <registryUrl>${registryUrl}</registryUrl>
+                    </runtime>
                     <appSettings>
                         <property>
                             <name>PORT</name>
@@ -34,10 +37,12 @@
         </plugins>
     </build>
     <properties>
+        <appName>appservice-docker-jetty-${example.postfix}</appName>
         <appServicePlan>appservice-plan</appServicePlan>
-        <imageName>manorrock/jetty</imageName>
+        <imageName>acr-jetty:latest</imageName>
         <resourceGroup>azure-examples</resourceGroup>
+        <registryUrl>https://${serverId}.azurecr.io</registryUrl>
+        <serverId>${env.ACR_NAME}</serverId>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
-
