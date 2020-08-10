@@ -7,7 +7,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>create-deployment-slot</artifactId>
+    <artifactId>create-a-deployment-slot</artifactId>
     <packaging>pom</packaging>
     <name>Create a deployment slot</name>
     <properties>

@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
     <name>Azure Webapp examples</name>
     <modules>
-        <module>create-deployment-slot</module>
+        <module>create-a-deployment-slot</module>
         <module>delete</module>
         <module>deploy-to-a-deployment-slot</module>
         <module>docker-glassfish</module>
@@ -27,6 +27,7 @@
         <module>javase-springboot</module>
         <module>javase-quarkus</module>
         <module>list</module>
+        <module>swap-a-deployment-slot</module>
         <module>tomcat-helloworld</module>
     </modules>
 </project>
