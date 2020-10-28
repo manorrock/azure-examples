@@ -13,9 +13,27 @@ To create the Resource Group use the following command line:
 
 ```
   export RESOURCE_GROUP=azure-examples
-
-  az group create --name $RESOURCE_GROUP --location 'West US 2'
+  export REGION=westus2
 ```
+
+<!-- GitHub workflow
+
+export RESOURCE_GROUP=azure-examples-$RANDOM
+
+  -->
+
+```
+  az group create --name $RESOURCE_GROUP --location $REGION
+```
+
+<!-- GitHub workflow
+
+export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" != Succeeded ]]; then
+  exit 1
+fi
+  -->
 
 ## Cleanup
 

@@ -12,4 +12,15 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - run: |
-        az group list
+        export RESOURCE_GROUP=azure-examples
+        export REGION=westus2
+    - run: |
+        export RESOURCE_GROUP=azure-examples-$RANDOM
+    - run: |
+        az group create --name $RESOURCE_GROUP --location $REGION
+    - run: |
+        export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+        az group delete --name $RESOURCE_GROUP --yes || true
+        if [[ "$RESULT" != Succeeded ]]; then
+          exit 1
+        fi
