@@ -24,10 +24,6 @@ if [[ "$RESULT" == $RESOURCE_GROUP ]]; then
 fi
   -->
 
-## Cleanup
-
-Do NOT forget to remove the resources once you are done running the example.
-
 ## Next steps
 
 1. [Manage resource groups and template deployments](https://docs.microsoft.com/en-us/cli/azure/group)
