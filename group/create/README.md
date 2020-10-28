@@ -24,7 +24,7 @@ export RESOURCE_GROUP=azure-examples-$RANDOM
   az group create --name $RESOURCE_GROUP --location $REGION
 ```
 
-<!-- GitHub workflow
+<!-- GitHub workflow - direct-only
 export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != Succeeded ]]; then
