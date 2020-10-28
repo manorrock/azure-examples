@@ -1,0 +1,15 @@
+on: 
+  push:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+name: group/create
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - run: |
+        az group list
