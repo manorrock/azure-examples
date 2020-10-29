@@ -16,5 +16,5 @@ jobs:
       run: mvn -B clean install
     - name: Run GitHub Workflow Generator
       run: |
-        cd tools/gwg
-        java -jar gwg.jar --dryrun --basedir ../..
+        cd tools/gwg/target
+        java -jar gwg.jar --dryrun --baseDirectory ../../..
