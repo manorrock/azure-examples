@@ -4,3 +4,4 @@
 .vscode/
 nb-configuration.xml
 target/
+/tools/gwg/nbactions.xml
