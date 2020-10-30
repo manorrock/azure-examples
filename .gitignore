@@ -2,6 +2,7 @@
 .project
 .settings/
 .vscode/
+dependency-reduced-pom.xml
+nbactions.xml
 nb-configuration.xml
 target/
-/tools/gwg/nbactions.xml

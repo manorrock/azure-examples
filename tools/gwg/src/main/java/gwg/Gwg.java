@@ -1,6 +1,5 @@
 package gwg;
 
-import com.vladsch.flexmark.ast.CodeBlock;
 import com.vladsch.flexmark.ast.FencedCodeBlock;
 import com.vladsch.flexmark.ast.HtmlCommentBlock;
 import com.vladsch.flexmark.parser.Parser;
@@ -10,7 +9,9 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * The GitHub Workflow Generator.
@@ -81,30 +82,52 @@ public class Gwg {
      * @param file the file to process.
      */
     private void processFile(File file) {
-        System.out.println(file);
-        
+        System.out.println("--- Processing file: " + file);
+        List<Node> nodes = collectNodes(file);
+        String workflow = generateGitHubWorkflow(file, nodes);
+    }
+
+    private List<Node> collectNodes(File file) {
+        System.out.println("--- Collecting MarkDown AST nodes");
+        ArrayList<Node> nodes = new ArrayList<>();
         try {
             MutableDataSet options = new MutableDataSet();
             Parser parser = Parser.builder(options).build();
             Document document = parser.parseReader(new FileReader(file));
             Iterator<Node> iterator = document.getChildIterator();
-            while(iterator.hasNext()) {
+            while (iterator.hasNext()) {
                 Node node = iterator.next();
                 if (node instanceof HtmlCommentBlock) {
                     HtmlCommentBlock comment = (HtmlCommentBlock) node;
                     System.out.println(comment.getChars().toString());
-                }
-                if (node instanceof CodeBlock) {
-                    CodeBlock code = (CodeBlock) node;
-                    System.out.println(code.getChars().toString());
+                    nodes.add(comment);
                 }
                 if (node instanceof FencedCodeBlock) {
                     FencedCodeBlock code = (FencedCodeBlock) node;
-                    System.out.println(code.getChars().toString());
+                    if (code.getInfo().toString().equals("shell")) {
+                        System.out.println(code.getChars().toString());
+                        nodes.add(code);
+                    }
                 }
             }
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+        return nodes;
+    }
+
+    /**
+     * Geenerate the GitHub worflow for the given nodes.
+     *
+     * @param file the file to generate the workflow for.
+     * @param nodes the nodes.
+     * @return the GitHub workflow.
+     */
+    private String generateGitHubWorkflow(File file, List<Node> nodes) {
+        System.out.println("--- Generating GitHub workflow");
+        ArrayList<Node> workList = new ArrayList<Node>();
+        workList.addAll(nodes);
+        StringBuilder workflow = new StringBuilder();
+        return workflow.toString();
     }
 }
