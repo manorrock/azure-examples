@@ -9,6 +9,8 @@ This example assumes you have previously completed the following example:
 
 ## Create the Azure App Service Plan
 
+<!-- workflow.include(../../../group/create/README.md) -->
+
 To create the Azure App Service Plan use the following command line:
 
 ```shell
@@ -21,6 +23,14 @@ To create the Azure App Service Plan use the following command line:
     --is-linux \
     --sku P1V2
 ```
+
+<!-- workflow.directOnly() 
+export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APP_SERVICE_PLAN --query provisioningState --output tsv)
+az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" != Succeeded ]]; then
+  exit 1
+fi
+  -->
 
 ## Cleanup
 
