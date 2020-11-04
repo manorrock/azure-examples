@@ -41,6 +41,16 @@ cd ../..
 
   -->
 
+<!-- workflow.directOnly() 
+
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query state)
+az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" == Running ]]; then
+  exit 1
+fi
+
+  -->
+
 Once the command completes you will be able to see the example by using your 
 web browser and going to the ```xxxxx.azurewebsites.net``` address the command
 echoes.
