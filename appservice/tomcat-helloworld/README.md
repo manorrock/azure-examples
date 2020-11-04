@@ -6,9 +6,17 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure App Service Plan](../../appservice/create-plan/)
+1. [Create an Azure App Service Plan](../create-plan/)
+
+<!-- workflow.include(../create-plan/README.md) -->
 
 ## Build the example
+
+<!-- workflow.run() 
+
+cd appservice/tomcat-helloworld
+
+  -->
 
 ````shell
   mvn clean install
@@ -26,6 +34,12 @@ To deploy the example use the following Maven command line.
     -DappServicePlan=$APP_SERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP
 ````
+
+<!-- workflow.run()
+
+cd ../..
+
+  -->
 
 Once the command completes you will be able to see the example by using your 
 web browser and going to the ```xxxxx.azurewebsites.net``` address the command
