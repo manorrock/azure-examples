@@ -1,0 +1,44 @@
+on: 
+  workflow_dispatch: 
+
+name: 'appservice/delete-webapp/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          export RESOURCE_GROUP=azure-examples
+          export REGION=westus2
+          export RESOURCE_GROUP=azure-examples-$RANDOM
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export APP_SERVICE_PLAN=appservice-plan-$RANDOM
+          
+          az appservice plan create \
+          --resource-group $RESOURCE_GROUP \
+          --location westus2 \
+          --name $APP_SERVICE_PLAN \
+          --is-linux \
+          --sku P1V2
+          
+          cd appservice/tomcat-helloworld
+          
+          mvn clean install
+          export TOMCAT_HELLOWORLD_WEBAPP=helloworld-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP
+          
+          cd ../..
+          
+          az webapp delete --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP
+          
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query state)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" == Running ]]; then
+          exit 1
+          fi

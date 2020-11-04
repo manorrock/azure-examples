@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'appservice/plan/delete/README.md'
+name: 'appservice/scale-manually/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -22,12 +22,27 @@ jobs:
           --name $APP_SERVICE_PLAN \
           --is-linux \
           --sku P1V2
-          az appservice plan delete \
-          --resource-group $RESOURCE_GROUP \
+          
+          cd appservice/tomcat-helloworld
+          
+          mvn clean install
+          export TOMCAT_HELLOWORLD_WEBAPP=helloworld-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP
+          
+          cd ../..
+          
+          az appservice plan update \
+          --verbose \
           --name $APP_SERVICE_PLAN \
-          --yes
-          export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APP_SERVICE_PLAN --query provisioningState --output tsv)
+          --resource-group $RESOURCE_GROUP \
+          --number-of-workers 2
+          
+          export RESULT=$(az appservice plan show --name $APP_SERVICE_PLAN --resource-group $RESOURCE_GROUP --output tsv --query sku.capacity)
           az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" == Succeeded ]]; then
+          if [[ "$RESULT" == 2 ]]; then
           exit 1
           fi

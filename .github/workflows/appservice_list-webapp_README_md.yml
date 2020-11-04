@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'appservice/plan/create/README.md'
+name: 'appservice/list-webapp/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -22,8 +22,17 @@ jobs:
           --name $APP_SERVICE_PLAN \
           --is-linux \
           --sku P1V2
-          export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APP_SERVICE_PLAN --query provisioningState --output tsv)
-          az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != Succeeded ]]; then
-          exit 1
-          fi
+          
+          cd appservice/tomcat-helloworld
+          
+          mvn clean install
+          export TOMCAT_HELLOWORLD_WEBAPP=helloworld-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP
+          
+          cd ../..
+          
+          az webapp list --resource-group $RESOURCE_GROUP
