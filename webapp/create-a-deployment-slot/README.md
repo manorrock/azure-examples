@@ -7,7 +7,7 @@ This example assumes you have previously completed the following:
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure App Service Plan](../../appservice/create-plan/)
-1. [Deploy a Web application on Azure App Service (managed Tomcat)](../tomcat-helloworld/)
+1. [Deploy a Web application on Azure App Service (managed Tomcat)](../../appservice/tomcat-helloworld/)
 
 ## Create a deployment slot
 

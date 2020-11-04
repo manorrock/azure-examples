@@ -28,6 +28,5 @@
         <module>javase-quarkus</module>
         <module>list</module>
         <module>swap-a-deployment-slot</module>
-        <module>tomcat-helloworld</module>
     </modules>
 </project>

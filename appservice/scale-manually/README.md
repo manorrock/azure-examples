@@ -6,12 +6,14 @@
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an App Service plan](../create/)
-1. [Deploy a Web application on Azure App Service (managed Tomcat)](../../webapp/tomcat-helloworld/)
+1. [Create an App Service plan](../create-plan/)
+1. [Deploy a Web application on Azure App Service (managed Tomcat)](../tomcat-helloworld/)
 
 ## Scale the Azure App Service Plan
 
 To scale the Azure App Service Plan use the following command line:
+
+<!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 ```shell
   az appservice plan update \

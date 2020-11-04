@@ -10,11 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.appservice.plan</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>scale-manually</artifactId>
     <packaging>pom</packaging>
-    <name>Azure App Service Plan examples</name>
-    <modules>
-        <module>scale-manually</module>
-    </modules>
+    <name>Scale your App Service Plan manually</name>
 </project>

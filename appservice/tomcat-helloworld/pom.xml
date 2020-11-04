@@ -6,13 +6,13 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.webapp</groupId>
+        <groupId>examples.azure.appservice</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>tomcat-helloworld</artifactId>
     <packaging>war</packaging>
-    <name>Web application on Azure App Service (managed Tomcat)</name>
+    <name>Deploy a Web application on Azure App Service (managed Tomcat)</name>
     <build>
         <plugins>
             <plugin>
