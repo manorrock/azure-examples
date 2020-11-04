@@ -1,0 +1,19 @@
+on: 
+  workflow_dispatch: 
+
+name: 'spring-cloud/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          az extension add --name spring-cloud
+          
+          export SPRING_CLOUD_NAME=springcloud-$RANDOM
+          
+          az spring-cloud create \
+          --resource-group $RESOURCE_GROUP \
+          --name $SPRING_CLOUD_NAME

@@ -1,0 +1,20 @@
+on: 
+  workflow_dispatch: 
+
+name: 'webapp/javase-quarkus/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          mvn package
+          mvn quarkus:dev
+          export JAVASE_QUARKUS_WEBAPP=javase-quarkus-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          -DappName=$JAVASE_QUARKUS_WEBAPP \
+          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP

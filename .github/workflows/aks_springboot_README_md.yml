@@ -1,0 +1,18 @@
+on: 
+  workflow_dispatch: 
+
+name: 'aks/springboot/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          mvn package
+          mvn spring-boot:run
+          az acr build --registry $ACR_NAME --image example-springboot:latest .
+          sed -i "" "s/ACR/$ACR_NAME/g" deployment.yml
+          kubectl apply -f deployment.yml
+          kubectl get service/springboot

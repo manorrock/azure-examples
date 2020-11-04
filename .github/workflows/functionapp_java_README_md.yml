@@ -1,0 +1,23 @@
+on: 
+  workflow_dispatch: 
+
+name: 'functionapp/java/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          export FUNCTION_APP_JAVA=function-app-java-$RANDOM
+          mvn -DappName=$FUNCTION_APP_JAVA -DresourceGroup=$RESOURCE_GROUP package
+          mvn -DappName=$FUNCTION_APP_JAVA  -DresourceGroup=$RESOURCE_GROUP \
+          clean package azure-functions:run
+          mvn -DappName=$FUNCTION_APP_JAVA  -DresourceGroup=$RESOURCE_GROUP \
+          clean package azure-functions:deploy
+          echo `az functionapp show \
+          --resource-group $RESOURCE_GROUP \
+          --name $FUNCTION_APP_JAVA \
+          --query hostNames \
+          --output tsv`/api/helloworld

@@ -1,0 +1,24 @@
+on: 
+  workflow_dispatch: 
+
+name: 'acr/create-acrpull-service-principal/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
+          export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
+          export ACR_PULL_SERVICE_PRINCIPAL_PASSWORD=`az ad sp create-for-rbac \
+          --name http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
+          --scopes $ACR_ID \
+          --role acrpull \
+          --query password \
+          --output tsv`
+          export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp show \
+          --id http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
+          --query appId \
+          --output tsv`

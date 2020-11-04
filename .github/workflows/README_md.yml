@@ -1,0 +1,15 @@
+on: 
+  workflow_dispatch: 
+
+name: 'README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          az login
+          az account list --output table
+          az account set --subscription "subscription-id"

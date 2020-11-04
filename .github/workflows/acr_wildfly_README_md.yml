@@ -1,0 +1,16 @@
+on: 
+  workflow_dispatch: 
+
+name: 'acr/wildfly/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          mvn package
+          export ACR_WILDFLY_IMAGE=acr-wildfly:latest
+          
+          az acr build --registry $ACR_NAME --image $ACR_WILDFLY_IMAGE .

@@ -1,0 +1,13 @@
+on: 
+  workflow_dispatch: 
+
+name: 'webapp/list/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          az webapp list --resource-group $RESOURCE_GROUP

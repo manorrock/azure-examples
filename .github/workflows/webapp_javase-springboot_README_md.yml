@@ -1,0 +1,20 @@
+on: 
+  workflow_dispatch: 
+
+name: 'webapp/javase-springboot/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          mvn package
+          mvn spring-boot:run
+          export JAVASE_SPRINGBOOT_WEBAPP=javase-springboot-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          -DappName=$JAVASE_SPRINGBOOT_WEBAPP \
+          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP

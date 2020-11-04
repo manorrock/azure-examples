@@ -1,0 +1,16 @@
+on: 
+  workflow_dispatch: 
+
+name: 'acr/glassfish/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          mvn package
+          export ACR_GLASSFISH_IMAGE=acr-glassfish:latest
+          
+          az acr build --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .

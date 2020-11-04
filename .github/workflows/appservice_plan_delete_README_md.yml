@@ -1,0 +1,16 @@
+on: 
+  workflow_dispatch: 
+
+name: 'appservice/plan/delete/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          az appservice plan delete \
+          --resource-group $RESOURCE_GROUP \
+          --name $APP_SERVICE_PLAN \
+          --yes

@@ -1,0 +1,26 @@
+on: 
+  push: 
+    paths: 
+      - 'group/delete/README.md'
+  schedule: 
+    - cron: '0 1 * * 0'
+  workflow_dispatch: 
+
+name: 'group/delete/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          export RESOURCE_GROUP=azure-examples
+          export REGION=westus2
+          export RESOURCE_GROUP=azure-examples-$RANDOM
+          az group create --name $RESOURCE_GROUP --location $REGION
+          az group delete --name $RESOURCE_GROUP --yes
+          export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query name)
+          if [[ "$RESULT" == $RESOURCE_GROUP ]]; then
+          exit 1
+          fi

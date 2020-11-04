@@ -1,0 +1,20 @@
+on: 
+  workflow_dispatch: 
+
+name: 'appservice/plan/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          export APP_SERVICE_PLAN=appservice-plan
+          
+          az appservice plan create \
+          --resource-group $RESOURCE_GROUP \
+          --location westus2 \
+          --name $APP_SERVICE_PLAN \
+          --is-linux \
+          --sku P1V2

@@ -1,0 +1,13 @@
+on: 
+  workflow_dispatch: 
+
+name: 'aks/use-your-acr/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME

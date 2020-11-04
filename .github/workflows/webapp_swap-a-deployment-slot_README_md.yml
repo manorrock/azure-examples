@@ -1,0 +1,16 @@
+on: 
+  workflow_dispatch: 
+
+name: 'webapp/swap-a-deployment-slot/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          az webapp deployment slot swap \
+          --resource-group $RESOURCE_GROUP \
+          --name $TOMCAT_HELLOWORLD_WEBAPP \
+          --slot staging

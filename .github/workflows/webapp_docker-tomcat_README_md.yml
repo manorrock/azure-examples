@@ -1,0 +1,27 @@
+on: 
+  workflow_dispatch: 
+
+name: 'webapp/docker-tomcat/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          export APPSERVICE_DOCKER_TOMCAT_NAME=appservice-docker-tomcat-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          --settings=$SETTINGS_XML \
+          -DappName=$APPSERVICE_DOCKER_TOMCAT_NAME \
+          -DimageName=acr-tomcat:latest \
+          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP \
+          -DserverId=$ACR_NAME
+          
+          az webapp show \
+          --resource-group $RESOURCE_GROUP \
+          --name $APPSERVICE_DOCKER_TOMCAT_NAME \
+          --query hostNames[0] \
+          --output tsv

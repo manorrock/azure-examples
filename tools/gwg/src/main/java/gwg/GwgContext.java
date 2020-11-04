@@ -2,6 +2,7 @@ package gwg;
 
 import gwg.model.Workflow;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
@@ -13,9 +14,9 @@ import java.util.Stack;
 public class GwgContext {
 
     /**
-     * Stores the current file we are processing.
+     * Stores the file stack.
      */
-    private File file;
+    private final Stack<File> fileStack;
 
     /**
      * Stores the output filename.
@@ -33,9 +34,9 @@ public class GwgContext {
     private List snippets;
 
     /**
-     * Stores the stack using for scoping.
+     * Stores the snippet stack.
      */
-    private Stack stack;
+    private final Stack snippetStack;
 
     /**
      * Stores the workflow.
@@ -46,16 +47,27 @@ public class GwgContext {
      * Constructor.
      */
     public GwgContext() {
-        this.stack = new Stack();
+        this.fileStack = new Stack();
+        this.snippets = new ArrayList();
+        this.snippetStack = new Stack();
     }
 
     /**
-     * Get the file.
+     * Get the current file.
      *
-     * @return the file.
+     * @return the current file.
      */
-    public File getFile() {
-        return file;
+    public File getCurrentFile() {
+        return fileStack.peek();
+    }
+
+    /**
+     * Get the file stack.
+     *
+     * @return the file stack.
+     */
+    public Stack getFileStack() {
+        return fileStack;
     }
 
     /**
@@ -81,8 +93,17 @@ public class GwgContext {
      *
      * @return the stack.
      */
-    public Stack getStack() {
-        return stack;
+    public Stack getSnippetStack() {
+        return snippetStack;
+    }
+
+    /**
+     * Get the output filename.
+     * 
+     * @return the output filename.
+     */
+    public String getOutputFilename() {
+        return outputFilename;
     }
 
     /**
@@ -95,12 +116,12 @@ public class GwgContext {
     }
 
     /**
-     * Set the file.
+     * Set the current file.
      *
-     * @param file the file.
+     * @param currentFile the current file.
      */
-    public void setFile(File file) {
-        this.file = file;
+    public void setCurrentFile(File currentFile) {
+        fileStack.push(currentFile);
     }
 
     /**

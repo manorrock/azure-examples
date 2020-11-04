@@ -1,0 +1,16 @@
+on: 
+  workflow_dispatch: 
+
+name: 'storage/blob/upload-files-to-static-website/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          az storage blob upload-batch \
+          --source web \
+          --destination '$web' \
+          --account-name $STORAGE_ACCOUNT_NAME

@@ -23,6 +23,13 @@ public class On {
      * Stores the workflow dispatch.
      */
     private WorkflowDispatch workflow_dispatch;
+    
+    /**
+     * Constructor.
+     */
+    public On() {
+        this.workflow_dispatch = new WorkflowDispatch();
+    }
 
     /**
      * Get the push.

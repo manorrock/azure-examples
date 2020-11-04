@@ -1,0 +1,19 @@
+on: 
+  workflow_dispatch: 
+
+name: 'acr/graalvm/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          mvn package
+          docker build -t builder -f Dockerfile.builder .
+          docker run --rm -it -v $PWD/../..:/mnt builder mvn -P graalvm -pl \
+          acr/graalvm clean install
+          export ACR_GRAALVM_IMAGE=acr-graalvm:latest
+          
+          az acr build --registry $ACR_NAME --image $ACR_GRAALVM_IMAGE .

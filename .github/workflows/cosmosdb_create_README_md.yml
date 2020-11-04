@@ -1,0 +1,17 @@
+on: 
+  workflow_dispatch: 
+
+name: 'cosmosdb/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          export COSMOSDB_NAME=cosmosdb-$RANDOM
+          
+          az cosmosdb create \
+          --name $COSMOSDB_NAME \
+          --resource-group $RESOURCE_GROUP

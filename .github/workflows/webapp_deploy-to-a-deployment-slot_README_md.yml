@@ -1,0 +1,18 @@
+on: 
+  workflow_dispatch: 
+
+name: 'webapp/deploy-to-a-deployment-slot/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - run: | 
+          mvn clean install
+          mvn azure-webapp:deploy \
+          -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP \
+          -DdeploymentSlotName=staging
