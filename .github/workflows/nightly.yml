@@ -26,4 +26,5 @@ jobs:
         git config --global user.email "noreply@manorrock.com"
         git config --global user.name "Automated workflow"
         git commit -a -m "Committing generated workflows" --allow-empty
+        git push
         
