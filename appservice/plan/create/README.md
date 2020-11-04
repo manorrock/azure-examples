@@ -14,7 +14,7 @@ This example assumes you have previously completed the following example:
 To create the Azure App Service Plan use the following command line:
 
 ```shell
-  export APP_SERVICE_PLAN=appservice-plan
+  export APP_SERVICE_PLAN=appservice-plan-$RANDOM
 
   az appservice plan create \
     --resource-group $RESOURCE_GROUP \
