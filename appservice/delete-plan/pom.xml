@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>delete-plan</artifactId>
+    <artifactId>appservice-delete-plan</artifactId>
     <packaging>pom</packaging>
     <name>Delete an Azure App Service Plan</name>
 </project>

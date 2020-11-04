@@ -17,6 +17,7 @@
     <modules>
         <module>create-plan</module>
         <module>delete-plan</module>
+        <module>delete-webapp</module>
         <module>scale-manually</module>
         <module>tomcat-helloworld</module>
     </modules>

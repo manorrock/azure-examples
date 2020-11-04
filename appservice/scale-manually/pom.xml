@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>scale-manually</artifactId>
+    <artifactId>appservice-scale-manually</artifactId>
     <packaging>pom</packaging>
     <name>Scale your App Service Plan manually</name>
 </project>

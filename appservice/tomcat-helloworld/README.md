@@ -45,7 +45,7 @@ cd ../..
 
 export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query state)
 az group delete --name $RESOURCE_GROUP --yes || true
-if [[ "$RESULT" == Running ]]; then
+if [[ "$RESULT" != Running ]]; then
   exit 1
 fi
 
