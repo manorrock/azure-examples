@@ -58,7 +58,7 @@
         <dependency>
             <groupId>com.manorrock.yaml</groupId>
             <artifactId>yaml</artifactId>
-            <version>20.11.0</version>
+            <version>20.11.1</version>
         </dependency>
     </dependencies>
 </project>
