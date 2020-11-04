@@ -3,7 +3,7 @@
 
 ## Prerequisites
 
-This example assume you are logged into Azure CLI and have set your default
+This example assumes you are logged into Azure CLI and have set your default
 subscription, if you have NOT done so please go to our top-level
 [README](../README.md)
 
@@ -11,13 +11,19 @@ subscription, if you have NOT done so please go to our top-level
 
 To delete the Resource Group use the following command line:
 
-<!-- GitHub workflow - include ../create/README.md -->
+<!-- workflow.name(group/delete/README.md) -->
+<!-- workflow.filename(group_delete_README.md.yml) -->
+<!-- workflow.cron(0 1 * * 0) -->
+<!-- workflow.pushPath(true) -->
+<!-- workflow.dispatch(true) -->
+<!-- workflow.runsOn(ubuntu-latest) -->
+<!-- workflow.include(../create/README.md) -->
 
-````shell
+```shell
  az group delete --name $RESOURCE_GROUP --yes
-````
+```
 
-<!-- GitHub workflow - direct-only
+<!-- workflow.directOnly()
 export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query name)
 if [[ "$RESULT" == $RESOURCE_GROUP ]]; then
   exit 1

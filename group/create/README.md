@@ -9,22 +9,25 @@ subscription, if you have NOT done so please go to our top-level
 
 ## Create the Resource Group
 
-To create the Resource Group use the following command line:
+To setup the environment variables needed to create the Resource Group execute
+the command lines below:
 
-```
+```shell
   export RESOURCE_GROUP=azure-examples
   export REGION=westus2
 ```
 
-<!-- GitHub workflow
+<!-- workflow.run()
 export RESOURCE_GROUP=azure-examples-$RANDOM
   -->
 
-```
+To create the Resource Group use the following command line:
+
+```shell
   az group create --name $RESOURCE_GROUP --location $REGION
 ```
 
-<!-- GitHub workflow - direct-only
+<!-- workflow.directOnly()
 export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != Succeeded ]]; then
