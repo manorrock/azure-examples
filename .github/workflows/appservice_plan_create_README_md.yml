@@ -14,7 +14,7 @@ jobs:
           export REGION=westus2
           export RESOURCE_GROUP=azure-examples-$RANDOM
           az group create --name $RESOURCE_GROUP --location $REGION
-          export APP_SERVICE_PLAN=appservice-plan
+          export APP_SERVICE_PLAN=appservice-plan-$RANDOM
           
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
