@@ -9,6 +9,8 @@ This example assumes you have previously completed the following example:
 
 ## Delete the Azure App Service Plan
 
+<!-- workflow.include(../create/README.md) -->
+
 To delete the Azure App Service Plan use the following command line:
 
 ```shell
@@ -17,6 +19,14 @@ To delete the Azure App Service Plan use the following command line:
     --name $APP_SERVICE_PLAN \
     --yes
 ```
+
+<!-- workflow.directOnly() 
+export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APP_SERVICE_PLAN --query provisioningState --output tsv)
+az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" == Succeeded ]]; then
+  exit 1
+fi
+  -->
 
 ## Cleanup
 
