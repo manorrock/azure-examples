@@ -50,7 +50,7 @@ exit 0
 ### Azure App Service examples
 
 1. [Create an Azure App Service Plan](appservice/create-plan/)
-1. [Delete an Azure App Service Plan](appservice/plan/delete/)
+1. [Delete an Azure App Service Plan](appservice/delete-plan/)
 1. [Scale your Azure App Service Plan manually](appservice/plan/scale-manually/)
 1. [List your Azure App Services](webapp/list/)
 1. [Create a deployment slot](webapp/create-a-deployment-slot/)

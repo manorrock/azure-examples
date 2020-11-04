@@ -16,6 +16,7 @@
     <name>Azure App Service examples</name>
     <modules>
         <module>create-plan</module>
+        <module>delete-plan</module>
         <module>plan</module>
     </modules>
 </project>
