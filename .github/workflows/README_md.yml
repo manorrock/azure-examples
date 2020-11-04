@@ -10,6 +10,4 @@ jobs:
         with: 
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - run: | 
-          az login
-          az account list --output table
-          az account set --subscription "subscription-id"
+          exit 0
