@@ -24,6 +24,7 @@ jobs:
         cd ../../..
         git config --global user.email "noreply@manorrock.com"
         git config --global user.name "Automated workflow"
-        git commit -a -m "Committing generated workflows" --allow-empty
+        git add .
+        git commit -a -m "Committing workflows" || true
         git push
         
