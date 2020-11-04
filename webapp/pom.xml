@@ -25,7 +25,6 @@
         <module>docker-wildfly</module>
         <module>javase-springboot</module>
         <module>javase-quarkus</module>
-        <module>list</module>
         <module>swap-a-deployment-slot</module>
     </modules>
 </project>

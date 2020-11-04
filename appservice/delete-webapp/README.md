@@ -19,8 +19,8 @@ line:
   az webapp delete --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP
 ```
 
-Or change the value of $TOMCAT_HELLOWORLD_WEBAPP to the name of the web
-application you want to delete.
+Note you can substitute $TOMCAT_HELLOWORLD_WEBAPP with the name of any web 
+application you want to delete in your resource group.
 
 <!-- workflow.directOnly() 
 
