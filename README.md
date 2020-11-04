@@ -20,6 +20,7 @@ To setup the Azure CLI, please visit [Install the Azure CLI](https://docs.micros
 
 ### Login into Azure
 
+<!-- workflow.skip() -->
 ````shell
   az login
 ````
@@ -28,15 +29,21 @@ To setup the Azure CLI, please visit [Install the Azure CLI](https://docs.micros
 
 Get a list of your subscriptions
 
+<!-- workflow.skip() -->
 ````shell
   az account list --output table
 ````
 
 Set your default subscription for this session using the subscription id from the previous output
 
+<!-- workflow.skip() -->
 ````shell
   az account set --subscription "subscription-id"
 ````
+
+<!-- workflow.run() 
+exit 0
+  -->
 
 ## Hosting platforms
 

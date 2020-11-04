@@ -250,6 +250,8 @@ public class Gwg {
                 processRunSnippet(context, comment);
             } else if (action.equals("runsOn")) {
                 processRunsOn(context, matcher.group(2));
+            } else if (action.equals("skip")) {
+                processSkip(context);
             }
         }
     }
@@ -410,6 +412,21 @@ public class Gwg {
         if (context.getSnippetStack().isEmpty()) {
             Job job = (Job) context.getWorkflow().getJobs().get("validate");
             job.setRunsOn(runsOn);
+        }
+    }
+
+    /**
+     * Process the skip.
+     *
+     * <p>
+     * This directive instructs the generator to skip the next snippet.
+     * </p>
+     *
+     * @param context the context.
+     */
+    private void processSkip(GwgContext context) {
+        if (context.getSnippets().size() > 0) {
+            context.getSnippets().remove(0);
         }
     }
 
