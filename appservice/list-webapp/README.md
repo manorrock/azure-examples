@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 
 ## List your Web applications on Azure App Service
 
-<!-- workflow.include(../tomcat-helloworld/README.md)
+<!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To list the Web applications on Azure App Service use the following command line:
 
