@@ -8,7 +8,10 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout sources
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GIT_PASSWORD }}
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
@@ -19,4 +22,8 @@ jobs:
         rm -rf .github/workflows/*_md.yml
         cd tools/gwg/target
         java -jar gwg.jar --baseDirectory ../../.. --outputDirectory ../../../.github/workflows
-        git status
+        cd ../../..
+        git config --global user.email "noreply@manorrock.com"
+        git config --global user.name "Automated workflow"
+        git commit -a -m "Committing generated workflows" --allow-empty
+        
