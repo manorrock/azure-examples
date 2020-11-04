@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 ## Create the Azure App Service Plan
 
-<!-- workflow.include(../../../group/create/README.md) -->
+<!-- workflow.include(../../group/create/README.md) -->
 
 To create the Azure App Service Plan use the following command line:
 

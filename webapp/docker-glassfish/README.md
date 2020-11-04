@@ -9,7 +9,7 @@ This example assumes you have previously completed the following examples.
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create a custom Glassfish Docker image and push it to Azure Container Registry](../../acr/glassfish/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
-1. [Create an Azure App Service Plan](../../appservice/plan/create/)
+1. [Create an Azure App Service Plan](../../appservice/create-plan/)
 
 ## Deploy the example
 

@@ -15,7 +15,6 @@
     <packaging>pom</packaging>
     <name>Azure App Service Plan examples</name>
     <modules>
-        <module>create</module>
         <module>delete</module>
         <module>scale-manually</module>
     </modules>

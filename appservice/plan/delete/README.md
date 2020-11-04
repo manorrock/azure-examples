@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 ## Delete the Azure App Service Plan
 
-<!-- workflow.include(../create/README.md) -->
+<!-- workflow.include(../../create-plan/README.md) -->
 
 To delete the Azure App Service Plan use the following command line:
 
