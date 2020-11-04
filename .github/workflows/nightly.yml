@@ -16,5 +16,7 @@ jobs:
       run: mvn -B clean install
     - name: Run GitHub Workflow Generator
       run: |
+        rm -rf .github/workflows/*_md.yml
         cd tools/gwg/target
         java -jar gwg.jar --baseDirectory ../../.. --outputDirectory ../../../.github/workflows
+        git status
