@@ -17,4 +17,4 @@ jobs:
     - name: Run GitHub Workflow Generator
       run: |
         cd tools/gwg/target
-        java -jar gwg.jar --dryrun --baseDirectory ../../..
+        java -jar gwg.jar --baseDirectory ../../.. --outputDirectory ../../../.github/workflows
