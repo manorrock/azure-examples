@@ -24,7 +24,7 @@ To create a deployment slot use the following command line:
 
 ## Cleanup
 
-<!-- workflow.directOnly
+<!-- workflow.directOnly()
 
 export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --query [0].state)
 if [[ "$RESULT" != Running ]]; then
