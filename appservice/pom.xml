@@ -20,6 +20,7 @@
         <module>delete-plan</module>
         <module>delete-webapp</module>
         <module>deploy-to-deployment-slot</module>
+        <module>docker-jetty</module>
         <module>docker-tomcat</module>
         <module>list-webapp</module>
         <module>scale-manually</module>

@@ -12,13 +12,17 @@ subscription, if you have NOT done so please go to our top-level
 To setup the environment variables needed to create the Resource Group execute
 the command lines below:
 
+<!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=azure-examples
   export REGION=westus2
 ```
 
 <!-- workflow.run()
-export RESOURCE_GROUP=azure-examples-$RANDOM
+if [[ -z $RESOURCE_GROUP ]] then;
+  export RESOURCE_GROUP=azure-examples-$RANDOM
+fi
+export REGION=westus2
   -->
 
 To create the Resource Group use the following command line:
