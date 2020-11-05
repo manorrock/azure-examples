@@ -27,18 +27,18 @@ jobs:
           cd appservice/tomcat-helloworld
           
           mvn clean install
-          export TOMCAT_HELLOWORLD_WEBAPP=helloworld-$RANDOM
+          export APPSERVICE_TOMCAT_HELLOWORLD=helloworld-$RANDOM
           
           mvn azure-webapp:deploy \
-          -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+          -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
           cd ../..
           
-          az webapp delete --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP
+          az webapp delete --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
           
-          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query state)
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" == Running ]]; then
           exit 1

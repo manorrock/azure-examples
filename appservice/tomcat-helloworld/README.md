@@ -27,10 +27,10 @@ cd appservice/tomcat-helloworld
 To deploy the example use the following Maven command line.
 
 ````shell
-  export TOMCAT_HELLOWORLD_WEBAPP=helloworld-$RANDOM
+  export APPSERVICE_TOMCAT_HELLOWORLD=helloworld-$RANDOM
 
   mvn azure-webapp:deploy \
-    -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+    -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP
 ````
@@ -43,14 +43,14 @@ cd ../..
 
 <!-- workflow.directOnly() 
 
-export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query state)
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
 if [[ "$RESULT" != Running ]]; then
   echo 'Web application is not running'
   az group delete --name $RESOURCE_GROUP --yes || true
   exit 1
 fi
 
-export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query defaultHostName)
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query defaultHostName)
 export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true

@@ -16,15 +16,15 @@ To delete the web application from Azure App Service use the following command
 line:
 
 ```shell
-  az webapp delete --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP
+  az webapp delete --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
 ```
 
-Note you can substitute $TOMCAT_HELLOWORLD_WEBAPP with the name of any web 
+Note you can substitute $APPSERVICE_TOMCAT_HELLOWORLD with the name of any web 
 application you want to delete in your resource group.
 
 <!-- workflow.directOnly() 
 
-export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query state)
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" == Running ]]; then
   exit 1

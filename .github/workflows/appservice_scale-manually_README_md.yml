@@ -27,10 +27,10 @@ jobs:
           cd appservice/tomcat-helloworld
           
           mvn clean install
-          export TOMCAT_HELLOWORLD_WEBAPP=helloworld-$RANDOM
+          export APPSERVICE_TOMCAT_HELLOWORLD=helloworld-$RANDOM
           
           mvn azure-webapp:deploy \
-          -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+          -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           

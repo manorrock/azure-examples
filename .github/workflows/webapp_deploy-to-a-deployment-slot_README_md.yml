@@ -13,7 +13,7 @@ jobs:
       - run: | 
           mvn clean install
           mvn azure-webapp:deploy \
-          -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
+          -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP \
           -DdeploymentSlotName=staging

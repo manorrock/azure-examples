@@ -18,7 +18,7 @@ To swap deployment slot use the following command line:
 ```shell
   az webapp deployment slot swap \
     --resource-group $RESOURCE_GROUP \
-    --name $TOMCAT_HELLOWORLD_WEBAPP \
+    --name $APPSERVICE_TOMCAT_HELLOWORLD \
     --slot staging
 ```
 
