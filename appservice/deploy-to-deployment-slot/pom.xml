@@ -6,11 +6,11 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.webapp</groupId>
+        <groupId>examples.azure.appservice</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>deploy-to-a-deployment-slot</artifactId>
+    <artifactId>deploy-to-deployment-slot</artifactId>
     <packaging>war</packaging>
     <name>Deploy to a deployment slot</name>
     <build>

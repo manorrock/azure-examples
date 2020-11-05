@@ -19,6 +19,7 @@
         <module>create-plan</module>
         <module>delete-plan</module>
         <module>delete-webapp</module>
+        <module>deploy-to-deployment-slot</module>
         <module>scale-manually</module>
         <module>tomcat-helloworld</module>
     </modules>

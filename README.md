@@ -56,7 +56,7 @@ exit 0
 1. [Delete your Web application from Azure App Service](appservice/delete-webapp/)
 1. [List your Web applications](appservice/list-webapp/)
 1. [Create a deployment slot](appservice/create-a-deployment-slot/)
-1. [Deploy to a deployment slot](webapp/deploy-to-a-deployment-slot/)
+1. [Deploy to a deployment slot](appservice/deploy-to-deployment-slot/)
 1. [Deploy Tomcat on Azure App Service (using a Docker image)](webapp/docker-tomcat/)
 1. [Deploy Jetty on Azure App Service (using a Docker image)](webapp/docker-jetty/)
 1. [Deploy Payara on Azure App Service (using a Docker image)](webapp/docker-payara/)
