@@ -27,7 +27,7 @@ cd appservice/tomcat-helloworld
 To deploy the example use the following Maven command line.
 
 ````shell
-  export APPSERVICE_TOMCAT_HELLOWORLD=helloworld-$RANDOM
+  export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
 
   mvn azure-webapp:deploy \
     -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
@@ -45,7 +45,7 @@ cd ../..
 
 export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
 if [[ "$RESULT" != Running ]]; then
-  echo 'Web application is not running'
+  echo 'Web application is NOT running'
   az group delete --name $RESOURCE_GROUP --yes || true
   exit 1
 fi
