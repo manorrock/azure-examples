@@ -44,8 +44,19 @@ cd ../..
 <!-- workflow.directOnly() 
 
 export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query state)
-az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != Running ]]; then
+  echo 'Web application is not running'
+  az group delete --name $RESOURCE_GROUP --yes || true
+  exit 1
+fi
+
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $TOMCAT_HELLOWORLD_WEBAPP --output tsv --query defaultHostName)
+export RESULT=$(curl $URL)
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ "$RESULT" != *"Hello World"* ]]; then
+  echo "Response did not contain 'Hello World'"
   exit 1
 fi
 
