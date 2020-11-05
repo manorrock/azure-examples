@@ -9,7 +9,7 @@ jobs:
       - uses: 'azure/login@v1'
         with: 
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-      - uses: 'azure/checkout@v2'
+      - uses: 'actions/checkout@v2'
       - run: | 
           export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
           export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`

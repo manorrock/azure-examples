@@ -9,7 +9,7 @@ jobs:
       - uses: 'azure/login@v1'
         with: 
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-      - uses: 'azure/checkout@v2'
+      - uses: 'actions/checkout@v2'
       - run: | 
           export RESOURCE_GROUP=azure-examples
           export REGION=westus2
