@@ -9,9 +9,9 @@ This example assumes you have previously completed the following examples.
 1. [Create an App Service plan](../create-plan/)
 1. [Deploy a Web application on a managed Tomcat](../tomcat-helloworld/)
 
-## Scale the Azure App Service Plan
+## Scale the App Service Plan
 
-To scale the Azure App Service Plan use the following command line:
+To scale the App Service Plan use the following command line:
 
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 

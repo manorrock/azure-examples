@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>create-deployment-slot</artifactId>
+    <artifactId>appservice-create-deployment-slot</artifactId>
     <packaging>pom</packaging>
-    <name>Create a deployment slot</name>
+    <name>Create a Deployment Slot</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

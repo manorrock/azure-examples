@@ -11,11 +11,11 @@ This example assumes you have previously completed the following examples.
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
-## Deploy the example
+## Deploy Payara using a Docker image
 
 <!-- workflow.include(../create-plan/README.md)
 
-To deploy the example use the following command lines:
+To deploy Payara use the following command lines:
 
 ```shell
   export APPSERVICE_DOCKER_PAYARA=appservice-docker-payara-$RANDOM

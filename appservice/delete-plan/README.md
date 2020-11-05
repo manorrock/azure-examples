@@ -1,5 +1,5 @@
 
-# Delete an Azure App Service Plan
+# Delete an App Service Plan
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ This example assumes you have previously completed the following example:
 1. [Create an Azure Resource Group](../group/create/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
-## Delete the Azure App Service Plan
+## Delete an App Service Plan
 
 <!-- workflow.include(../create-plan/README.md) -->
 

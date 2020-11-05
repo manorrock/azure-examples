@@ -1,5 +1,5 @@
 
-# Deploy to a deployment slot
+# Deploy to a Deployment Slot
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ This example assumes you have previously completed the following:
   mvn clean install
 ````
 
-## Deploy to a deployment slot
+## Deploy to a Deployment Slot
 
 ````shell
   mvn azure-webapp:deploy \

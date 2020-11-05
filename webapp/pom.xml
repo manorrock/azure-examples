@@ -15,7 +15,6 @@
     <packaging>pom</packaging>
     <name>Azure Webapp examples</name>
     <modules>
-        <module>docker-glassfish</module>
         <module>docker-graalvm</module>
         <module>docker-wildfly</module>
         <module>javase-springboot</module>

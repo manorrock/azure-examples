@@ -12,5 +12,5 @@
     </parent>
     <artifactId>appservice-delete-plan</artifactId>
     <packaging>pom</packaging>
-    <name>Delete an Azure App Service Plan</name>
+    <name>Delete an App Service Plan</name>
 </project>

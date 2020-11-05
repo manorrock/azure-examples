@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>appservice-webapp-delete</artifactId>
+    <artifactId>appservice-delete-webapp</artifactId>
     <packaging>pom</packaging>
-    <name>Delete your web application from Azure App Service</name>
+    <name>Delete your web application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

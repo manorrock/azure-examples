@@ -20,6 +20,7 @@
         <module>delete-plan</module>
         <module>delete-webapp</module>
         <module>deploy-to-deployment-slot</module>
+        <module>docker-glassfish</module>
         <module>docker-jetty</module>
         <module>docker-payara</module>
         <module>docker-tomcat</module>

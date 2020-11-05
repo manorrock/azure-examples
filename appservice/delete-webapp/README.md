@@ -1,5 +1,5 @@
 
-# Delete your web application from Azure App Service
+# Delete a Web Application
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../group/create/)
 1. [Deploy a Web application on a managed Tomcat](../tomcat-helloworld/)
 
-## Delete the web application
+## Delete a Web Application
 
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 

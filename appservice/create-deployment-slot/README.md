@@ -1,5 +1,5 @@
 
-# Create a deployment slot
+# Create a Deployment Slot
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This example assumes you have previously completed the following:
 1. [Create an Azure App Service Plan](../create-plan/)
 1. [Deploy a Web application on a managed Tomcat](../tomcat-helloworld/)
 
-## Create a deployment slot
+## Create a Deployment Slot
 
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 

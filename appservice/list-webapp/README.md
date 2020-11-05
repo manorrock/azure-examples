@@ -1,5 +1,5 @@
 
-# List your Web applications on Azure App Service
+# List your Web Applications
 
 ## Prerequisites
 
@@ -9,11 +9,11 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure App Service Plan](../create-plan/)
 1. [Deploy a Web application on a managed Tomcat](../tomcat-helloworld/)
 
-## List your Web applications on Azure App Service
+## List your Web Applications
 
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
-To list the Web applications on Azure App Service use the following command line:
+To list the Web Applications use the following command line:
 
 ```shell
   az webapp list --resource-group $RESOURCE_GROUP

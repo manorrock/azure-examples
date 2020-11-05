@@ -1,5 +1,5 @@
 
-# Create an Azure App Service Plan
+# Create an App Service Plan
 
 ## Prerequisites
 
@@ -7,11 +7,11 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/)
 
-## Create the Azure App Service Plan
+## Create an App Service Plan
 
 <!-- workflow.include(../../group/create/README.md) -->
 
-To create the Azure App Service Plan use the following command line:
+To create the App Service Plan use the following command line:
 
 ```shell
   export APPSERVICE_PLAN=appservice-plan-$RANDOM
