@@ -6,13 +6,13 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.webapp</groupId>
+        <groupId>examples.azure.appservice</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>javase-springboot</artifactId>
+    <artifactId>appservice-javase-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Spring Boot application to Azure App Service (using JavaSE)</name>
+    <name>Deploy a Spring Boot Application using managed JavaSE</name>
     <build>
         <plugins>
             <plugin>

@@ -59,7 +59,7 @@ exit 0
 1. [Deploy Jetty using a Docker image](appsevice/docker-jetty/)
 1. [Deploy Payara using a Docker image](appservice/docker-payara/)
 1. [Deploy Glassfish using a Docker image](appservice/docker-glassfish/)
-1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](webapp/javase-springboot/)
+1. [Deploy a Spring Boot application using managed JavaSE](appservice/javase-springboot/)
 1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](webapp/docker-wildfly/)
 1. [Deploy a Quarkus application on Azure App Service (using JavaSE)](webapp/javase-quarkus/)
 1. [Deploy a GraalVM application on Azure App Service (using Docker)](webapp/docker-graalvm/)

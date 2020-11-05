@@ -1,5 +1,5 @@
 
-# Create a Spring Boot application and deploy it to Azure App Service (using JavaSE)
+# Deploy a Spring Boot Application using managed JavaSE
 
 ## Prerequisites
 
@@ -26,12 +26,12 @@ To run the example locally use the following Maven command line.
 
 You can see the application in action at http://localhost:8080/
 
-## Deploy the example
+## Deploy the Spring Boot Application
 
 To deploy the example use the following Maven command line:
 
 ````shell
-  export JAVASE_SPRINGBOOT_WEBAPP=javase-springboot-$RANDOM
+  export JAVASE_SPRINGBOOT_WEBAPP=appservice-javase-springboot-$RANDOM
 
   mvn azure-webapp:deploy \
     -DappName=$JAVASE_SPRINGBOOT_WEBAPP \

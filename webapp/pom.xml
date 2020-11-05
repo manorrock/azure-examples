@@ -17,7 +17,6 @@
     <modules>
         <module>docker-graalvm</module>
         <module>docker-wildfly</module>
-        <module>javase-springboot</module>
         <module>javase-quarkus</module>
         <module>swap-a-deployment-slot</module>
     </modules>
