@@ -57,7 +57,7 @@ exit 0
 1. [Deploy to a deployment slot](appservice/deploy-to-deployment-slot/)
 1. [Deploy Tomcat using a Docker image](appservice/docker-tomcat/)
 1. [Deploy Jetty using a Docker image](appsevice/docker-jetty/)
-1. [Deploy Payara on Azure App Service (using a Docker image)](webapp/docker-payara/)
+1. [Deploy Payara using a Docker image](appservice/docker-payara/)
 1. [Deploy Glassfish on Azure App Service (using a Docker image)](webapp/docker-glassfish/)
 1. [Deploy a Spring Boot application on Azure App Service (using JavaSE)](webapp/javase-springboot/)
 1. [Create a custom WildFly on deploy it on Azure App Service (using a Docker image)](webapp/docker-wildfly/)

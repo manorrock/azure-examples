@@ -1,5 +1,5 @@
 
-# Deploy a custom Payara to Azure App Service (using a Docker image)
+# Deploy Payara using a Docker image
 
 ## Prerequisites
 
@@ -9,18 +9,20 @@ This example assumes you have previously completed the following examples.
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create a custom Payara Docker image and push it to Azure Container Registry](../../acr/payara/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
-1. [Create an Azure App Service Plan](../../appservice/create-plan/)
+1. [Create an Azure App Service Plan](../create-plan/)
 
 ## Deploy the example
+
+<!-- workflow.include(../create-plan/README.md)
 
 To deploy the example use the following command lines:
 
 ```shell
-  export APPSERVICE_DOCKER_PAYARA_NAME=appservice-docker-payara-$RANDOM
+  export APPSERVICE_DOCKER_PAYARA=appservice-docker-payara-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
-    -DappName=$APPSERVICE_DOCKER_PAYARA_NAME \
+    -DappName=$APPSERVICE_DOCKER_PAYARA \
     -DimageName=acr-payara:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
@@ -28,7 +30,7 @@ To deploy the example use the following command lines:
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $APPSERVICE_DOCKER_PAYARA_NAME \
+    --name $APPSERVICE_DOCKER_PAYARA \
     --query hostNames[0] \
     --output tsv
 ```

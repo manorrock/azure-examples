@@ -21,6 +21,7 @@
         <module>delete-webapp</module>
         <module>deploy-to-deployment-slot</module>
         <module>docker-jetty</module>
+        <module>docker-payara</module>
         <module>docker-tomcat</module>
         <module>list-webapp</module>
         <module>scale-manually</module>
