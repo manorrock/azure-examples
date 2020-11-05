@@ -188,7 +188,10 @@ public class Gwg {
         HashMap<String, Object> with = new HashMap<>();
         with.put("creds", "${{ secrets.AZURE_CREDENTIALS }}");
         login.put("with", with);
+        LinkedHashMap<String, Object> checkout = new LinkedHashMap<>();
+        checkout.put("uses", "azure/checkout@v2");
         job.getSteps().add(login);
+        job.getSteps().add(checkout);
         HashMap<String, Object> run = new HashMap<>();
         YAMLLiteralBlock literalBlock = new YAMLLiteralBlock();
         run.put("run", literalBlock);
