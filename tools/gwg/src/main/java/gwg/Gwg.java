@@ -189,7 +189,7 @@ public class Gwg {
         with.put("creds", "${{ secrets.AZURE_CREDENTIALS }}");
         login.put("with", with);
         LinkedHashMap<String, Object> checkout = new LinkedHashMap<>();
-        checkout.put("uses", "azure/checkout@v2");
+        checkout.put("uses", "actions/checkout@v2");
         job.getSteps().add(login);
         job.getSteps().add(checkout);
         HashMap<String, Object> run = new HashMap<>();
