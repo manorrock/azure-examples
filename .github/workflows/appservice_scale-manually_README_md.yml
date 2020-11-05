@@ -15,12 +15,12 @@ jobs:
           export REGION=westus2
           export RESOURCE_GROUP=azure-examples-$RANDOM
           az group create --name $RESOURCE_GROUP --location $REGION
-          export APP_SERVICE_PLAN=appservice-plan-$RANDOM
+          export APPSERVICE_PLAN=appservice-plan-$RANDOM
           
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
           --location westus2 \
-          --name $APP_SERVICE_PLAN \
+          --name $APPSERVICE_PLAN \
           --is-linux \
           --sku P1V2
           
@@ -31,18 +31,18 @@ jobs:
           
           mvn azure-webapp:deploy \
           -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
-          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
           cd ../..
           
           az appservice plan update \
           --verbose \
-          --name $APP_SERVICE_PLAN \
+          --name $APPSERVICE_PLAN \
           --resource-group $RESOURCE_GROUP \
           --number-of-workers 2
           
-          export RESULT=$(az appservice plan show --name $APP_SERVICE_PLAN --resource-group $RESOURCE_GROUP --output tsv --query sku.capacity)
+          export RESULT=$(az appservice plan show --name $APPSERVICE_PLAN --resource-group $RESOURCE_GROUP --output tsv --query sku.capacity)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" == 2 ]]; then
           exit 1

@@ -17,5 +17,5 @@ jobs:
           
           mvn azure-webapp:deploy \
           -DappName=$JAVASE_QUARKUS_WEBAPP \
-          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP

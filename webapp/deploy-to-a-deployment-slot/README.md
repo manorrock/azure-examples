@@ -21,7 +21,7 @@ This example assumes you have previously completed the following:
 ````shell
   mvn azure-webapp:deploy \
     -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
-    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DdeploymentSlotName=staging
 ````

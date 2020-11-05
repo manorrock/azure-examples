@@ -15,19 +15,19 @@ jobs:
           export REGION=westus2
           export RESOURCE_GROUP=azure-examples-$RANDOM
           az group create --name $RESOURCE_GROUP --location $REGION
-          export APP_SERVICE_PLAN=appservice-plan-$RANDOM
+          export APPSERVICE_PLAN=appservice-plan-$RANDOM
           
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
           --location westus2 \
-          --name $APP_SERVICE_PLAN \
+          --name $APPSERVICE_PLAN \
           --is-linux \
           --sku P1V2
           az appservice plan delete \
           --resource-group $RESOURCE_GROUP \
-          --name $APP_SERVICE_PLAN \
+          --name $APPSERVICE_PLAN \
           --yes
-          export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APP_SERVICE_PLAN --query provisioningState --output tsv)
+          export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APPSERVICE_PLAN --query provisioningState --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" == Succeeded ]]; then
           exit 1

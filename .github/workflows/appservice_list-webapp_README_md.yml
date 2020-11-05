@@ -15,12 +15,12 @@ jobs:
           export REGION=westus2
           export RESOURCE_GROUP=azure-examples-$RANDOM
           az group create --name $RESOURCE_GROUP --location $REGION
-          export APP_SERVICE_PLAN=appservice-plan-$RANDOM
+          export APPSERVICE_PLAN=appservice-plan-$RANDOM
           
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
           --location westus2 \
-          --name $APP_SERVICE_PLAN \
+          --name $APPSERVICE_PLAN \
           --is-linux \
           --sku P1V2
           
@@ -31,7 +31,7 @@ jobs:
           
           mvn azure-webapp:deploy \
           -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
-          -DappServicePlan=$APP_SERVICE_PLAN \
+          -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
           cd ../..

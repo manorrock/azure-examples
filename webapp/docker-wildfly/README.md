@@ -22,7 +22,7 @@ To deploy the example use the following command lines:
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_WILDFLY_NAME \
     -DimageName=acr-wildfly:latest \
-    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR_NAME
 

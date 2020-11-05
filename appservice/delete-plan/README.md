@@ -17,12 +17,12 @@ To delete the Azure App Service Plan use the following command line:
 ```shell
   az appservice plan delete \
     --resource-group $RESOURCE_GROUP \
-    --name $APP_SERVICE_PLAN \
+    --name $APPSERVICE_PLAN \
     --yes
 ```
 
 <!-- workflow.directOnly() 
-export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APP_SERVICE_PLAN --query provisioningState --output tsv)
+export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APPSERVICE_PLAN --query provisioningState --output tsv)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" == Succeeded ]]; then
   exit 1

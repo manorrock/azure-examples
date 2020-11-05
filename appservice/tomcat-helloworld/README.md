@@ -31,7 +31,7 @@ To deploy the example use the following Maven command line.
 
   mvn azure-webapp:deploy \
     -DappName=$TOMCAT_HELLOWORLD_WEBAPP \
-    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP
 ````
 

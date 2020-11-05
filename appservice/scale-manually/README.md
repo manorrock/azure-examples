@@ -18,7 +18,7 @@ To scale the Azure App Service Plan use the following command line:
 ```shell
   az appservice plan update \
     --verbose \
-    --name $APP_SERVICE_PLAN \
+    --name $APPSERVICE_PLAN \
     --resource-group $RESOURCE_GROUP \
     --number-of-workers 2
 ```
@@ -27,7 +27,7 @@ You can adjust the number to your desired number of workers.
 
 <!-- workflow.directOnly()
 
-export RESULT=$(az appservice plan show --name $APP_SERVICE_PLAN --resource-group $RESOURCE_GROUP --output tsv --query sku.capacity)
+export RESULT=$(az appservice plan show --name $APPSERVICE_PLAN --resource-group $RESOURCE_GROUP --output tsv --query sku.capacity)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" == 2 ]]; then
   exit 1

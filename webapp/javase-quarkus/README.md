@@ -35,7 +35,7 @@ To deploy the example use the following command lines:
 
   mvn azure-webapp:deploy \
     -DappName=$JAVASE_QUARKUS_WEBAPP \
-    -DappServicePlan=$APP_SERVICE_PLAN \
+    -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP
 ````
 
