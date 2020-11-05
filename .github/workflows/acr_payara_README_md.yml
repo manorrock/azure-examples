@@ -9,6 +9,7 @@ jobs:
       - uses: 'azure/login@v1'
         with: 
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'azure/checkout@v2'
       - run: | 
           mvn package
           export ACR_PAYARA_IMAGE=acr-payara:latest
