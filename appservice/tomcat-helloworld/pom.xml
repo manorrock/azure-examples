@@ -12,7 +12,7 @@
     </parent>
     <artifactId>appservice-tomcat-helloworld</artifactId>
     <packaging>war</packaging>
-    <name>Deploy a Web application on Azure App Service (managed Tomcat)</name>
+    <name>Deploy a Web application on a managed Tomcat</name>
     <build>
         <plugins>
             <plugin>

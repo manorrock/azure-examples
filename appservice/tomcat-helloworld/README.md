@@ -1,5 +1,5 @@
 
-# Deploy a Web application on Azure App Service (managed Tomcat)
+# Deploy a Web application on a managed Tomcat
 
 ## Prerequisites
 

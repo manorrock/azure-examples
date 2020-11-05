@@ -19,7 +19,6 @@
         <module>docker-graalvm</module>
         <module>docker-jetty</module>
         <module>docker-payara</module>
-        <module>docker-tomcat</module>
         <module>docker-wildfly</module>
         <module>javase-springboot</module>
         <module>javase-quarkus</module>

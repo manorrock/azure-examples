@@ -45,11 +45,9 @@ Set your default subscription for this session using the subscription id from th
 exit 0
   -->
 
-## Hosting platforms
+## Azure App Service examples
 
-### Azure App Service examples
-
-1. [Deploy a Web application on Azure App Service (managed Tomcat)](appservice/tomcat-helloworld/)
+1. [Deploy a Web application on a managed Tomcat](appservice/tomcat-helloworld/)
 1. [Create an Azure App Service Plan](appservice/create-plan/)
 1. [Delete an Azure App Service Plan](appservice/delete-plan/)
 1. [Scale your Azure App Service Plan manually](appservice/scale-manually/)
@@ -57,7 +55,7 @@ exit 0
 1. [List your Web applications](appservice/list-webapp/)
 1. [Create a deployment slot](appservice/create-a-deployment-slot/)
 1. [Deploy to a deployment slot](appservice/deploy-to-deployment-slot/)
-1. [Deploy Tomcat on Azure App Service (using a Docker image)](webapp/docker-tomcat/)
+1. [Deploy Tomcat using a Docker image](appservice/docker-tomcat/)
 1. [Deploy Jetty on Azure App Service (using a Docker image)](webapp/docker-jetty/)
 1. [Deploy Payara on Azure App Service (using a Docker image)](webapp/docker-payara/)
 1. [Deploy Glassfish on Azure App Service (using a Docker image)](webapp/docker-glassfish/)
