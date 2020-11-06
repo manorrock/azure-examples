@@ -1,5 +1,5 @@
 
-# Deploy a custom WildFly to Azure App Service (using a Docker image)
+# Deploy WildFly using a Docker image
 
 ## Prerequisites
 
@@ -11,16 +11,16 @@ This example assumes you have previously completed the following examples.
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Create an Azure App Service Plan](../../appservice/create-plan/)
 
-## Deploy the example
+## Deploy WildFly using a Docker image
 
-To deploy the example use the following command lines:
+To deploy WildFly use the following command lines:
 
 ```shell
-  export APPSERVICE_DOCKER_WILDFLY_NAME=appservice-docker-wildfly-$RANDOM
+  export APPSERVICE_DOCKER_WILDFLY=appservice-docker-wildfly-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
-    -DappName=$APPSERVICE_DOCKER_WILDFLY_NAME \
+    -DappName=$APPSERVICE_DOCKER_WILDFLY \
     -DimageName=acr-wildfly:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
@@ -28,7 +28,7 @@ To deploy the example use the following command lines:
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $APPSERVICE_DOCKER_WILDFLY_NAME \
+    --name $APPSERVICE_DOCKER_WILDFLY \
     --query hostNames[0] \
     --output tsv
 ```

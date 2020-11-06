@@ -24,6 +24,7 @@
         <module>docker-jetty</module>
         <module>docker-payara</module>
         <module>docker-tomcat</module>
+        <module>docker-wildfly</module>
         <module>javase-springboot</module>
         <module>list-webapp</module>
         <module>scale-manually</module>
