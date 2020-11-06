@@ -7,7 +7,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>use-your-acr-registry</artifactId>
+    <artifactId>aks-use-your-acr-registry</artifactId>
     <packaging>pom</packaging>
     <name>Update your AKS cluster to use your Azure Container Registry</name>
     <properties>

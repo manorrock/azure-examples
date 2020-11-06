@@ -10,9 +10,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>springboot</artifactId>
+    <artifactId>aks-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Spring Boot application to an Azure Kubernetes Service cluster</name>
+    <name>Deploy a Spring Boot application</name>
     <build>
         <plugins>
             <plugin>

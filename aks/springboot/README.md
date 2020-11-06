@@ -8,10 +8,12 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
-1. [Deploy an AKS cluster (Azure Kubernetes Service)](../create/)
+1. [Deploy an AKS cluster (Azure Kubernetes Service)](../create-cluster/)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/)
 
 ## Build the example
+
+<!-- workflow.include(../use-your-acr/README.md) -->
 
 To build the JAR file use the following Maven command line.
 
