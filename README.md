@@ -77,7 +77,7 @@ exit 0
 
 ## Azure Kubernetes Service examples
 
-1. [Create an Azure Kubernetes Service cluster](aks/create-cluster/)
+1. [Create an Azure Kubernetes Service cluster](aks/create/)
 1. [Create a Kube config file using admin access](aks/create-kube-config/)
 1. [Deploy Tiller using Helm 2](aks/deploy-tiller/)
 1. [Deploy an NGINX Ingress Controller using Helm 2](aks/deploy-nginx-ingress-controller/)

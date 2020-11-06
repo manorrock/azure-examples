@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
     <name>Azure Kubernetes Service examples</name>
     <modules>
-        <module>create-cluster</module>
+        <module>create</module>
         <module>create-kube-config</module>
         <module>deploy-nginx-ingress-controller</module>
         <module>deploy-tiller</module>

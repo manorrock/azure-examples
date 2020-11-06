@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Deploy an Azure Kubernetes Cluster](../create-cluster/)
+1. [Deploy an Azure Kubernetes Service cluster](../create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
 
 ## Update your cluster to use your Azure Container Registry

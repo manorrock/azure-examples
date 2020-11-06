@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Deploy an AKS cluster](../create-cluster/)
+1. [Deploy an Azure Kubernetes Service cluster](../create/)
 1. [Create Kube config file for your AKS cluster (using admin access)](../create-kube-config/)
 1. [Deploy Tiller using Helm 2](../deploy-tiller/)
 

@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>aks-create-cluster</artifactId>
+    <artifactId>aks-create</artifactId>
     <packaging>pom</packaging>
     <name>Create an Azure Kubernetes Service cluster</name>
 </project>

@@ -11,11 +11,11 @@ limit access to your Kubernetes cluster based on roles.
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Deploy an Azure Kubernetes Cluster](../create-cluster/)
+1. [Deploy an Azure Kubernetes Service cluster](../create/)
 
 ## Create a Kubeconfig file usin admin access
 
-<!-- workflow.include(../create-cluster/README.md) -->
+<!-- workflow.include(../create/README.md) -->
 
 To create the Kubeconfig file use the following command line:
 
