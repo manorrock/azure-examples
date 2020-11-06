@@ -29,6 +29,7 @@
         <module>javase-springboot</module>
         <module>list-webapp</module>
         <module>scale-manually</module>
+        <module>swap-deployment-slot</module>
         <module>tomcat-helloworld</module>
     </modules>
 </project>

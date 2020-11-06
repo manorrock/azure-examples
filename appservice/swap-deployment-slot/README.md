@@ -6,12 +6,14 @@
 This example assumes you have previously completed the following:
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure App Service Plan](../../appservice/create-plan/)
-1. [Deploy a Web application on a managed Tomcat](../../appservice/tomcat-helloworld/)
+1. [Create an Azure App Service Plan](../../create-plan/)
+1. [Deploy a Web application on a managed Tomcat](../tomcat-helloworld/)
 1. [Create a deployment slot](../create-deployment-slot/)
-1. [Deploy to a deployment slot](../deploy-to-a-deployment-slot/)
+1. [Deploy to a deployment slot](../deploy-to-deployment-slot/)
 
 ## Swap a deployment slot
+
+<!-- workflow.include(../deploy-to-deployment-slot/README.md) -->
 
 To swap deployment slot use the following command line:
 
