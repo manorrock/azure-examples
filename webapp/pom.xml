@@ -15,8 +15,6 @@
     <packaging>pom</packaging>
     <name>Azure Webapp examples</name>
     <modules>
-        <module>docker-graalvm</module>
-        <module>javase-quarkus</module>
         <module>swap-a-deployment-slot</module>
     </modules>
 </project>

@@ -9,18 +9,20 @@ This example assumes you have previously completed the following examples.
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create a GraalVM application packaged as a Docker image and push it to Azure Container Registry](../../acr/graalvm/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
-1. [Create an Azure App Service Plan](../../appservice/create-plan/)
+1. [Create an Azure App Service Plan](../create-plan/)
 
 ## Deploy the example
+
+<!-- workflow.include(../create-plan/README.md) -->
 
 To deploy the example use the following command lines:
 
 ```shell
-  export APPSERVICE_DOCKER_GRAALVM_NAME=appservice-docker-graalvm-$RANDOM
+  export APPSERVICE_DOCKER_GRAALVM=appservice-docker-graalvm-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
-    -DappName=$APPSERVICE_DOCKER_GRAALVM_NAME \
+    -DappName=$APPSERVICE_DOCKER_GRAALVM \
     -DimageName=acr-graalvm:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
@@ -28,7 +30,7 @@ To deploy the example use the following command lines:
 
   echo `az webapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $APPSERVICE_DOCKER_GRAALVM_NAME \
+    --name $APPSERVICE_DOCKER_GRAALVM \
     --query hostNames[0] \
     --output tsv`/hello
 ```

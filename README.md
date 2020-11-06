@@ -62,7 +62,7 @@ exit 0
 1. [Deploy a Spring Boot application using managed JavaSE](appservice/javase-springboot/)
 1. [Deploy WildFly using a Docker image](appservice/docker-wildfly/)
 1. [Deploy a Quarkus application using JavaSE](appservice/javase-quarkus/)
-1. [Deploy a GraalVM application on Azure App Service (using Docker)](webapp/docker-graalvm/)
+1. [Deploy a GraalVM application using Docker](appservice/docker-graalvm/)
 
 ### Azure Container Instances examples
 
