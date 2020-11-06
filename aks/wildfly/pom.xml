@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>wildfly</artifactId>
+    <artifactId>aks-wildfly</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a WildFly application to an Azure Kubernetes Service cluster</name>
+    <name>Deploy WildFly</name>
 </project>
