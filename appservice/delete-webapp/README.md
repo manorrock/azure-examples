@@ -1,14 +1,14 @@
 
-# Delete a Web Application
+# Delete a web application
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../group/create/)
-1. [Deploy a Web application on a managed Tomcat](../tomcat-helloworld/)
+1. [Deploy a web application on a managed Tomcat](../tomcat-helloworld/)
 
-## Delete a Web Application
+## Delete a web application
 
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 

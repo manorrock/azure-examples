@@ -1,5 +1,5 @@
 
-# Deploy a Web Application on a managed Tomcat
+# Deploy a web application on a managed Tomcat
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ cd appservice/tomcat-helloworld
   mvn clean install
 ````
 
-## Deploy the Web Application on the managed Tomcat
+## Deploy the web application on the managed Tomcat
 
 To deploy the example use the following Maven command line.
 

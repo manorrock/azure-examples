@@ -1,5 +1,5 @@
 
-# Deploy a custom GraalVM to Azure App Service (using a Docker image)
+# Deploy a GraalVM application using a Docker image
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples.
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
-## Deploy the example
+## Deploy the GraalVM application using a Docker image
 
 <!-- workflow.include(../create-plan/README.md) -->
 

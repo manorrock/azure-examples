@@ -47,22 +47,23 @@ exit 0
 
 ## Azure App Service examples
 
-1. [Deploy a Web Application on a managed Tomcat](appservice/tomcat-helloworld/)
+1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/)
 1. [Create an App Service Plan](appservice/create-plan/)
 1. [Delete an App Service Plan](appservice/delete-plan/)
 1. [Scale your App Service Plan manually](appservice/scale-manually/)
-1. [Delete your Web application from Azure App Service](appservice/delete-webapp/)
-1. [List your Web applications](appservice/list-webapp/)
-1. [Create a Deployment Slot](appservice/create-a-deployment-slot/)
-1. [Deploy to a Deployment Slot](appservice/deploy-to-deployment-slot/)
+1. [Delete your web application](appservice/delete-webapp/)
+1. [List your web applications](appservice/list-webapp/)
+1. [Create a deployment slot](appservice/create-a-deployment-slot/)
+1. [Deploy to a deployment slot](appservice/deploy-to-deployment-slot/)
 1. [Deploy Tomcat using a Docker image](appservice/docker-tomcat/)
-1. [Deploy Jetty using a Docker image](appsevice/docker-jetty/)
+1. [Deploy Jetty using a Docker image](appservice/docker-jetty/)
 1. [Deploy Payara using a Docker image](appservice/docker-payara/)
 1. [Deploy Glassfish using a Docker image](appservice/docker-glassfish/)
 1. [Deploy a Spring Boot application using managed JavaSE](appservice/javase-springboot/)
 1. [Deploy WildFly using a Docker image](appservice/docker-wildfly/)
-1. [Deploy a Quarkus application using JavaSE](appservice/javase-quarkus/)
-1. [Deploy a GraalVM application using Docker](appservice/docker-graalvm/)
+1. [Deploy a Quarkus application using managed JavaSE](appservice/javase-quarkus/)
+1. [Deploy a GraalVM application using a Docker image](appservice/docker-graalvm/)
+1. [Swap a deployment slot](appservice/swap-deployment-slot/)
 
 ### Azure Container Instances examples
 

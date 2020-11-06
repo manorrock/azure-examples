@@ -1,5 +1,5 @@
 
-# Deploy to a Deployment Slot
+# Deploy to a deployment slot
 
 ## Prerequisites
 
@@ -7,7 +7,7 @@ This example assumes you have previously completed the following:
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure App Service Plan](../create-plan/)
-1. [Deploy a Web application on a managed Tomcat](../tomcat-helloworld/)
+1. [Deploy a web application on a managed Tomcat](../tomcat-helloworld/)
 1. [Create a deployment slot](../create-deployment-slot/)
 
 ## Build the example
@@ -18,7 +18,7 @@ This example assumes you have previously completed the following:
   mvn clean install
 ````
 
-## Deploy to a Deployment Slot
+## Deploy to a deployment slot
 
 ````shell
   mvn azure-webapp:deploy \

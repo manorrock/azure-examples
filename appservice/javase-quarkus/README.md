@@ -1,5 +1,5 @@
 
-# Create a Quarkus application and deploy it to Azure App Service (using JavaSE)
+# Deploy a Quarkus application using managed JavaSE
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ To run the example locally use the following Maven command line.
 
 You can see the application in action at http://localhost:8080/hello
 
-## Deploy the example
+## Deploy the Quarkus application using managed JavaSE
 
-To deploy the example use the following command lines:
+To deploy the application use the following command lines:
 
 ````shell
   export APPSERVICE_JAVASE_QUARKUS=appservice-javase-quarkus-$RANDOM
