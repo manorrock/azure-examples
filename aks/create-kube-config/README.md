@@ -1,5 +1,5 @@
 
-# Create a Kubeconfig file for your Azure Kubernetes Service (using admin access)
+# Create a Kubeconfig file using admin access
 
 ```text
 Note for production environments we recommend you configure RBAC to
@@ -11,9 +11,11 @@ limit access to your Kubernetes cluster based on roles.
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Deploy an Azure Kubernetes Cluster](../create/)
+1. [Deploy an Azure Kubernetes Cluster](../create-cluster/)
 
-## Create a Kubeconfig file
+## Create a Kubeconfig file usin admin access
+
+<!-- workflow.include(../create-cluster/README.md) -->
 
 To create the Kubeconfig file use the following command line:
 
