@@ -1,5 +1,5 @@
 
-# Deploy an NGINX Ingress Controller on your AKS cluster (using Helm 2)
+# Deploy an NGINX Ingress Controller using Helm 2
 
 ## Prerequisites
 
@@ -15,6 +15,8 @@ need to install `helm`, please go to [Installing Helm 2](https://v2.helm.sh/docs
 If you need to install `kubectl`, please go to [Install and Setup kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 ## Create the Kubernetes namespace
+
+<!-- workflow.include(../deploy-tiller/README.md) -->
 
 We will create a separate Kubernetes namespace which will be used for deploying
 the NGINX Ingress Controller.

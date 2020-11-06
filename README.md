@@ -79,8 +79,8 @@ exit 0
 
 1. [Create an Azure Kubernetes Service cluster](aks/create-cluster/)
 1. [Create a Kube config file using admin access](aks/create-kube-config/)
-1. [Deploy Tiller using Helm 2)](aks/deploy-tiller/)
-1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks/deploy-nginx-ingress-controller/)
+1. [Deploy Tiller using Helm 2](aks/deploy-tiller/)
+1. [Deploy an NGINX Ingress Controller using Helm 2](aks/deploy-nginx-ingress-controller/)
 1. [Update your AKS cluster to use your Azure Container Registry](aks/use-your-acr/)
 1. [Deploy a Spring Boot application to AKS](aks/springboot/)
 1. [Deploy a Tomcat web application to AKS](aks/tomcat/)

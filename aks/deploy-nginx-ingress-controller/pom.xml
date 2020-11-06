@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>deploy-nginx-ingress-controller</artifactId>
+    <artifactId>aks-deploy-nginx-ingress-controller</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy NGINX Ingress Controller on an Azure Kubernetes Service cluster (using Helm 2)</name>
+    <name>Deploy NGINX Ingress Controller using Helm 2</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
