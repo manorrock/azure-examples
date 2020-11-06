@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.functionapp</groupId>
+        <groupId>examples.azure.functions</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>java-function</artifactId>
+    <artifactId>functions-java</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Java Azure Function</name>
+    <name>Deploy a Java Function</name>
     <build>
         <plugins>
             <plugin>
@@ -110,7 +110,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <appName>java-function</appName>
+        <appName>functions-java</appName>
         <resourceGroup>azure-examples</resourceGroup>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>

@@ -71,9 +71,9 @@ exit 0
 1. [Deploy a GraalVM application using a Docker image](appservice/docker-graalvm/)
 1. [Swap a deployment slot](appservice/swap-deployment-slot/)
 
-### Azure Functions examples
+## Azure Functions examples
 
-1. [Deploy a Java Azure Function](functionapp/java/)
+1. [Deploy a Java Function](functions/java/)
 
 ### Azure Kubernetes Service examples
 

@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.functionapp</groupId>
+    <groupId>examples.azure.functions</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <name>Azure Functions examples</name>
