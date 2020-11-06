@@ -15,10 +15,10 @@
     <packaging>pom</packaging>
     <name>Azure Kubernetes Service examples</name>
     <modules>
-        <module>create</module>
+        <module>create-cluster</module>
         <module>create-kube-config</module>
         <module>deploy-nginx-ingress-controller</module>
-        <module>install-tiller</module>
+        <module>deploy-tiller</module>
         <module>springboot</module>
         <module>tomcat</module>
         <module>use-your-acr</module>

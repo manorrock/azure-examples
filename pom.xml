@@ -69,7 +69,7 @@
         <module>appservice</module>
         <module>aro</module>
         <module>cosmosdb</module>
-        <module>functionapp</module>
+        <module>functions</module>
         <module>group</module>
         <module>keyvault</module>
         <module>mysql</module>

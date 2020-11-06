@@ -8,7 +8,7 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an AKS cluster](../create/)
 1. [Create Kube config file for your AKS cluster (using admin access)](../create-kube-config/)
-1. [Install Tiller on your AKS cluster (using Helm 2)](../install-tiller/)
+1. [Deploy Tiller using Helm 2](../deploy-tiller/)
 
 And additionally it assumes you have installed both `helm` and `kubectl`. If you
 need to install `helm`, please go to [Installing Helm 2](https://v2.helm.sh/docs/using_helm/#installing-helm).

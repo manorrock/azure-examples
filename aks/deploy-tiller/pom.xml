@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>install-tiller</artifactId>
+    <artifactId>aks-deploy-tiller</artifactId>
     <packaging>pom</packaging>
-    <name>Install Tiller on an Azure Kubernetes Service cluster (using Helm 2)</name>
+    <name>Deploy Tiller using Helm 2</name>
      <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
