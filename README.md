@@ -83,7 +83,7 @@ exit 0
 1. [Deploy an NGINX Ingress Controller using Helm 2](aks/deploy-nginx-ingress-controller/)
 1. [Update your cluster to use your Azure Container Registry](aks/use-your-acr/)
 1. [Deploy a Spring Boot application](aks/springboot/)
-1. [Deploy a Tomcat web application to AKS](aks/tomcat/)
+1. [Deploy Tomcat](aks/tomcat/)
 1. [Deploy a WildFly application to AKS](aks/wildfly/)
 
 ### Azure Red Hat OpenShift examples

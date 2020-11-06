@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>tomcat</artifactId>
+    <artifactId>aks-tomcat</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a Tomcat application to an Azure Kubernetes Service cluster</name>
+    <name>Deploy Tomcat</name>
 </project>

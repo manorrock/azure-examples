@@ -1,5 +1,5 @@
 
-# Deploy a Tomcat web application to AKS
+# Deploy Tomcat
 
 ## Prerequisites
 
@@ -9,11 +9,11 @@ This example assumes you have previously completed the following examples.
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](../../acr/tomcat/)
 1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
-1. [Deploy an AKS cluster (Azure Kubernetes Service)](../create/)
+1. [Deploy an AKS cluster (Azure Kubernetes Service)](../create-cluster/)
 1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/)
 
-## Deploying to the AKS cluster
+## Deploying Tomcat
 
 First open the `deployment.yml` file in an editor and replace `ACR` with the
 name of your registry OR execute the command line below:
