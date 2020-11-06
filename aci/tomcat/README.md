@@ -1,5 +1,5 @@
 
-# Deploy a Quarkus application to Azure Container Instances
+# Deploy Tomcat
 
 ## Prerequisites
 
@@ -8,28 +8,28 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/)
-1. [Create a Quarkus application packaged as a Docker image and push it to Azure Container Registry](../../acr/quarkus/)
+1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](../../acr/tomcat/)
 
-## Deploy the example
+## Deploy Tomcat
 
-To deploy the example use the following command line:
+To deploy Tomcat the following command line:
 
 ```shell
-  export ACI_QUARKUS_NAME=aci-quarkus-$RANDOM
+  export ACI_TOMCAT=aci-tomcat-$RANDOM
 
   az container create \
     --resource-group $RESOURCE_GROUP \
-    --name $ACI_QUARKUS_NAME \
-    --image $ACR_NAME.azurecr.io/acr-quarkus:latest \
+    --name $ACI_TOMCAT \
+    --image $ACR_NAME.azurecr.io/acr-tomcat:latest \
     --registry-login-server $ACR_NAME.azurecr.io \
     --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
     --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
-    --dns-name-label $ACI_QUARKUS_NAME \
+    --dns-name-label $ACI_TOMCAT_NAME \
     --ports 8080
 
   echo `az container show \
     --resource-group $RESOURCE_GROUP \
-    --name $ACI_QUARKUS_NAME \
+    --name $ACI_TOMCAT \
     --query ipAddress.fqdn \
     --output tsv`:8080
 ```
@@ -37,7 +37,8 @@ To deploy the example use the following command line:
 Then open your browser to the URL echoed above and you should see:
 
 ```text
-hello
+And this is served by a custom Tomcat using a Docker image coming from our 
+own Azure Container Registry.
 ```
 
 ## Cleanup

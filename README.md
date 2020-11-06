@@ -45,6 +45,12 @@ Set your default subscription for this session using the subscription id from th
 exit 0
   -->
 
+## Azure Container Instances examples
+
+1. [Deploy Quarkus application](aci/quarkus/)
+1. [Deploy Tomcat](aci/tomcat/)
+1. [Deploy WildFly](aci/wildfly/)
+
 ## Azure App Service examples
 
 1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/)
@@ -64,11 +70,6 @@ exit 0
 1. [Deploy a Quarkus application using managed JavaSE](appservice/javase-quarkus/)
 1. [Deploy a GraalVM application using a Docker image](appservice/docker-graalvm/)
 1. [Swap a deployment slot](appservice/swap-deployment-slot/)
-
-### Azure Container Instances examples
-
-1. [Deploy a custom Tomcat on Azure Container Instances](container/tomcat/)
-1. [Deploy a custom WildFly on Azure Container Instances](container/wildfly/)
 
 ### Azure Functions examples
 

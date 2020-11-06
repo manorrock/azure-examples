@@ -1,5 +1,5 @@
 
-# Deploy a custom WildFly to Azure Container Instances
+# Deploy WildFly
 
 ## Prerequisites
 
@@ -10,16 +10,16 @@ This example assumes you have previously completed the following examples.
 1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/)
 1. [Create a custom WildFly Docker image and push it to Azure Container Registry](../../acr/wildfly/)
 
-## Deploy the example
+## Deploy WildFly
 
-To deploy the example use the following command line:
+To deploy WildFly use the following command line:
 
 ```shell
-  export ACI_WILDFLY_NAME=aci-wildfly-$RANDOM
+  export ACI_WILDFLY=aci-wildfly-$RANDOM
 
   az container create \
     --resource-group $RESOURCE_GROUP \
-    --name $ACI_WILDFLY_NAME \
+    --name $ACI_WILDFLY \
     --image $ACR_NAME.azurecr.io/acr-wildfly:latest \
     --registry-login-server $ACR_NAME.azurecr.io \
     --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
@@ -29,7 +29,7 @@ To deploy the example use the following command line:
 
   echo `az container show \
     --resource-group $RESOURCE_GROUP \
-    --name $ACI_WILDFLY_NAME \
+    --name $ACI_WILDFLY \
     --query ipAddress.fqdn \
     --output tsv`:8080
 ```
