@@ -1,12 +1,7 @@
 on: 
-  push: 
-    paths: 
-      - 'group/delete/README.md'
-  schedule: 
-    - cron: '0 1 * * 0'
   workflow_dispatch: 
 
-name: 'group/delete/README.md'
+name: 'appservice/docker-payara/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -21,8 +16,11 @@ jobs:
           fi
           export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
-          az group delete --name $RESOURCE_GROUP --yes
-          export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query name)
-          if [[ "$RESULT" == $RESOURCE_GROUP ]]; then
-          exit 1
-          fi
+          export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          
+          az appservice plan create \
+          --resource-group $RESOURCE_GROUP \
+          --location westus2 \
+          --name $APPSERVICE_PLAN \
+          --is-linux \
+          --sku P1V2

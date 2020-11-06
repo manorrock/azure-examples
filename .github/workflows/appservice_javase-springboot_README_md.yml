@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'webapp/javase-springboot/README.md'
+name: 'appservice/javase-springboot/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -13,7 +13,7 @@ jobs:
       - run: | 
           mvn package
           mvn spring-boot:run
-          export JAVASE_SPRINGBOOT_WEBAPP=javase-springboot-$RANDOM
+          export JAVASE_SPRINGBOOT_WEBAPP=appservice-javase-springboot-$RANDOM
           
           mvn azure-webapp:deploy \
           -DappName=$JAVASE_SPRINGBOOT_WEBAPP \

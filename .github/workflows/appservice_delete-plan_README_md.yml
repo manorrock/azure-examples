@@ -11,9 +11,10 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          export RESOURCE_GROUP=azure-examples
-          export REGION=westus2
+          if [[ -z $RESOURCE_GROUP ]] then;
           export RESOURCE_GROUP=azure-examples-$RANDOM
+          fi
+          export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
           

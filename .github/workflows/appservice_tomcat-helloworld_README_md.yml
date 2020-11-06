@@ -11,9 +11,10 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          export RESOURCE_GROUP=azure-examples
-          export REGION=westus2
+          if [[ -z $RESOURCE_GROUP ]] then;
           export RESOURCE_GROUP=azure-examples-$RANDOM
+          fi
+          export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
           
@@ -27,7 +28,7 @@ jobs:
           cd appservice/tomcat-helloworld
           
           mvn clean install
-          export APPSERVICE_TOMCAT_HELLOWORLD=helloworld-$RANDOM
+          export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
           
           mvn azure-webapp:deploy \
           -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
@@ -38,7 +39,18 @@ jobs:
           
           
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
-          az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Running ]]; then
+          echo 'Web application is NOT running'
+          az group delete --name $RESOURCE_GROUP --yes || true
+          exit 1
+          fi
+          
+          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query defaultHostName)
+          export RESULT=$(curl $URL)
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
+          
+          if [[ "$RESULT" != *"Hello World"* ]]; then
+          echo "Response did not contain 'Hello World'"
           exit 1
           fi

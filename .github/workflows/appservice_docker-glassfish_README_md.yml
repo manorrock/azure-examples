@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'appservice/delete-webapp/README.md'
+name: 'appservice/docker-glassfish/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -24,23 +24,18 @@ jobs:
           --name $APPSERVICE_PLAN \
           --is-linux \
           --sku P1V2
-          
-          cd appservice/tomcat-helloworld
-          
-          mvn clean install
-          export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
+          export APPSERVICE_DOCKER_GLASSFISH=appservice-docker-glassfish-$RANDOM
           
           mvn azure-webapp:deploy \
-          -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
+          --settings=$SETTINGS_XML \
+          -DappName=$APPSERVICE_DOCKER_GLASSFISH \
+          -DimageName=acr-glassfish:latest \
           -DappServicePlan=$APPSERVICE_PLAN \
-          -DresourceGroup=$RESOURCE_GROUP
+          -DresourceGroup=$RESOURCE_GROUP \
+          -DserverId=$ACR_NAME
           
-          cd ../..
-          
-          az webapp delete --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
-          
-          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
-          az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" == Running ]]; then
-          exit 1
-          fi
+          az webapp show \
+          --resource-group $RESOURCE_GROUP \
+          --name $APPSERVICE_DOCKER_GLASSFISH \
+          --query hostNames[0] \
+          --output tsv

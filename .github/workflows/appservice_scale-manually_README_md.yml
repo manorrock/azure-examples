@@ -11,9 +11,10 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          export RESOURCE_GROUP=azure-examples
-          export REGION=westus2
+          if [[ -z $RESOURCE_GROUP ]] then;
           export RESOURCE_GROUP=azure-examples-$RANDOM
+          fi
+          export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
           
@@ -27,7 +28,7 @@ jobs:
           cd appservice/tomcat-helloworld
           
           mvn clean install
-          export APPSERVICE_TOMCAT_HELLOWORLD=helloworld-$RANDOM
+          export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
           
           mvn azure-webapp:deploy \
           -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
