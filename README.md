@@ -75,9 +75,9 @@ exit 0
 
 1. [Deploy a Java Function](functions/java/)
 
-### Azure Kubernetes Service examples
+## Azure Kubernetes Service examples
 
-1. [Deploy an AKS cluster (Azure Kubernetes Service)](aks/create/)
+1. [Create an Azure Kubernetes Service cluster](aks/create-cluster/)
 1. [Create a Kube config file for an Azure Kubernetes Cluster (using admin access)](aks/create-kube-config/)
 1. [Install Tiller on your Azure Kubernetes Service cluster (using Helm 2)](aks/install-tiller/)
 1. [Deploy an NGINX Ingress Controller on your Azure Kubernetes Service cluster (using Helm 2)](aks/deploy-nginx-ingress-controller/)
