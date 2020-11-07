@@ -8,6 +8,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
+<!-- workflow.include(0 3 * * 1) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 ## Build the example

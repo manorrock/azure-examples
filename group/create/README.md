@@ -33,6 +33,11 @@ To create the Resource Group use the following command line:
   az group create --name $RESOURCE_GROUP --location $REGION
 ```
 
+<!-- workflow.run()
+  export DELETE_AFTER=$(( `date +%s` + 7200))
+  az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER" 
+  -->
+
 <!-- workflow.directOnly()
 export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
 az group delete --name $RESOURCE_GROUP --yes || true
