@@ -22,7 +22,7 @@ the command lines below:
 ```
 
 <!-- workflow.run()
-if [[ -z $RESOURCE_GROUP ]] then;
+if [[ -z $RESOURCE_GROUP ]]; then
   export RESOURCE_GROUP=azure-examples-$RANDOM
 fi
 export REGION=westus2
