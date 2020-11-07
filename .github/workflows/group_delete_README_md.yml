@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 0'
+    - cron: '0 2 * * 0'
   workflow_dispatch: 
 
-name: 'group/create/README.md'
+name: 'group/delete/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -18,8 +18,8 @@ jobs:
           fi
           export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
-          export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
-          az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != Succeeded ]]; then
+          az group delete --name $RESOURCE_GROUP --yes
+          export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query name)
+          if [[ "$RESULT" == $RESOURCE_GROUP ]]; then
           exit 1
           fi
