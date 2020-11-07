@@ -9,6 +9,7 @@ This example assumes you have previously completed the following example:
 
 ## Create an App Service Plan
 
+<!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 To create the App Service Plan use the following command line:
@@ -18,7 +19,7 @@ To create the App Service Plan use the following command line:
 
   az appservice plan create \
     --resource-group $RESOURCE_GROUP \
-    --location westus2 \
+    --location $REGION \
     --name $APPSERVICE_PLAN \
     --is-linux \
     --sku P1V2
