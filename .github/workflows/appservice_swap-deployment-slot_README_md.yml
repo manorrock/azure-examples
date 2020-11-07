@@ -20,7 +20,7 @@ jobs:
           
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
-          --location westus2 \
+          --location $REGION \
           --name $APPSERVICE_PLAN \
           --is-linux \
           --sku P1V2
