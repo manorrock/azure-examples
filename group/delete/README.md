@@ -12,7 +12,6 @@ subscription, if you have NOT done so please go to our top-level
 To delete the Resource Group use the following command line:
 
 <!-- workflow.cron(0 2 * * 0) -->
-<!-- workflow.pushPath(true) -->
 <!-- workflow.include(../create/README.md) -->
 
 ```shell
