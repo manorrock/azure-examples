@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'container/quarkus/README.md'
+name: 'aci/wildfly/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -11,20 +11,20 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          export ACI_QUARKUS_NAME=aci-quarkus-$RANDOM
+          export ACI_WILDFLY=aci-wildfly-$RANDOM
           
           az container create \
           --resource-group $RESOURCE_GROUP \
-          --name $ACI_QUARKUS_NAME \
-          --image $ACR_NAME.azurecr.io/acr-quarkus:latest \
+          --name $ACI_WILDFLY \
+          --image $ACR_NAME.azurecr.io/acr-wildfly:latest \
           --registry-login-server $ACR_NAME.azurecr.io \
           --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
           --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
-          --dns-name-label $ACI_QUARKUS_NAME \
+          --dns-name-label $ACI_WILDFLY_NAME \
           --ports 8080
           
           echo `az container show \
           --resource-group $RESOURCE_GROUP \
-          --name $ACI_QUARKUS_NAME \
+          --name $ACI_WILDFLY \
           --query ipAddress.fqdn \
           --output tsv`:8080

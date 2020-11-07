@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'aks/deploy-nginx-ingress-controller/README.md'
+name: 'aks/deploy-tiller/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -25,9 +25,3 @@ jobs:
           kubectl create clusterrolebinding tiller --clusterrole cluster-admin \
           --serviceaccount=kube-system:tiller
           helm init --service-account tiller --upgrade
-          kubectl create namespace ingress-basic
-          helm install stable/nginx-ingress --namespace ingress-basic --name nginx-ingress \
-          --set controller.replicaCount=2 \
-          --set controller.nodeSelector.'beta.kubernetes.io/os'=linux \
-          --set defaultBackend.nodeSelector.'beta.kubernetes.io/os'=linux \
-          kubectl --namespace ingress-basic get services -o wide nginx-ingress-controller

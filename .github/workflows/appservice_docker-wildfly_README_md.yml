@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'webapp/docker-wildfly/README.md'
+name: 'appservice/docker-wildfly/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -11,11 +11,11 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          export APPSERVICE_DOCKER_WILDFLY_NAME=appservice-docker-wildfly-$RANDOM
+          export APPSERVICE_DOCKER_WILDFLY=appservice-docker-wildfly-$RANDOM
           
           mvn azure-webapp:deploy \
           --settings=$SETTINGS_XML \
-          -DappName=$APPSERVICE_DOCKER_WILDFLY_NAME \
+          -DappName=$APPSERVICE_DOCKER_WILDFLY \
           -DimageName=acr-wildfly:latest \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP \
@@ -23,6 +23,6 @@ jobs:
           
           az webapp show \
           --resource-group $RESOURCE_GROUP \
-          --name $APPSERVICE_DOCKER_WILDFLY_NAME \
+          --name $APPSERVICE_DOCKER_WILDFLY \
           --query hostNames[0] \
           --output tsv

@@ -1,0 +1,41 @@
+on: 
+  workflow_dispatch: 
+
+name: 'appservice/docker-graalvm/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          if [[ -z $RESOURCE_GROUP ]] then;
+          export RESOURCE_GROUP=azure-examples-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          
+          az appservice plan create \
+          --resource-group $RESOURCE_GROUP \
+          --location westus2 \
+          --name $APPSERVICE_PLAN \
+          --is-linux \
+          --sku P1V2
+          export APPSERVICE_DOCKER_GRAALVM=appservice-docker-graalvm-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          --settings=$SETTINGS_XML \
+          -DappName=$APPSERVICE_DOCKER_GRAALVM \
+          -DimageName=acr-graalvm:latest \
+          -DappServicePlan=$APPSERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP \
+          -DserverId=$ACR_NAME
+          
+          echo `az webapp show \
+          --resource-group $RESOURCE_GROUP \
+          --name $APPSERVICE_DOCKER_GRAALVM \
+          --query hostNames[0] \
+          --output tsv`/hello

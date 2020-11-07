@@ -1,0 +1,53 @@
+on: 
+  workflow_dispatch: 
+
+name: 'appservice/swap-deployment-slot/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          if [[ -z $RESOURCE_GROUP ]] then;
+          export RESOURCE_GROUP=azure-examples-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          
+          az appservice plan create \
+          --resource-group $RESOURCE_GROUP \
+          --location westus2 \
+          --name $APPSERVICE_PLAN \
+          --is-linux \
+          --sku P1V2
+          
+          cd appservice/tomcat-helloworld
+          
+          mvn clean install
+          export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
+          -DappServicePlan=$APPSERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP
+          
+          cd ../..
+          
+          az webapp deployment slot create \
+          --resource-group $RESOURCE_GROUP \
+          --name $APPSERVICE_TOMCAT_HELLOWORLD \
+          --slot staging
+          mvn clean install
+          mvn azure-webapp:deploy \
+          -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
+          -DappServicePlan=$APPSERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP \
+          -DdeploymentSlotName=staging
+          az webapp deployment slot swap \
+          --resource-group $RESOURCE_GROUP \
+          --name $APPSERVICE_TOMCAT_HELLOWORLD \
+          --slot staging

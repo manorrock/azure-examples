@@ -11,6 +11,14 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          export ACR_NAME=acr$RANDOM
+          
+          az acr create \
+          --name $ACR_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME
           mvn package
           mvn spring-boot:run
           az acr build --registry $ACR_NAME --image example-springboot:latest .
