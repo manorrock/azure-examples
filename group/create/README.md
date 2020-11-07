@@ -12,6 +12,8 @@ subscription, if you have NOT done so please go to our top-level
 To setup the environment variables needed to create the Resource Group execute
 the command lines below:
 
+<!-- workflow.schedule('0 1 * * 0') -->
+
 <!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=azure-examples
