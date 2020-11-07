@@ -12,7 +12,7 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - run: | 
           export RESOURCE_GROUPS=$(az group list --query [*].name --output tsv)
-          IFS='\n'
+          IFS=$'\n'
           for RESOURCE_GROUP in "$RESOURCE_GROUPS";
           do
             echo "Processing" $RESOURCE_GROUP
