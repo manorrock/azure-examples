@@ -5,18 +5,14 @@
 
 This example assumes you are logged into Azure CLI and have set your default
 subscription, if you have NOT done so please go to our top-level
-[README](../README.md)
+[README](../..)
 
 ## Delete the Resource Group
 
 To delete the Resource Group use the following command line:
 
-<!-- workflow.name(group/delete/README.md) -->
-<!-- workflow.filename(group_delete_README.md.yml) -->
-<!-- workflow.cron(0 1 * * 0) -->
+<!-- workflow.cron(0 2 * * 0) -->
 <!-- workflow.pushPath(true) -->
-<!-- workflow.dispatch(true) -->
-<!-- workflow.runsOn(ubuntu-latest) -->
 <!-- workflow.include(../create/README.md) -->
 
 ```shell

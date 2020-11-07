@@ -13,6 +13,7 @@ To setup the environment variables needed to create the Resource Group execute
 the command lines below:
 
 <!-- workflow.cron(0 1 * * 0) -->
+<!-- workflow.pushPath(true) -->
 
 <!-- workflow.skip() -->
 ```shell
