@@ -12,11 +12,23 @@ This example assumes you have previously completed the following example:
 <!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
-To create the App Service Plan use the following command line:
+First, create the environment variable used for our App Service Plan
+using the command line below:
+
+<!-- workflow.skip() -->
+```shell
+  export APPSERVICE_PLAN=appservice-plan
+```
+
+<!-- workflow.run() 
+if [[ -z $APPSERVICE_PLAN ]]; then
+  export APPSERVICE_PLAN=appservice-plan-$RANDOM
+fi
+-->
+
+Then, create the App Service Plan using the following command line:
 
 ```shell
-  export APPSERVICE_PLAN=appservice-plan-$RANDOM
-
   az appservice plan create \
     --resource-group $RESOURCE_GROUP \
     --location $REGION \
