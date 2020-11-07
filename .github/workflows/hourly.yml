@@ -15,7 +15,7 @@ jobs:
           for RESOURCE_GROUP in "$RESOURCE_GROUPS";
           do
             echo "Processing" $RESOURCE_GROUP
-            if [[$RESOURCE_GROUP == "azure-examples-*"]]; then
+            if [[ "$RESOURCE_GROUP" == "azure-examples-*"]]; then
               echo "Evaluating DeleteAfter for" $RESOURCE_GROUP
               export DELETE_AFTER=$(az group show --name $RESOURCE_GROUP --query tags.DeleteAfter)
               if [[ ((`date +%s` > $DELETE_AFTER )) ]]; then
