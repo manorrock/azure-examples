@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 2 * * 1'
   workflow_dispatch: 
 
 name: 'appservice/delete-plan/README.md'
@@ -16,6 +18,8 @@ jobs:
           fi
           export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
           if [[ -z $APPSERVICE_PLAN ]]; then
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
           fi
