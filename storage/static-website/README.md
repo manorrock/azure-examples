@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure Storage Account](../storage/create/)
+1. [Create an Azure Storage Account](../account/create/)
 
 ## Enable static website hosting
 

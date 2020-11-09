@@ -51,6 +51,29 @@ exit 0
 1. [Deploy Tomcat](aci/tomcat/)
 1. [Deploy WildFly](aci/wildfly/)
 
+## Azure Container Registry examples
+
+1. [Deploy an Azure Container registry](acr/create/)
+1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
+1. [Create an 'acrpull' Service Principal](acr/create-acrpull-service-principal/)
+1. [Create a custom Glassfish Docker image and push it to Azure Container Registry](acr/glassfish/)
+1. [Create a GraalVM application packaged as a Docker image and push it to Azure Container Registry](acr/graalvm/)
+1. [Create a custom Jetty Docker image and push it to Azure Container Registry](acr/jetty/)
+1. [Create a custom Payara Docker image and push it to Azure Container Registry](acr/payara/)
+1. [Create a Quarkus application packaged as a Docker image and push it to Azure Container Registry](acr/quarkus/)
+1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](acr/tomcat/)
+1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)
+
+## Azure Cosmos DB examples
+
+1. [Create an Azure Cosmos DB](cosmosdb/create/)
+
+## Azure Database for MySQL examples
+
+1. [Deploy an Azure Database for MySQL](mysql/create/)
+1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip/)
+1. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/)
+
 ## Azure App Service examples
 
 1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/)
@@ -75,6 +98,11 @@ exit 0
 
 1. [Deploy a Java Function](functions/java/)
 
+## Azure Key Vault examples
+
+1. [Create an Azure Key Vault](keyvault/create/)
+1. [Add a Secret to an Azure Key Vault](keyvault/add-secret/)
+
 ## Azure Kubernetes Service examples
 
 1. [Create an Azure Kubernetes Service cluster](aks/create/)
@@ -86,55 +114,23 @@ exit 0
 1. [Deploy Tomcat](aks/tomcat/)
 1. [Deploy WildFly](aks/wildfly/)
 
-### Azure Red Hat OpenShift examples
+## Azure Red Hat OpenShift examples
 
 1. [Deploy an Azure Red Hat OpenShift cluster](aro/create/)
-
-### Azure Spring Cloud examples
-
-1. [Create an Azure Spring Cloud](spring-cloud/create/)
-1. [Deploy a Spring Boot application to Azure Spring Cloud](spring-cloud/helloworld/)
-1. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/)
-
-## Databases
-
-### Azure Database for MySQL examples
-
-1. [Deploy an Azure Database for MySQL](mysql/create/)
-1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip/)
-1. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/)
-
-### Azure Cosmos DB examples
-
-1. [Create an Azure Cosmos DB](cosmosdb/create/)
-
-## Supporting services / examples
-
-### Azure Container Registry examples
-
-1. [Deploy an Azure Container registry](acr/create/)
-1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
-1. [Create an 'acrpull' Service Principal](acr/create-acrpull-service-principal/)
-1. [Create a custom Glassfish Docker image and push it to Azure Container Registry](acr/glassfish/)
-1. [Create a GraalVM application packaged as a Docker image and push it to Azure Container Registry](acr/graalvm/)
-1. [Create a custom Jetty Docker image and push it to Azure Container Registry](acr/jetty/)
-1. [Create a custom Payara Docker image and push it to Azure Container Registry](acr/payara/)
-1. [Create a Quarkus application packaged as a Docker image and push it to Azure Container Registry](acr/quarkus/)
-1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](acr/tomcat/)
-1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)
-
-### Azure Key Vault examples
-
-1. [Create an Azure Key Vault](keyvault/create/)
-1. [Add a Secret to an Azure Key Vault](keyvault/add-secret/)
 
 ### Azure Resource Group examples
 
 1. [Create an Azure Resource Group](group/create/)
 1. [Delete an Azure Resource Group](group/delete/)
 
-### Azure Storage examples
+## Azure Spring Cloud examples
+
+1. [Create an Azure Spring Cloud](spring-cloud/create/)
+1. [Deploy a Spring Boot application to Azure Spring Cloud](spring-cloud/helloworld/)
+1. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/)
+
+## Azure Storage examples
 
 1. [Create an Azure Storage Account](storage/create/)
-1. [Enabled static website hosting on Azure Storage](storage/blob/enable-static-website-hosting/)
+1. [Enabled static website hosting on Azure Storage](storage/enable-static-website-hosting/)
 1. [Upload files to static website](storage/blob/upload-files-to-static-website/)
