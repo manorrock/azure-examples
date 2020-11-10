@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'storage/blob/enable-static-website-hosting/README.md'
+name: 'storage/enable-static-website/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
