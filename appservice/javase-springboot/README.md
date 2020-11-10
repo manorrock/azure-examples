@@ -8,9 +8,19 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure App Service Plan](../../appservice/create-plan/)
 
+<!-- workflow.include(0 4 * * 1) -->
+<!-- workflow.include(../create-plan/README.md) -->
+
 ## Build the example
 
 To build the JAR file use the following Maven command line.
+
+<!-- workflow.run() 
+
+cd appservice/javase-springboot
+
+  -->
+
 
 ````shell
   mvn package
@@ -20,6 +30,7 @@ To build the JAR file use the following Maven command line.
 
 To run the example locally use the following Maven command line.
 
+<!-- workflow.skip() -->
 ````shell
   mvn spring-boot:run
 ````
@@ -39,9 +50,36 @@ To deploy the example use the following Maven command line:
     -DresourceGroup=$RESOURCE_GROUP
 ````
 
+<!-- workflow.run()
+
+cd ../..
+
+  -->
+
 Once the command completes you will be able to see the example by using your 
 web browser and going to the ```xxxxx.azurewebsites.net``` address the command
 echoes.
+
+<!-- workflow.directOnly() 
+
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $JAVASE_SPRINGBOOT_WEBAPP --output tsv --query state)
+if [[ "$RESULT" != Running ]]; then
+  echo 'Web application is NOT running'
+  az group delete --name $RESOURCE_GROUP --yes || true
+  exit 1
+fi
+
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $JAVASE_SPRINGBOOT_WEBAPP --output tsv --query defaultHostName)
+export RESULT=$(curl $URL)
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ "$RESULT" != *"Hello World"* ]]; then
+  echo "Response did not contain 'Hello World'"
+  exit 1
+fi
+
+  -->
 
 ### Properties supported by the example
 
