@@ -1,6 +1,8 @@
 
 # Deploy a web application on a managed Tomcat
 
+![appservice/tomcat-helloworld/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/tomcat-helloworld/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
