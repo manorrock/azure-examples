@@ -11,11 +11,49 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=azure-examples-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          if [[ -z $APPSERVICE_PLAN ]]; then
+          export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          fi
+          az appservice plan create \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION \
+          --name $APPSERVICE_PLAN \
+          --is-linux \
+          --sku P1V2
+          
+          cd appservice/javase-springboot
+          
           mvn package
-          mvn spring-boot:run
           export JAVASE_SPRINGBOOT_WEBAPP=appservice-javase-springboot-$RANDOM
           
           mvn azure-webapp:deploy \
           -DappName=$JAVASE_SPRINGBOOT_WEBAPP \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
+          
+          cd ../..
+          
+          
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $JAVASE_SPRINGBOOT_WEBAPP --output tsv --query state)
+          if [[ "$RESULT" != Running ]]; then
+          echo 'Web application is NOT running'
+          az group delete --name $RESOURCE_GROUP --yes || true
+          exit 1
+          fi
+          
+          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $JAVASE_SPRINGBOOT_WEBAPP --output tsv --query defaultHostName)
+          export RESULT=$(curl $URL)
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
+          
+          if [[ "$RESULT" != *"Hello World"* ]]; then
+          echo "Response did not contain 'Hello World'"
+          exit 1
+          fi
