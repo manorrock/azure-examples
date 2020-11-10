@@ -1,6 +1,8 @@
 
 # Create an Azure Resource Group
 
+![group/create/README.md](https://github.com/manorrock/azure-examples/workflows/group/create/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assume you are logged into Azure CLI and have set your default
@@ -8,8 +10,6 @@ subscription, if you have NOT done so please go to our top-level
 [README](../../)
 
 ## Create the Resource Group
-
-![group/create/README.md](https://github.com/manorrock/azure-examples/workflows/group/create/README.md/badge.svg)
 
 To setup the environment variables needed to create the Resource Group execute
 the command lines below:
