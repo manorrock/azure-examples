@@ -16,7 +16,7 @@
     <name>Azure Storage examples</name>
     <modules>
         <module>account</module>
-        <module>enable-static-website-hosting</module>
+        <module>enable-static-website</module>
         <module>blob</module>
     </modules>
 </project>

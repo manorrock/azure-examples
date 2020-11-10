@@ -15,7 +15,6 @@
     <packaging>pom</packaging>
     <name>Azure Blob Storage examples</name>
     <modules>
-        <module>enable-static-website-hosting</module>
         <module>upload-files-to-static-website</module>
     </modules>
 </project>

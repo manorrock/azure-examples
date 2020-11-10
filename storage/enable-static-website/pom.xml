@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>storage-static-website</artifactId>
+    <artifactId>storage-enable-static-website</artifactId>
     <packaging>pom</packaging>
     <name>Enable static website</name>
 </project>
