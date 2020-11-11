@@ -12,3 +12,7 @@
 ![appservice/tomcat-helloworld/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/tomcat-helloworld/README.md/badge.svg)
 
 ![appservice/javase-springboot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/javase-springboot/README.md/badge.svg)
+
+![appservice/javase-quarkus/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/javase-quarkus/README.md/badge.svg)
+
+![appservice/delete-webapp/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/delete-webapp/README.md/badge.svg)

@@ -1,6 +1,8 @@
 
 # Deploy a Quarkus application using managed JavaSE
 
+![appservice/javase-quarkus/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/javase-quarkus/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
@@ -8,7 +10,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
-<!-- workflow.include(0 4 * * 1) -->
+<!-- workflow.include(0 5 * * 1) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 ## Build the example

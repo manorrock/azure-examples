@@ -1,6 +1,8 @@
 
 # Delete a web application
 
+![appservice/delete-webapp/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/delete-webapp/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
@@ -10,6 +12,7 @@ This example assumes you have previously completed the following examples:
 
 ## Delete a web application
 
+<!-- workflow.include(0 6 * * 1) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To delete the web application from Azure App Service use the following command
