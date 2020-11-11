@@ -8,11 +8,18 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
-## Build the example
-
+<!-- workflow.include(0 4 * * 1) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
+## Build the example
+
 To build the JAR file use the following Maven command line.
+
+<!-- workflow.run() 
+
+cd appservice/javase-quarkus
+
+  -->
 
 ```shell
   mvn package
@@ -42,8 +49,35 @@ To deploy the application use the following command lines:
     -DresourceGroup=$RESOURCE_GROUP
 ````
 
+<!-- workflow.run()
+
+cd ../..
+
+  -->
+
 Once the command completes you will be able to see the example by using your web
 browser and going to the ```xxxxx.azurewebsites.net``` address the command echoes.
+
+<!-- workflow.directOnly() 
+
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_QUARKUS --output tsv --query state)
+if [[ "$RESULT" != Running ]]; then
+  echo 'Web application is NOT running'
+  az group delete --name $RESOURCE_GROUP --yes || true
+  exit 1
+fi
+
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_QUARKUS --output tsv --query defaultHostName)
+export RESULT=$(curl $URL)
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ "$RESULT" != *"Hello"* ]]; then
+  echo "Response did not contain 'Hello'"
+  exit 1
+fi
+
+  -->
 
 ### Properties supported by the example
 

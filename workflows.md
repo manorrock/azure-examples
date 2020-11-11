@@ -10,3 +10,5 @@
 ![appservice/delete-plan/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/delete-plan/README.md/badge.svg)
 
 ![appservice/tomcat-helloworld/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/tomcat-helloworld/README.md/badge.svg)
+
+![appservice/javase-springboot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/javase-springboot/README.md/badge.svg)

@@ -1,6 +1,8 @@
 
 # Deploy a Spring Boot Application using managed JavaSE
 
+![appservice/javase-springboot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/javase-springboot/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
@@ -42,10 +44,10 @@ You can see the application in action at http://localhost:8080/
 To deploy the example use the following Maven command line:
 
 ````shell
-  export JAVASE_SPRINGBOOT_WEBAPP=appservice-javase-springboot-$RANDOM
+  export APPSERVICE_JAVASE_SPRINGBOOT=appservice-javase-springboot-$RANDOM
 
   mvn azure-webapp:deploy \
-    -DappName=$JAVASE_SPRINGBOOT_WEBAPP \
+    -DappName=$APPSERVICE_JAVASE_SPRINGBOOT \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP
 ````
@@ -62,14 +64,14 @@ echoes.
 
 <!-- workflow.directOnly() 
 
-export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $JAVASE_SPRINGBOOT_WEBAPP --output tsv --query state)
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_SPRINGBOOT --output tsv --query state)
 if [[ "$RESULT" != Running ]]; then
   echo 'Web application is NOT running'
   az group delete --name $RESOURCE_GROUP --yes || true
   exit 1
 fi
 
-export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $JAVASE_SPRINGBOOT_WEBAPP --output tsv --query defaultHostName)
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_SPRINGBOOT --output tsv --query defaultHostName)
 export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
