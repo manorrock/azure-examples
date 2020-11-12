@@ -13,6 +13,7 @@ This example assumes you have previously completed the following examples:
 
 ## List your web applications
 
+<!-- workflow.include(0 7 * * 1) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To list the web applications use the following command line:

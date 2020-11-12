@@ -1,6 +1,8 @@
 
 # Create a deployment slot
 
+![appservice/create-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/create-deployment-slot/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following:
@@ -11,6 +13,7 @@ This example assumes you have previously completed the following:
 
 ## Create a deployment slot
 
+<!-- workflow.include(0 8 * * 1) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To create a deployment slot use the following command line:
