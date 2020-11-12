@@ -29,7 +29,7 @@ To create a deployment slot use the following command line:
 
 <!-- workflow.directOnly()
 
-export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --query [0].state)
+export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --query [0].state -tsv)
 if [[ "$RESULT" != Running ]]; then
   echo 'Deployment slot is NOT running'
   az group delete --name $RESOURCE_GROUP --yes || true
