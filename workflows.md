@@ -16,3 +16,5 @@
 ![appservice/javase-quarkus/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/javase-quarkus/README.md/badge.svg)
 
 ![appservice/delete-webapp/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/delete-webapp/README.md/badge.svg)
+
+![appservice/list-webapp/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/list-webapp/README.md/badge.svg)

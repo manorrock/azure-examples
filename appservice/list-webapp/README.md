@@ -1,6 +1,8 @@
 
 # List your web applications
 
+![appservice/list-webapp/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/list-webapp/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
