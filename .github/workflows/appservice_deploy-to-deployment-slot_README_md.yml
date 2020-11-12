@@ -44,12 +44,18 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --name $APPSERVICE_TOMCAT_HELLOWORLD \
           --slot staging
+          
+          cd appservice/deploy-to-deployment-slot
+          
           mvn clean install
           mvn azure-webapp:deploy \
           -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP \
           -DdeploymentSlotName=staging
+          
+          cd ../..
+          
           
           export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query [0].state)
           if [[ "$RESULT" != Running ]]; then
@@ -63,7 +69,7 @@ jobs:
           
           az group delete --name $RESOURCE_GROUP --yes || true
           
-          if [[ "$RESULT" != *"Hello World"* ]]; then
-          echo "Response did not contain 'Hello World'"
+          if [[ "$RESULT" != *"Hello World (staging)"* ]]; then
+          echo "Response did not contain 'Hello World (staging)'"
           exit 1
           fi
