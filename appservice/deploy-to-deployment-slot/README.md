@@ -1,6 +1,8 @@
 
 # Deploy to a deployment slot
 
+![appservice/deploy-to-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/deploy-to-deployment-slot/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following:
@@ -12,6 +14,7 @@ This example assumes you have previously completed the following:
 
 ## Build the example
 
+<!-- workflow.include(0 9 * * 1) -->
 <!-- workflow.include(../create-deployment-slot/README.md) -->
 
 ````shell
