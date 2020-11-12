@@ -55,7 +55,7 @@
     <properties>
         <appName>helloworld-${postfix}</appName>
         <appServicePlan>azure-examples-appserviceplan</appServicePlan>
-        <deploymentSlotName>slot1</deploymentSlotName>
+        <deploymentSlotName>staging</deploymentSlotName>
         <javaVersion>jre8</javaVersion>
         <region>westus2</region>
         <webContainer>tomcat 8.5</webContainer>

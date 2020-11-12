@@ -17,6 +17,12 @@ This example assumes you have previously completed the following:
 <!-- workflow.include(0 9 * * 1) -->
 <!-- workflow.include(../create-deployment-slot/README.md) -->
 
+<!-- workflow.run() 
+
+cd appservice/deploy-to-deployment-slot
+
+  -->
+
 ````shell
   mvn clean install
 ````
@@ -30,6 +36,12 @@ This example assumes you have previously completed the following:
     -DresourceGroup=$RESOURCE_GROUP \
     -DdeploymentSlotName=staging
 ````
+
+<!-- workflow.run()
+
+cd ../..
+
+  -->
 
 <!-- workflow.directOnly() 
 
@@ -45,8 +57,8 @@ export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
 
-if [[ "$RESULT" != *"Hello World"* ]]; then
-  echo "Response did not contain 'Hello World'"
+if [[ "$RESULT" != *"Hello World (staging)"* ]]; then
+  echo "Response did not contain 'Hello World (staging)'"
   exit 1
 fi
 
