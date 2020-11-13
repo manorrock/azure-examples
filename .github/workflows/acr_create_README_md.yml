@@ -28,7 +28,7 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
-          export RESULT=$(az acr show --name $ACR --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+          export RESULT=$(az acr show --name $ACR --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
           echo "Azure Container Registry $ACR was not provisioned properly"
