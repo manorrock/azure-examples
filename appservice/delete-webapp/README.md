@@ -12,7 +12,7 @@ This example assumes you have previously completed the following examples:
 
 ## Delete a web application
 
-<!-- workflow.include(0 6 * * 1) -->
+<!-- workflow.cron(0 6 * * 1) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To delete the web application from Azure App Service use the following command
