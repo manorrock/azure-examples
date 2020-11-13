@@ -22,3 +22,5 @@
 ![appservice/create-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/create-deployment-slot/README.md/badge.svg)
 
 ![appservice/deploy-to-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/deploy-to-deployment-slot/README.md/badge.svg)
+
+![appservice/swap-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/swap-deployment-slot/README.md/badge.svg)

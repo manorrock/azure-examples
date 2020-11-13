@@ -1,6 +1,8 @@
 
 # Swap a deployment slot
 
+![appservice/swap-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/swap-deployment-slot/README.md/badge.svg)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following:
