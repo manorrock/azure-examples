@@ -17,7 +17,7 @@ jobs:
           export ACR=acr$RANDOM
           fi
           az acr create \
-          --name $ACR_NAME \
+          --name $ACR \
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
