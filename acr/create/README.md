@@ -37,7 +37,7 @@ To create the Azure Container Registry use the following command line:
 ```
 
 <!-- workflow.directOnly()
-export RESULT=$(az acr show --name $ACR --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+export RESULT=$(az acr show --name $ACR --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != Succeeded ]]; then
   echo "Azure Container Registry $ACR was not provisioned properly"
