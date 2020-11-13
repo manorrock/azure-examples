@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 1 * * 2'
   workflow_dispatch: 
 
 name: 'acr/create/README.md'
@@ -11,10 +13,17 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          export ACR_NAME=acr$RANDOM
-          
+          if [[ -z $ACR ]]; then
+          export ACR=acr$RANDOM
+          fi
           az acr create \
           --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
+          export RESULT=$(az acr show --name $ACR --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          echo "Azure Container Registry $ACR was not provisioned properly"
+          exit 1
+          fi
