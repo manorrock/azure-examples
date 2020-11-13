@@ -55,10 +55,12 @@ fi
 export URL=https://$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query [0].defaultHostName)
 export RESULT=$(curl $URL)
 
+echo $RESULT
+
 az group delete --name $RESOURCE_GROUP --yes || true
 
-if [[ "$RESULT" != *"Hello World (staging)!"* ]]; then
-  echo "Response did not contain 'Hello World (staging)'"
+if [[ "$RESULT" != *"Hello Staging"* ]]; then
+  echo "Response did not contain 'Hello Staging'"
   exit 1
 fi
 
