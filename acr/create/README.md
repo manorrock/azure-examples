@@ -1,5 +1,5 @@
 
-# Deploy an Azure Container Registry
+# Create an Azure Container Registry
 
 ## Prerequisites
 
@@ -7,19 +7,42 @@ This example assumes you have previously completed the following example.
 
 1. [Create an Azure Resource Group](../../group/create/)
 
-## Deploy a basic Azure Container Registry
+## Create an Azure Container Registry
 
-To deploy the basic Azure Container Registry use the following command line:
+Setup environment variable for the Azure Container Registry using the command
+line below:
+
+<!-- workflow.cron(0 1 * * 2) -->
+
+<!-- workflow.skip() -->
+```shell
+  export ACR=acr$RANDOM
+```
+
+<!-- workflow.run()
+if [[ -z $ACR ]]; then
+  export ACR=acr$RANDOM
+fi
+  -->
+
+To create the Azure Container Registry use the following command line:
 
 ```shell
-  export ACR_NAME=acr$RANDOM
-
   az acr create \
     --name $ACR_NAME \
     --resource-group $RESOURCE_GROUP \
     --sku Basic \
     --admin-enabled true
 ```
+
+<!-- workflow.directOnly()
+export RESULT=$(az acr show --name $ACR --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" != Succeeded ]]; then
+  echo "Azure Container Registry $ACR was not provisioned properly"
+  exit 1
+fi
+  -->
 
 ## Cleanup
 
