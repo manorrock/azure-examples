@@ -29,7 +29,7 @@ To create the Azure Container Registry use the following command line:
 
 ```shell
   az acr create \
-    --name $ACR_NAME \
+    --name $ACR \
     --resource-group $RESOURCE_GROUP \
     --sku Basic \
     --admin-enabled true
