@@ -46,7 +46,7 @@ if [[ -z $ACR_USERNAME ]]; then
   exit 1
 fi
 
-if [[ -z $ACR_PASSWORD" ]]; then
+if [[ -z $ACR_PASSWORD ]]; then
   echo "ACR Admin passsword was not found"
   exit 1
 fi
