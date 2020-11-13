@@ -53,6 +53,9 @@ if [[ "$RESULT" != Running ]]; then
 fi
 
 export URL=https://$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query [0].defaultHostName)
+
+echo $URL
+
 export RESULT=$(curl $URL)
 
 echo $RESULT
