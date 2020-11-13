@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'acr/create-access-keys-settings-xml/README.md'
+name: 'acr/create-settings-xml/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'

@@ -8,7 +8,7 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../../acr/create/)
 1. [Create a custom Jetty Docker image and push it to Azure Container Registry](../../acr/jetty/)
-1. [Create settings.xml for your Azure Container Registry (using admin access keys)](../../acr/create-access-keys-settings-xml/)
+1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
 ## Deploy Jetty using a Docker image

@@ -1,9 +1,7 @@
 
 # Workflow status
 
-![group/create/README.md](https://github.com/manorrock/azure-examples/workflows/group/create/README.md/badge.svg)
-
-![group/delete/README.md](https://github.com/manorrock/azure-examples/workflows/group/delete/README.md/badge.svg)
+## Azure App Service
 
 ![appservice/create-plan/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/create-plan/README.md/badge.svg)
 
@@ -24,3 +22,14 @@
 ![appservice/deploy-to-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/deploy-to-deployment-slot/README.md/badge.svg)
 
 ![appservice/swap-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/swap-deployment-slot/README.md/badge.svg)
+
+## Azure Container Registry
+
+![acr/create/README.md](https://github.com/manorrock/azure-examples/workflows/acr/create/README.md/badge.svg)
+
+## Azure Resource Group
+
+![group/create/README.md](https://github.com/manorrock/azure-examples/workflows/group/create/README.md/badge.svg)
+
+![group/delete/README.md](https://github.com/manorrock/azure-examples/workflows/group/delete/README.md/badge.svg)
+

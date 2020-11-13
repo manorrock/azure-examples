@@ -1,5 +1,5 @@
 
-# Create settings.xml for your Azure Container Registry (using admin access keys)
+# Create settings.xml using admin access keys
 
 ```text
 Note for production environments we recommend you setup
@@ -12,6 +12,9 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Deploy an Azure Container Registry](../create/)
+
+<!-- workflow.cron(0 2 * * 2) -->
+<!-- workflow.include(../create/README.md) -->
 
 ## Create the settings.xml
 
@@ -34,6 +37,20 @@ Set the SETTINGS_XML variable
 ```shell
   export SETTINGS_XML=$PWD/settings.xml
 ```
+
+<!-- workflow.directOnly()
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ -z $ACR_USERNAME ]]; then
+  echo "ACR Admin username was not found"
+  exit 1
+fi
+
+if [[ -z $ACR_PASSWORD" ]]; then
+  echo "ACR Admin passsword was not found"
+  exit 1
+fi
+  -->
 
 ## Cleanup
 

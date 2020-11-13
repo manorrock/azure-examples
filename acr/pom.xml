@@ -16,7 +16,7 @@
     <name>Azure Container Registry examples</name>
     <modules>
         <module>create</module>
-        <module>create-access-keys-settings-xml</module>
+        <module>create-settings-xml</module>
         <module>create-acrpull-service-principal</module>
         <module>glassfish</module>
         <module>graalvm</module>

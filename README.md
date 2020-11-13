@@ -54,7 +54,7 @@ exit 0
 ## Azure Container Registry examples
 
 1. [Create an Azure Container registry](acr/create/)
-1. [Create Maven settings.xml for Azure Container Registry (using admin access keys)](acr/create-access-keys-settings-xml/)
+1. [Create Maven settings.xml using admin access keys](acr/create-settings-xml/)
 1. [Create an 'acrpull' Service Principal](acr/create-acrpull-service-principal/)
 1. [Create a custom Glassfish Docker image and push it to Azure Container Registry](acr/glassfish/)
 1. [Create a GraalVM application packaged as a Docker image and push it to Azure Container Registry](acr/graalvm/)

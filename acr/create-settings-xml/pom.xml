@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>acr-create-access-keys-settings-xml</artifactId>
+    <artifactId>acr-create-settings-xml</artifactId>
     <packaging>pom</packaging>
-    <name>Create settings.xml for your Azure Container Registry (using admin access keys)</name>
+    <name>Create settings.xml using admin access keys</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
