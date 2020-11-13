@@ -21,14 +21,14 @@ This example assumes you have previously completed the following examples.
 Get the ACR username
 
 ```shell
-  export ACR_USERNAME=`az acr credential show --name $ACR_NAME \
+  export ACR_USERNAME=`az acr credential show --name $ACR \
     --resource-group $RESOURCE_GROUP --query username --output tsv`
 ```
 
 Get the ACR password
 
 ```shell
-  export ACR_PASSWORD=`az acr credential show --name $ACR_NAME \
+  export ACR_PASSWORD=`az acr credential show --name $ACR \
     --resource-group $RESOURCE_GROUP --query passwords[0].value --output tsv`
 ```
 
