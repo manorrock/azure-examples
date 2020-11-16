@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Deploy an Azure Container Registry](../../acr/create/)
+1. [Create an Azure Container Registry](../../acr/create/)
 1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](../../acr/tomcat/)
 1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)
 1. [Deploy an Azure Kubernetes Service cluster](../create/)
