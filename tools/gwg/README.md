@@ -34,3 +34,12 @@ script commands
 
   -->
 ```
+
+## Skip
+
+To skip a snippet for inclusion use the following:
+
+<!-- workflow.skip() -->
+```
+<!-- workflow.skip() -->
+```
