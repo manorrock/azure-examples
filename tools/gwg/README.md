@@ -11,8 +11,8 @@ To set the cron schedule for a given workflow use
 
 ## Direct only
 
-To only run a snippet when it is the original Markdown and not coming in through
-an include use the following:
+To only run a snippet when it is in the original Markdown and not coming in 
+through workflow.include use the following:
 
 ```
 <!-- workflow.directOnly()
