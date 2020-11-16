@@ -6,7 +6,20 @@ To set the cron schedule for a given workflow use
 
 <!-- workflow.skip() -->
 ```
-\<!-- workflow.cron(* * * * *) -->
+<!-- workflow.cron(* * * * *) -->
+```
+
+## Direct only
+
+To only run a snippet when it is the original Markdown and not coming in through
+an include use the following:
+
+```
+<!-- workflow.directOnly()
+
+script commands
+
+  -->
 ```
 
 ## (Always) Run
@@ -15,9 +28,9 @@ To always run a specific set of comments one can use the following:
 
 <!-- workflow.skip() -->
 ```
-\<!-- workflow.run()
+<!-- workflow.run()
 
 script commands
 
-\  -->
+  -->
 ```
