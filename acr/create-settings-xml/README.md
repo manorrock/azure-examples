@@ -1,6 +1,8 @@
 
 # Create settings.xml using admin access keys
 
+![acr/create-settings-xml/README.md](https://github.com/manorrock/azure-examples/workflows/acr/create-settings-xml/README.md/badge.svg)
+
 ```text
 Note for production environments we recommend you setup
 a service principal instead of using admin access keys
