@@ -187,6 +187,7 @@ public class Gwg {
         login.put("uses", "azure/login@v1");
         HashMap<String, Object> with = new HashMap<>();
         with.put("creds", "${{ secrets.AZURE_CREDENTIALS }}");
+        with.put("allow-no-subscriptions", "true");
         login.put("with", with);
         LinkedHashMap<String, Object> checkout = new LinkedHashMap<>();
         checkout.put("uses", "actions/checkout@v2");
