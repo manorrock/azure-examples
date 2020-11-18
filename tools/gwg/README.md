@@ -14,12 +14,22 @@ To set the cron schedule for a given workflow use
 To only run a snippet when it is in the original Markdown and not coming in 
 through workflow.include use the following:
 
+<!-- workflow.skip() -->
 ```
 <!-- workflow.directOnly()
 
 script commands
 
   -->
+```
+
+## Include
+
+To include content from another file one can use the following:
+
+<!-- workflow.skip() -->
+```
+<!-- workflow.include(relativeFilename.md) -->
 ```
 
 ## (Always) Run
