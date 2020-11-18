@@ -8,6 +8,7 @@ jobs:
     steps: 
       - uses: 'azure/login@v1'
         with: 
+          allow-no-subscriptions: 'true'
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: |
