@@ -23,6 +23,15 @@ script commands
   -->
 ```
 
+## (Workflow) dispatch
+
+To allow for triggering the workflow manually use the snippet below:
+
+<!-- workflow.skip() -->
+```
+<!-- workflow.dispatch() -->
+```
+
 ## Include
 
 To include content from another file one can use the following:
