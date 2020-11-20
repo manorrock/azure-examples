@@ -26,7 +26,7 @@ To deploy Tomcat use the following command lines:
     -DimageName=acr-tomcat:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
-    -DserverId=$ACR_NAME
+    -DserverId=$ACR
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \

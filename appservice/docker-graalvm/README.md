@@ -26,7 +26,7 @@ To deploy the example use the following command lines:
     -DimageName=acr-graalvm:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
-    -DserverId=$ACR_NAME
+    -DserverId=$ACR
 
   echo `az webapp show \
     --resource-group $RESOURCE_GROUP \

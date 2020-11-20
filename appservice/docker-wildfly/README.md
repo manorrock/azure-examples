@@ -24,7 +24,7 @@ To deploy WildFly use the following command lines:
     -DimageName=acr-wildfly:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
-    -DserverId=$ACR_NAME
+    -DserverId=$ACR
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \

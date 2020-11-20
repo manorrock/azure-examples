@@ -23,7 +23,7 @@ To build and push the Docker image to your ACR use the command line below:
 ```shell
   export ACR_WILDFLY_IMAGE=acr-wildfly:latest
 
-  az acr build --registry $ACR_NAME --image $ACR_WILDFLY_IMAGE .
+  az acr build --registry $ACR --image $ACR_WILDFLY_IMAGE .
 ```
 
 ## Cleanup

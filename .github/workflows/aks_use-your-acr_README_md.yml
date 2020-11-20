@@ -27,4 +27,4 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
-          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME
+          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR

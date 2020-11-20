@@ -22,8 +22,8 @@ To deploy the application use the following command line:
   az container create \
     --resource-group $RESOURCE_GROUP \
     --name $ACI_QUARKUS \
-    --image $ACR_NAME.azurecr.io/acr-quarkus:latest \
-    --registry-login-server $ACR_NAME.azurecr.io \
+    --image $ACR.azurecr.io/acr-quarkus:latest \
+    --registry-login-server $ACR.azurecr.io \
     --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
     --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
     --dns-name-label $ACI_QUARKUS_NAME \

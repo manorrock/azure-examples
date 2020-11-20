@@ -12,5 +12,5 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          sed -i "" "s/ACR/$ACR_NAME/g" deployment.yml
+          sed -i "" "s/ACR/$ACR/g" deployment.yml
           kubectl apply -f deployment.yml

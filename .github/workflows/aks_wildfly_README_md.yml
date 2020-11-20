@@ -27,6 +27,6 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
-          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME
-          sed -i "" "s/ACR/$ACR_NAME/g" deployment.yml
+          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR
+          sed -i "" "s/ACR/$ACR/g" deployment.yml
           kubectl apply -f deployment.yml

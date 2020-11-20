@@ -23,7 +23,7 @@ To build and push the Docker image to your ACR use the command line below:
 ```shell
   export ACR_PAYARA_IMAGE=acr-payara:latest
 
-  az acr build --registry $ACR_NAME --image $ACR_PAYARA_IMAGE .
+  az acr build --registry $ACR --image $ACR_PAYARA_IMAGE .
 ```
 
 ## Cleanup

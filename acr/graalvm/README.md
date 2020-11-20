@@ -44,7 +44,7 @@ To build and push the Docker image to your ACR use the command lines below:
 ```shell
   export ACR_GRAALVM_IMAGE=acr-graalvm:latest
 
-  az acr build --registry $ACR_NAME --image $ACR_GRAALVM_IMAGE .
+  az acr build --registry $ACR --image $ACR_GRAALVM_IMAGE .
 ```
 
 ## Cleanup

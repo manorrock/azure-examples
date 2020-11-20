@@ -23,7 +23,7 @@ To build and push the Docker image to your ACR use the command lines below:
 ```shell
   export ACR_JETTY_IMAGE=acr-jetty:latest
 
-  az acr build --registry $ACR_NAME --image $ACR_JETTY_IMAGE .
+  az acr build --registry $ACR --image $ACR_JETTY_IMAGE .
 ```
 
 ## Cleanup

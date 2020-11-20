@@ -33,7 +33,7 @@ To build and push the Docker image to your ACR use the command lines below:
 ```shell
   export ACR_QUARKUS_IMAGE=acr-quarkus:latest
 
-  az acr build --registry $ACR_NAME --image $ACR_QUARKUS_IMAGE .
+  az acr build --registry $ACR --image $ACR_QUARKUS_IMAGE .
 ```
 
 ## Cleanup
