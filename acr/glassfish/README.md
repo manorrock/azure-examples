@@ -13,6 +13,12 @@ This example assumes you have previously completed the following examples.
 
 ## Build the WAR file
 
+<!-- workflow.run()
+
+cd acr/glassfish
+
+  -->
+
 To build the WAR file use the following command line:
 
 ```shell
@@ -28,6 +34,12 @@ To build and push the Docker image to your ACR use the command line below:
 
   az acr build --registry $ACR --image $ACR_GLASSFISH_IMAGE .
 ```
+
+<!-- workflow.run()
+
+cd ../..
+
+  -->
 
 <!-- workflow.directOnly()
 
