@@ -1,5 +1,5 @@
 
-# Create a custom Glassfish Docker image and push it to Azure Container Registry
+# Push a Glassfish Docker image to Azure Container Registry
 
 ## Prerequisites
 
@@ -7,6 +7,9 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Container Registry](../create/)
+
+<!-- workflow.cron(0 4 * * 2) -->
+<!-- workflow.include(../create/README.md) -->
 
 ## Build the WAR file
 
@@ -21,10 +24,22 @@ To build the WAR file use the following command line:
 To build and push the Docker image to your ACR use the command line below:
 
 ```shell
-  export ACR_GLASSFISH_IMAGE=acr-glassfish:latest
+  export ACR_GLASSFISH_IMAGE=glassfish:latest
 
   az acr build --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
 ```
+
+<!-- workflow.directOnly()
+
+export RESULT=$(az acr repository show --name $ACR --image $ACR_GLASSFISH_IMAGE)
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ -z $RESULT ]]; then
+  echo "Unable to find $ACR_GLASSFISH_NAME image"
+  exit 1
+fi
+
+  -->
 
 ## Cleanup
 

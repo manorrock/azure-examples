@@ -9,7 +9,7 @@
     </parent>
     <artifactId>glassfish</artifactId>
     <packaging>war</packaging>
-    <name>Create a custom Glassfish Docker image and push it to Azure Container Registry</name>
+    <name>Push a Glassfish Docker image to Azure Container Registry</name>
     <build>
         <finalName>ROOT</finalName>
     </build>
