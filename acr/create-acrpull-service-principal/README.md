@@ -53,6 +53,7 @@ fi
 <!-- workflow.directOnly() 
 
 az group delete --name $RESOURCE_GROUP --yes || true
+az ad sp delete --name $ACR_PULL_SERVICE_PRINCIPAL_ID || true
 
 if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD ]]; then
   echo "ACR 'acrpull' service principal password was not found"
