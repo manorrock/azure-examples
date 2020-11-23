@@ -9,7 +9,7 @@
     </parent>
     <artifactId>jetty</artifactId>
     <packaging>war</packaging>
-    <name>Create a custom Jetty Docker image and push it to Azure Container Registry</name>
+    <name>Push a Jetty Docker image to Azure Container Registry</name>
     <build>
         <finalName>ROOT</finalName>
     </build>

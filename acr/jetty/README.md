@@ -1,5 +1,5 @@
 
-# Create a custom Jetty Docker image and push it to Azure Container Registry
+# Push a Jetty Docker image to Azure Container Registry
 
 ## Prerequisites
 
@@ -8,7 +8,16 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Container Registry](../create/)
 
+<!-- workflow.cron(0 6 * * 2) -->
+<!-- workflow.include(../create/README.md) -->
+
 ## Build the WAR file
+
+<!-- workflow.run()
+
+cd acr/jetty
+
+  -->
 
 To build the WAR file use the following command line:
 
@@ -25,6 +34,24 @@ To build and push the Docker image to your ACR use the command lines below:
 
   az acr build --registry $ACR --image $ACR_JETTY_IMAGE .
 ```
+
+<!-- workflow.run()
+
+cd ../..
+
+  -->
+
+<!-- workflow.directOnly()
+
+export RESULT=$(az acr repository show --name $ACR --image $ACR_JETTY_IMAGE)
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ -z $RESULT ]]; then
+  echo "Unable to find $ACR_JETTY_IMAGE image"
+  exit 1
+fi
+
+  -->
 
 ## Cleanup
 

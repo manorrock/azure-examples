@@ -47,7 +47,7 @@ export RESULT=$(az acr repository show --name $ACR --image $ACR_GLASSFISH_IMAGE)
 az group delete --name $RESOURCE_GROUP --yes || true
 
 if [[ -z $RESULT ]]; then
-  echo "Unable to find $ACR_GLASSFISH_NAME image"
+  echo "Unable to find $ACR_GLASSFISH_IMAGE image"
   exit 1
 fi
 
