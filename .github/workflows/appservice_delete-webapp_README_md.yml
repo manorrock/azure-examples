@@ -41,6 +41,7 @@ jobs:
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
+          sleep 60
           cd ../..
           
           az webapp delete --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD

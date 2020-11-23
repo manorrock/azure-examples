@@ -39,6 +39,7 @@ jobs:
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
+          sleep 60
           cd ../..
           
           az appservice plan update \
