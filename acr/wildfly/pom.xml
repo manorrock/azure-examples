@@ -9,7 +9,7 @@
     </parent>
     <artifactId>wildfly</artifactId>
     <packaging>war</packaging>
-    <name>Create a custom WildFly Docker image and push it to Azure Container Registry</name>
+    <name>Push a WildFly Docker image to Azure Container Registry</name>
     <build>
         <finalName>ROOT</finalName>
     </build>

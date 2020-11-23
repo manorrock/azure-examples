@@ -62,7 +62,7 @@ exit 0
 1. [Push a Payara Docker image to Azure Container Registry](acr/payara/)
 1. [Push a Quarkus Docker application to Azure Container Registry](acr/quarkus/)
 1. [Push a Tomcat Docker image to Azure Container Registry](acr/tomcat/)
-1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)
+1. [Push a WildFly Docker image to Azure Container Registry](acr/wildfly/)
 
 ## Azure Cosmos DB examples
 
