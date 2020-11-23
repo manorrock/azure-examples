@@ -8,7 +8,7 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Container Registry](../../acr/create/)
 1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/)
-1. [Create a Quarkus application packaged as a Docker image and push it to Azure Container Registry](../../acr/quarkus/)
+1. [Push a Quarkus Docker application to Azure Container Registry](../../acr/quarkus/)
 
 ## Deploy the Quarkus application
 
