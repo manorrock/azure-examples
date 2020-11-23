@@ -8,7 +8,7 @@ This example assumes you have previously completed the following examples.
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Container Registry](../../acr/create/)
 1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/)
-1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](../../acr/tomcat/)
+1. [Push a Tomcat Docker image to Azure Container Registry](../../acr/tomcat/)
 
 ## Deploy Tomcat
 
