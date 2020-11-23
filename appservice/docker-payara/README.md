@@ -7,7 +7,7 @@ This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Container Registry](../../acr/create/)
-1. [Create a custom Payara Docker image and push it to Azure Container Registry](../../acr/payara/)
+1. [Push a Payara Docker image to Azure Container Registry](../../acr/payara/)
 1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)
 1. [Create an Azure App Service Plan](../create-plan/)
 

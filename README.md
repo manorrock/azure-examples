@@ -59,7 +59,7 @@ exit 0
 1. [Push a Glassfish Docker image to Azure Container Registry](acr/glassfish/)
 1. [Push a GraalVM Docker application to Azure Container Registry](acr/graalvm/)
 1. [Push a Jetty Docker image to Azure Container Registry](acr/jetty/)
-1. [Create a custom Payara Docker image and push it to Azure Container Registry](acr/payara/)
+1. [Push a Payara Docker image to Azure Container Registry](acr/payara/)
 1. [Create a Quarkus application packaged as a Docker image and push it to Azure Container Registry](acr/quarkus/)
 1. [Create a custom Tomcat Docker image and push it to Azure Container Registry](acr/tomcat/)
 1. [Create a custom WildFly Docker image and push it to Azure Container Registry](acr/wildfly/)

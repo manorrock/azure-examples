@@ -9,7 +9,7 @@
     </parent>
     <artifactId>payara</artifactId>
     <packaging>war</packaging>
-    <name>Create a custom Payara Docker image and push it to Azure Container Registry</name>
+    <name>Push a Payara Docker image to Azure Container Registry</name>
     <build>
         <finalName>ROOT</finalName>
     </build>

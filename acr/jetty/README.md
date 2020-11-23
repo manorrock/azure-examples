@@ -30,7 +30,7 @@ To build the WAR file use the following command line:
 To build and push the Docker image to your ACR use the command lines below:
 
 ```shell
-  export ACR_JETTY_IMAGE=acr-jetty:latest
+  export ACR_JETTY_IMAGE=jetty:latest
 
   az acr build --registry $ACR --image $ACR_JETTY_IMAGE .
 ```
