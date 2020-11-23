@@ -33,7 +33,7 @@ jobs:
           cd acr/jetty
           
           mvn package
-          export ACR_JETTY_IMAGE=acr-jetty:latest
+          export ACR_JETTY_IMAGE=jetty:latest
           
           az acr build --registry $ACR --image $ACR_JETTY_IMAGE .
           
