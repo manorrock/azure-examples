@@ -47,7 +47,7 @@ exit 0
 
 ## Azure Container Instances examples
 
-1. [Deploy Quarkus application](aci/quarkus/)
+1. [Deploy a Quarkus application](aci/quarkus/)
 1. [Deploy Tomcat](aci/tomcat/)
 1. [Deploy WildFly](aci/wildfly/)
 
@@ -118,10 +118,14 @@ exit 0
 
 1. [Deploy an Azure Red Hat OpenShift cluster](aro/create/)
 
-### Azure Resource Group examples
+## Azure Resource Group examples
 
 1. [Create an Azure Resource Group](group/create/)
 1. [Delete an Azure Resource Group](group/delete/)
+
+## Azure Service Bus examples
+
+1. [Create an Azure Service Bus](servicebus/create/)
 
 ## Azure Spring Cloud examples
 
