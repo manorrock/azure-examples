@@ -21,7 +21,7 @@ using the command line below:
 ```
 
 <!-- workflow.run() 
-if [[ -z $SERBICE_BUS ]]; then
+if [[ -z $SERVICE_BUS ]]; then
   export SERVICE_BUS=service-bus-$RANDOM
 fi
 -->

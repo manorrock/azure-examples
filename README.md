@@ -126,6 +126,7 @@ exit 0
 ## Azure Service Bus examples
 
 1. [Create an Azure Service Bus](servicebus/create/)
+1. [Create an Azure Service Bus Queue](servicebus/create-queue/)
 
 ## Azure Spring Cloud examples
 
