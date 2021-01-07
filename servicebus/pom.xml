@@ -17,5 +17,6 @@
     <modules>
         <module>create</module>
         <module>create-queue</module>
+        <module>send-message</module>
     </modules>
 </project>

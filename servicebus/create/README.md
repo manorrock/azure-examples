@@ -15,16 +15,9 @@ This example assumes you have previously completed the following example.
 First, create the environment variable used for our Service Bus
 using the command line below:
 
-<!-- workflow.skip() -->
 ```shell
-  export SERVICE_BUS=service-bus
-```
-
-<!-- workflow.run() 
-if [[ -z $SERVICE_BUS ]]; then
   export SERVICE_BUS=service-bus-$RANDOM
-fi
--->
+```
 
 Then, create the Azure Service Bus using the following command line:
 
