@@ -40,4 +40,4 @@ fi
 
 Do NOT forget to remove the resources once you are done running the example.
 
-4m
+2m

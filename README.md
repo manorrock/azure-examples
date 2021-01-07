@@ -128,6 +128,7 @@ exit 0
 1. [Create an Azure Service Bus](servicebus/create/)
 1. [Create an Azure Service Bus Queue](servicebus/create-queue/)
 1. [Send a message](servicebus/send-message/)
+1. [Receive a message](servicebus/receive-message/)
 
 ## Azure Spring Cloud examples
 
