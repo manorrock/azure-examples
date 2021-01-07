@@ -21,9 +21,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          if [[ -z $SERVICE_BUS ]]; then
           export SERVICE_BUS=service-bus-$RANDOM
-          fi
           az servicebus namespace create \
           --resource-group $RESOURCE_GROUP \
           --name $SERVICE_BUS \

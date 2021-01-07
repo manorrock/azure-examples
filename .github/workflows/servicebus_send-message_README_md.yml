@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 1'
+    - cron: '0 3 * * 1'
   workflow_dispatch: 
 
-name: 'servicebus/create-queue/README.md'
+name: 'servicebus/send-message/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -33,8 +33,13 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --namespace-name $SERVICE_BUS \
           --name $SERVICE_BUS_QUEUE
-          export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE --query status --output tsv)
+          export SERVICE_BUS_QUEUE_CONNECTION_STRING=$(az servicebus namespace authorization-rule keys list \
+          --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
+          --query primaryConnectionString --output tsv)
+          mvn clean package
+          java -jar target/send-message.jar
+          export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE -query countDetails.activeMessageCount --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != Active ]]; then
+          if [[ "$RESULT" != 1 ]]; then
           exit 1
           fi
