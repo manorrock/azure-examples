@@ -31,11 +31,19 @@ Then build the client:
   mvn clean package
 ```
 
+<!-- workflow.run()
+  cd servicebus/receive-message
+  -->
+
 And then send the message:
 
 ```shell
   java -jar target/receive-message.jar
 ```
+
+<!-- workflow.run()
+  cd ../..
+  -->
 
 <!-- workflow.directOnly() 
 export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE -query countDetails.activeMessageCount --output tsv)
