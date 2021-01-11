@@ -46,9 +46,9 @@ And then send the message:
   -->
 
 <!-- workflow.directOnly() 
-export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE -query countDetails.activeMessageCount --output tsv)
+export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE --query countDetails.activeMessageCount --output tsv)
 az group delete --name $RESOURCE_GROUP --yes || true
-if [[ "$RESULT" != 0 ]]; then
+if [[ "$RESULT" != "0" ]]; then
   exit 1
 fi
   -->

@@ -26,6 +26,7 @@
         <module>docker-payara</module>
         <module>docker-tomcat</module>
         <module>docker-wildfly</module>
+        <module>javase-quarkus</module>
         <module>javase-springboot</module>
         <module>list-webapp</module>
         <module>scale-manually</module>
