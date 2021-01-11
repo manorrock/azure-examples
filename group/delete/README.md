@@ -22,7 +22,7 @@ To delete the Resource Group use the following command line:
 
 <!-- workflow.directOnly()
 export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query name)
-if [[ "$RESULT" == $RESOURCE_GROUP ]]; then
+if [[ "$RESULT" == "$RESOURCE_GROUP" ]]; then
   exit 1
 fi
   -->
