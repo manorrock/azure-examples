@@ -31,7 +31,6 @@ jobs:
           cd acr/quarkus
           
           mvn package
-          mvn quarkus:dev
           export ACR_QUARKUS_IMAGE=quarkus:latest
           
           az acr build --registry $ACR --image $ACR_QUARKUS_IMAGE .
