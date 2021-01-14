@@ -28,6 +28,7 @@
         <module>docker-wildfly</module>
         <module>javase-quarkus</module>
         <module>javase-springboot</module>
+        <module>jboss-eap-helloworld</module>
         <module>list-webapp</module>
         <module>scale-manually</module>
         <module>swap-deployment-slot</module>

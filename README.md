@@ -93,6 +93,7 @@ exit 0
 1. [Deploy a Quarkus application using managed JavaSE](appservice/javase-quarkus/)
 1. [Deploy a GraalVM application using a Docker image](appservice/docker-graalvm/)
 1. [Swap a deployment slot](appservice/swap-deployment-slot/)
+1. [Deploy a web application on a managed JBoss EAP](appservice/jboss-eap-helloworld/)
 
 ## Azure Functions examples
 
