@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 4 * * 1'
+    - cron: '0 3 * * 1'
   workflow_dispatch: 
 
 name: 'servicebus/receive-message/README.md'
@@ -25,6 +25,7 @@ jobs:
           az servicebus namespace create \
           --resource-group $RESOURCE_GROUP \
           --name $SERVICE_BUS \
+          --sku Premium \
           --location $REGION
           if [[ -z $SERVICE_BUS_QUEUE ]]; then
           export SERVICE_BUS_QUEUE=service-bus-queue-$RANDOM

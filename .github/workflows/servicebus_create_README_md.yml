@@ -25,6 +25,7 @@ jobs:
           az servicebus namespace create \
           --resource-group $RESOURCE_GROUP \
           --name $SERVICE_BUS \
+          --sku Premium \
           --location $REGION
           export RESULT=$(az servicebus namespace show --resource-group $RESOURCE_GROUP --name $SERVICE_BUS --query provisioningState --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
