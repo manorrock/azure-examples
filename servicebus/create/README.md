@@ -25,6 +25,7 @@ Then, create the Azure Service Bus using the following command line:
   az servicebus namespace create \
     --resource-group $RESOURCE_GROUP \
     --name $SERVICE_BUS \
+    --sku Premium \
     --location $REGION
 ```
 

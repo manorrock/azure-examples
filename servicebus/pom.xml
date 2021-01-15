@@ -18,6 +18,7 @@
         <module>create</module>
         <module>create-queue</module>
         <module>receive-message</module>
+        <module>send-jms-message</module>
         <module>send-message</module>
     </modules>
 </project>
