@@ -130,6 +130,8 @@ exit 0
 1. [Create an Azure Service Bus Queue](servicebus/create-queue/)
 1. [Send a message](servicebus/send-message/)
 1. [Receive a message](servicebus/receive-message/)
+1. [Send a JMS message](servicebus/send-jms-message/)
+1. [Receive a JMS message](servicebus/receive-jms-message/)
 
 ## Azure Spring Cloud examples
 

@@ -12,7 +12,7 @@ This example assumes you have previously completed the following example.
 
 ## Receive a message from an Azure Service Bus Queue
 
-<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.cron(0 4 * * 1) -->
 <!-- workflow.include(../send-message/README.md) -->
 
 First, create the environment variables used to connect to our message queue
@@ -25,15 +25,15 @@ using the command line below:
     --query primaryConnectionString --output tsv)
 ```
 
+<!-- workflow.run()
+  cd servicebus/receive-message
+  -->
+
 Then build the client:
 
 ```shell
   mvn clean package
 ```
-
-<!-- workflow.run()
-  cd servicebus/receive-message
-  -->
 
 And then send the message:
 
