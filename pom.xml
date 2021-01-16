@@ -68,7 +68,6 @@
         <module>aks</module>
         <module>appservice</module>
         <module>aro</module>
-        <module>cosmosdb</module>
         <module>functions</module>
         <module>group</module>
         <module>keyvault</module>
@@ -77,6 +76,7 @@
         <module>spring-cloud</module>
         <module>storage</module>
         <module>tools</module>
+        <module>cosmosdb-output</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
