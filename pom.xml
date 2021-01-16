@@ -76,7 +76,6 @@
         <module>spring-cloud</module>
         <module>storage</module>
         <module>tools</module>
-        <module>cosmosdb-output</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
