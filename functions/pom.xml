@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
     <name>Azure Functions examples</name>
     <modules>
-        <module>cosmosdb</module>
+        <module>cosmosdb-output</module>
         <module>java</module>
     </modules>
 </project>
