@@ -6,10 +6,11 @@
 This example assumes you have previously completed the following.
 
 1. [Create an Azure Resource Group](../../group/create/)
-1. [Install Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools)
+1. [Install Azure Functions Core Tools](../install-tools/)
 1. [Create an Azure Cosmos DB](../../cosmosdb/create/)
 
 <!-- workflow.cron(0 1 * * 2) -->
+<!-- workflow.include(../install-tools/README.md) -->
 <!-- workflow.include(../../cosmosdb/create/README.md) -->
 
 <!-- workflow.run() 
