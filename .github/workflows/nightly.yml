@@ -17,6 +17,10 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Install Azure Functions Core Tools
+      run: |
+        brew tap azure/functions
+        brew install azure-functions-core-tools
     - name: Build with Maven
       run: mvn -B clean install
     - name: Run GitHub Workflow Generator
