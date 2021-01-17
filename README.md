@@ -97,7 +97,9 @@ exit 0
 
 ## Azure Functions examples
 
+1. [Install Azure Functions Core Tools](functions/install-tools/)
 1. [Deploy a Java Function](functions/java/)
+1. [Deploy a Cosmos DB output Function](functions/cosmosdb-output/)
 
 ## Azure Key Vault examples
 
