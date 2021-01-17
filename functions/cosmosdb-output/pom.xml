@@ -116,6 +116,7 @@
             <groupId>examples.azure.functions</groupId>
             <artifactId>functions-install-tools</artifactId>
             <version>${project.version}</version>
+            <type>pom</type>
             <scope>provided</scope>
         </dependency>
     </dependencies>
