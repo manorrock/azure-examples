@@ -1,5 +1,5 @@
 
-# Deploy a Java Function storing data in Cosmos DB
+# Deploy a Cosmos DB output Function
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ http://localhost:7071/api/cosmosDBOutput
 
 You should see `We stored an item in Cosmos DB` in your brower.
 
-## Deploy the Azure Function to Azure
+## Deploy the example to Azure
 
 ```shell
   mvn -DappName=$FUNCTIONS_COSMOSDB  -DresourceGroup=$RESOURCE_GROUP \
