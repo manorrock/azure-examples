@@ -5,6 +5,7 @@
 dependency-reduced-pom.xml
 nbactions.xml
 nb-configuration.xml
+obj/
 target/
 /functions/cosmosdb-output/local.settings.json
 /functions/cosmosdb-output/host.json

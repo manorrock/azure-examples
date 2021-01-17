@@ -7,6 +7,8 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/)
 
+<!-- workflow.include(../../group/create/README.md) -->
+
 ## Create the Azure Cosmos DB
 
 To create the Azure Cosmos DB use the following command line:
