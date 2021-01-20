@@ -70,7 +70,8 @@ exit 0
 
 ## Azure Event Hubs examples
 
-1. [Create an Azure Event Hubs namespace](eventhubs/create/)
+1. [Create an Azure Event Hubs namespace](eventhubs/create-namespace/)
+1. [Create an Azure Event Hub](eventhubs/create/)
 
 ## Azure Database for MySQL examples
 

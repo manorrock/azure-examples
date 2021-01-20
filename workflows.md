@@ -25,6 +25,8 @@
 
 ## Azure Event Hubs
 
+![eventhubs/create-namespace/README.md](https://github.com/manorrock/azure-examples/workflows/eventhubs/create-namespace/README.md/badge.svg)
+
 ![eventhubs/create/README.md](https://github.com/manorrock/azure-examples/workflows/eventhubs/create/README.md/badge.svg)
 
 ## Azure Container Registry
