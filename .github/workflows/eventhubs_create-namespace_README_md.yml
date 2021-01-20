@@ -21,12 +21,12 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export EVENT_HUBS_NAMESPACE=event-hubs-namespace-$RANDOM
+          export EVENT_HUB_NAMESPACE=event-hub-namespace-$RANDOM
           az eventhubs namespace create \
           --resource-group $RESOURCE_GROUP \
-          --name $EVENT_HUBS_NAMESPACE
+          --name $EVENT_HUB_NAMESPACE
           
-          export RESULT=$(az eventhubs namespace show --resource-group $RESOURCE_GROUP --name $EVENT_HUBS_NAMESPACE --query provisioningState --output tsv)
+          export RESULT=$(az eventhubs namespace show --resource-group $RESOURCE_GROUP --name $EVENT_HUB_NAMESPACE --query provisioningState --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
           exit 1
