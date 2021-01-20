@@ -23,6 +23,10 @@
 
 ![appservice/swap-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/swap-deployment-slot/README.md/badge.svg)
 
+## Azure Event Hubs
+
+![eventhubs/create/README.md](https://github.com/manorrock/azure-examples/workflows/eventhubs/create/README.md/badge.svg)
+
 ## Azure Container Registry
 
 ![acr/create/README.md](https://github.com/manorrock/azure-examples/workflows/acr/create/README.md/badge.svg)
@@ -34,4 +38,3 @@
 ![group/create/README.md](https://github.com/manorrock/azure-examples/workflows/group/create/README.md/badge.svg)
 
 ![group/delete/README.md](https://github.com/manorrock/azure-examples/workflows/group/delete/README.md/badge.svg)
-

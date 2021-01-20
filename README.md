@@ -68,6 +68,10 @@ exit 0
 
 1. [Create an Azure Cosmos DB](cosmosdb/create/)
 
+## Azure Event Hubs examples
+
+1. [Create an Azure Event Hubs namespace](eventhubs/create/)
+
 ## Azure Database for MySQL examples
 
 1. [Deploy an Azure Database for MySQL](mysql/create/)
