@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 5'
+    - cron: '0 2 * * 5'
   workflow_dispatch: 
 
 name: 'eventhubs/create/README.md'
@@ -14,20 +14,15 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=azure-examples-$RANDOM
-          fi
-          export REGION=westus2
-          az group create --name $RESOURCE_GROUP --location $REGION
-          export DELETE_AFTER=$(( `date +%s` + 7200))
-          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export EVENT_HUBS=event-hubs-$RANDOM
-          az eventhubs namespace create \
+          export EVENT_HUBS_NAME=event-hubs-$RANDOM
+          az eventhubs eventhub create \
           --resource-group $RESOURCE_GROUP \
-          --name $EVENT_HUBS
+          --name $EVENT_HUBS_NAME \
+          --namespace-name $EVENT_HUBS_NAMESPACE \
+          --message-retention 1
           
-          export RESULT=$(az eventhubs namespace show --resource-group $RESOURCE_GROUP --name $EVENT_HUBS --query provisioningState --output tsv)
+          export RESULT=$(az eventhubs eventhub show --resource-group $RESOURCE_GROUP --namespace-name $EVENT_HUBS_NAMESPACE --name $EVENT_HUBS_NAME --query status --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != Succeeded ]]; then
+          if [[ "$RESULT" != Active ]]; then
           exit 1
           fi
