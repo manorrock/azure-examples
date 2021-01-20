@@ -18,5 +18,6 @@
         <module>cosmosdb-output</module>
         <module>install-tools</module>
         <module>java</module>
+        <module>event-hub-trigger-cosmosdb-output</module>
     </modules>
 </project>

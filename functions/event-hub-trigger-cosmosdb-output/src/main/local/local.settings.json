@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "${env.STORAGE_ACCOUNT_CONNECTION_STRING}",
+        "Cosmos_DB_Connection_String": "${env.FUNCTIONS_EVENTHUB_COSMOSDB_COSMOSDB_CONNECTION_STRING}",
+        "Event_Hub_Connection_String": "${env.FUNCTIONS_EVENTHUB_COSMOSDB_EVENT_HUB_CONNECTION_STRING}",
+        "FUNCTIONS_WORKER_RUNTIME": "java"
+    }
+}
