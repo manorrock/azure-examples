@@ -17,6 +17,7 @@ This example assumes you have previously completed the following.
 <!-- workflow.include(../install-tools/README.md) -->
 <!-- workflow.include(../../cosmosdb/create/README.md) -->
 <!-- workflow.include(../../eventhubs/create-authorization-rule/README.md) -->
+<!-- workflow.include(../../storage/account/create/README.md) -->
 
 <!-- workflow.run() 
 
