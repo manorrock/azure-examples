@@ -14,7 +14,7 @@ This example assumes you have previously completed the following example.
 ## Create an Authorization Rule
 
 <!-- workflow.cron(0 3 * * 5) -->
-<!-- workflow.include(../../create/README.md) -->
+<!-- workflow.include(../create/README.md) -->
 
 First, create the environment variable used for our authorization rule
 using the command line below:

@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example.
 ## Create an Event Hub
 
 <!-- workflow.cron(0 2 * * 5) -->
-<!-- workflow.include(../../create-namespace/README.md) -->
+<!-- workflow.include(../create-namespace/README.md) -->
 
 First, create the environment variable used for our event hub
 using the command line below:
