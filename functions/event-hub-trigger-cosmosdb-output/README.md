@@ -1,5 +1,7 @@
 
-# Deploy a Cosmos DB output Function
+# Deploy an Event Hub trigger with Cosmos DB output Function
+
+![functions/event-hub-trigger-cosmosdb-output/README.md](https://github.com/manorrock/azure-examples/workflows/functions/event-hub-trigger-cosmosdb-output/README.md/badge.svg)
 
 ## Prerequisites
 

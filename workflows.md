@@ -29,6 +29,10 @@
 
 ![eventhubs/create/README.md](https://github.com/manorrock/azure-examples/workflows/eventhubs/create/README.md/badge.svg)
 
+## Azure Functions
+
+![functions/event-hub-trigger-cosmosdb-output/README.md](https://github.com/manorrock/azure-examples/workflows/functions/event-hub-trigger-cosmosdb-output/README.md/badge.svg)
+
 ## Azure Container Registry
 
 ![acr/create/README.md](https://github.com/manorrock/azure-examples/workflows/acr/create/README.md/badge.svg)
