@@ -14,6 +14,23 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=azure-examples-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          export EVENT_HUB_NAMESPACE=event-hub-namespace-$RANDOM
+          az eventhubs namespace create \
+          --resource-group $RESOURCE_GROUP \
+          --name $EVENT_HUB_NAMESPACE
+          export EVENT_HUB=event-hub-$RANDOM
+          az eventhubs eventhub create \
+          --resource-group $RESOURCE_GROUP \
+          --name $EVENT_HUB \
+          --namespace-name $EVENT_HUB_NAMESPACE \
+          --message-retention 1
           export EVENT_HUB_AUTHORIZATION_RULE=event-hub-auth-rule-$RANDOM
           az eventhubs eventhub authorization-rule create \
           --resource-group $RESOURCE_GROUP \
