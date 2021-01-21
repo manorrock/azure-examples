@@ -124,6 +124,10 @@ exit 0
 1. [Deploy Tomcat](aks/tomcat/)
 1. [Deploy WildFly](aks/wildfly/)
 
+## Azure Monitor examples
+
+1. [Create an Application Insights resource](monitor/create-app-insights/)
+
 ## Azure Red Hat OpenShift examples
 
 1. [Deploy an Azure Red Hat OpenShift cluster](aro/create/)

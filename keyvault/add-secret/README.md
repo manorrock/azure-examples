@@ -5,7 +5,7 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../groupd/create/)
+1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Key Vault](../create/)
 
 ## Add a Secret to Azure Key Vault
