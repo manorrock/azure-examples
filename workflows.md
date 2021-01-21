@@ -23,6 +23,10 @@
 
 ![appservice/swap-deployment-slot/README.md](https://github.com/manorrock/azure-examples/workflows/appservice/swap-deployment-slot/README.md/badge.svg)
 
+## Azure Container Instances
+
+![aci/quarkus/README.md](https://github.com/manorrock/azure-examples/workflows/aci/quarkus/README.md/badge.svg)
+
 ## Azure Event Hubs
 
 ![eventhubs/create-namespace/README.md](https://github.com/manorrock/azure-examples/workflows/eventhubs/create-namespace/README.md/badge.svg)
