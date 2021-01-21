@@ -39,6 +39,8 @@
 
 ![acr/create-settings-xml/README.md](https://github.com/manorrock/azure-examples/workflows/acr/create-settings-xml/README.md/badge.svg)
 
+![acr/create-acrpull-service-principal/README.md](https://github.com/manorrock/azure-examples/workflows/acr/create-acrpull-service-principal/README.md/badge.svg)
+
 ## Azure Resource Group
 
 ![group/create/README.md](https://github.com/manorrock/azure-examples/workflows/group/create/README.md/badge.svg)
