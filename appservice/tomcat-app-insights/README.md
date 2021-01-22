@@ -45,10 +45,11 @@ To deploy the example use the following command lines:
 
   -->
 
-Now everything should be ready for Application Insights to be enabled. So we
-are going to redeploy the example now with the connection string added. The 
-Application Insights connection string environment was created when you created
-the Application Insights resource.
+Now everything is be ready for Application Insights to be enabled. Wi will 
+redeploy the example with the Application Insights connection string added.
+
+Note the Application Insights connection string environment variable was created
+when you created the Application Insights resource.
 
 Execute the command line below to do so:
 
@@ -69,7 +70,7 @@ Execute the command line below to do so:
 
 ## Updating the Application Insights JAR
 
-Note if you want to update the Application Insights JAR you will need to remove
+If you want to update the Application Insights JAR you will need to remove
 the JAVA_OPTS application settings. The command line below will do that. 
 
 <!-- workflow.skip() -->
