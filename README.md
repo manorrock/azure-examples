@@ -65,6 +65,7 @@ exit 0
 1. [Deploy a GraalVM application using a Docker image](appservice/docker-graalvm/)
 1. [Swap a deployment slot](appservice/swap-deployment-slot/)
 1. [Deploy a web application on a managed JBoss EAP](appservice/jboss-eap-helloworld/)
+1. [Deploy a web application with Application Insights on a managed Tomcat](appservice/tomcat-app-insights/)
 
 ## Azure Container Instances examples
 

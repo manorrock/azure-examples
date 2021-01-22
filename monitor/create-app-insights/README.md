@@ -40,6 +40,14 @@ To create the Application Insights resource use the command line below:
     --resource-group $RESOURCE_GROUP
 ```
 
+Set the Application Insights connection string environment variable by
+executing the command line below:
+
+```shell
+  export APP_INSIGHTS_CONNECTION_STRING=$(az monitor app-insights component show \
+    --query [?applicationId==\'${APP_INSIGHTS}\'].connectionString --output tsv)
+```
+
 <!-- workflow.directOnly()
 
 export RESULT=$(az monitor app-insights component show --app $APP_INSIGHTS --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)

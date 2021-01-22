@@ -32,6 +32,7 @@
         <module>list-webapp</module>
         <module>scale-manually</module>
         <module>swap-deployment-slot</module>
+        <module>tomcat-app-insights</module>
         <module>tomcat-helloworld</module>
     </modules>
 </project>

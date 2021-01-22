@@ -12,3 +12,5 @@ extensions.csproj
 /functions/cosmosdb-output/host.json
 /functions/event-hub-trigger-cosmosdb-output/host.json
 /functions/event-hub-trigger-cosmosdb-output/local.settings.json
+/appservice/tomcat-app-insights/src/main/webapp/WEB-INF/agent/app-insights.jar
+
