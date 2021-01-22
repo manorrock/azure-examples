@@ -9,8 +9,6 @@ This example assumes you have previously completed the following examples:
 1. [Create an Application Insights resource](../../monitor/create-app-insights/) 
 1. [Create an Azure App Service Plan](../create-plan/)
 
-## Deploy a web application with Application Insights on a managed Tomcat
-
 <!-- workflow.cron(0 18 * * 1) -->
 <!-- workflow.include(../../monitor/create-app-insights/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
