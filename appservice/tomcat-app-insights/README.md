@@ -21,13 +21,17 @@ This example assumes you have previously completed the following examples:
 
   -->
 
+## Build the web application
+
+The first step is to build the WAR file using the command line below:
+
 ```shell
   mvn clean install
 ```
 
 ## Deploy the web application on the managed Tomcat
 
-To deploy the example use the following command lines:
+To deploy the web application use the following command lines:
 
 ```shell
   export APPSERVICE_TOMCAT_APP_INSIGHTS=appservice-tomcat-app-insights-$RANDOM
@@ -41,13 +45,12 @@ To deploy the example use the following command lines:
 <!-- workflow.run()
 
   sleep 60
-  cd ../..
 
   -->
 
 ## Redeploy the web application with Application Insights enabled
 
-Now everything is be ready for Application Insights to be enabled. Wi will 
+Now everything is be ready for Application Insights to be enabled. We will 
 redeploy the example with the Application Insights connection string added.
 
 Note the Application Insights connection string environment variable was created
