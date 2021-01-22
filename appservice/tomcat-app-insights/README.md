@@ -29,7 +29,7 @@ The first step is to build the WAR file using the command line below:
 
 ## Set the application environment variable
 
-The second step is to set the application environment variable using the command
+The next step is to set the application environment variable using the command
 line below:
 
 ```shell
@@ -58,9 +58,6 @@ To deploy the web application use the following command line:
 Now everything is ready for Application Insights to be enabled. We will 
 redeploy the example with the Application Insights connection string added.
 
-*Note* the Application Insights connection string environment variable was created
-earlier when you created the Application Insights component.
-
 Execute the command line below to do so:
 
 ```shell
@@ -70,6 +67,9 @@ Execute the command line below to do so:
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP
 ```
+
+*Note the Application Insights connection string environment variable was
+created earlier when you created the Application Insights component.*
 
 <!-- workflow.run()
 
