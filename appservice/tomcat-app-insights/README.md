@@ -45,11 +45,13 @@ To deploy the example use the following command lines:
 
   -->
 
+## Redeploy the web application with Application Insights enabled
+
 Now everything is be ready for Application Insights to be enabled. Wi will 
 redeploy the example with the Application Insights connection string added.
 
 Note the Application Insights connection string environment variable was created
-when you created the Application Insights resource.
+earlier when you created the Application Insights component.
 
 Execute the command line below to do so:
 
@@ -72,7 +74,7 @@ Execute the command line below to do so:
 
 If you want to update the Application Insights JAR you will need to remove
 the JAVA_OPTS application settings. The command line below will do that. 
-
+g
 <!-- workflow.skip() -->
 ```shell
   az webapp config appsettings delete \
