@@ -91,8 +91,8 @@ g
     --setting-names JAVA_OPTS
 ```
 
-Once that is done you can start from the *Deploy the web application on the 
-managed Tomcat* to perform the actual update.
+Once that is done you can start from **Deploy the web application on the 
+managed Tomcat** to perform the actual update.
 
 <!-- workflow.directOnly
 
