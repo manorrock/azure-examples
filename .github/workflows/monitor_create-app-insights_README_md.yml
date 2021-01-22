@@ -29,6 +29,8 @@ jobs:
           --app $APP_INSIGHTS \
           --location $REGION \
           --resource-group $RESOURCE_GROUP
+          export APP_INSIGHTS_CONNECTION_STRING=$(az monitor app-insights component show \
+          --query [?applicationId==\'${APP_INSIGHTS}\'].connectionString --output tsv)
           
           export RESULT=$(az monitor app-insights component show --app $APP_INSIGHTS --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
