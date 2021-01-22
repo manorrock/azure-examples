@@ -27,13 +27,20 @@ The first step is to build the WAR file using the command line below:
   mvn clean install
 ```
 
-## Deploy the web application on the managed Tomcat
+## Set the application environment variable
 
-To deploy the web application use the following command lines:
+The second step is to set the application environment variable using the command
+line below:
 
 ```shell
   export APPSERVICE_TOMCAT_APP_INSIGHTS=appservice-tomcat-app-insights-$RANDOM
+```
 
+## Deploy the web application on the managed Tomcat
+
+To deploy the web application use the following command line:
+
+```shell
   mvn azure-webapp:deploy \
     -DappName=$APPSERVICE_TOMCAT_APP_INSIGHTS \
     -DappServicePlan=$APPSERVICE_PLAN \
@@ -84,7 +91,8 @@ g
     --setting-names JAVA_OPTS
 ```
 
-Once that is done you can start from the top to perform the actual update.
+Once that is done you can start from the *Deploy the web application on the 
+managed Tomcat* to perform the actual update.
 
 <!-- workflow.directOnly
 
