@@ -81,8 +81,8 @@ Execute the command line below to do so:
 ## Updating the Application Insights JAR
 
 If you want to update the Application Insights JAR you will need to remove
-the JAVA_OPTS application settings. The command line below will do that. 
-g
+the JAVA_OPTS application setting. The command line below will do that. 
+
 <!-- workflow.skip() -->
 ```shell
   az webapp config appsettings delete \
