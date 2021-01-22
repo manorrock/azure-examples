@@ -55,10 +55,10 @@ To deploy the web application use the following command line:
 
 ## Redeploy the web application with Application Insights enabled
 
-Now everything is be ready for Application Insights to be enabled. We will 
+Now everything is ready for Application Insights to be enabled. We will 
 redeploy the example with the Application Insights connection string added.
 
-Note the Application Insights connection string environment variable was created
+*Note* the Application Insights connection string environment variable was created
 earlier when you created the Application Insights component.
 
 Execute the command line below to do so:
