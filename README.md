@@ -1,3 +1,4 @@
+We have moved to https://github.com/Azure-Samples/java-on-azure-examples
 
 # Azure Java Examples
 
